@@ -15,5 +15,10 @@ namespace TeamTracker2._0
         {
             InitializeComponent();
         }
+
+        private void MainBoard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
