@@ -14,6 +14,7 @@ namespace TeamTracker2._0
     {
         public MainBoard()
         {
+            // Checking Visual Studio GitHub
             InitializeComponent();
         }
     }
