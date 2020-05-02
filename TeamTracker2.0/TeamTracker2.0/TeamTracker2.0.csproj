@@ -126,6 +126,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UC_Configuration.resx">
       <DependentUpon>UC_Configuration.cs</DependentUpon>
@@ -163,6 +164,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-angry-eye-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-user-23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction-and-tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogwheel %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
