@@ -28,20 +28,531 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBoard));
+            this.panel_sidebar = new System.Windows.Forms.Panel();
+            this.logo_panel = new System.Windows.Forms.Panel();
+            this.panel_settings = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel_configuration = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.user_account = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.user_monitoring = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.user_statistics = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.session_log = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel_managetask = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_dashboard = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.header_panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_minimum = new System.Windows.Forms.Label();
+            this.panel_cross = new System.Windows.Forms.Panel();
+            this.lbl_cross = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.dashboard_panel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel_manage_task = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel_sidebar.SuspendLayout();
+            this.panel_settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel_configuration.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.user_account.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.user_monitoring.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.user_statistics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.session_log.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel_managetask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel_dashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.header_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel_cross.SuspendLayout();
+            this.dashboard_panel.SuspendLayout();
+            this.panel_manage_task.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Form1
+            // panel_sidebar
+            // 
+            this.panel_sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.panel_sidebar.Controls.Add(this.logo_panel);
+            this.panel_sidebar.Controls.Add(this.panel_settings);
+            this.panel_sidebar.Controls.Add(this.panel_configuration);
+            this.panel_sidebar.Controls.Add(this.user_account);
+            this.panel_sidebar.Controls.Add(this.user_monitoring);
+            this.panel_sidebar.Controls.Add(this.user_statistics);
+            this.panel_sidebar.Controls.Add(this.session_log);
+            this.panel_sidebar.Controls.Add(this.panel_managetask);
+            this.panel_sidebar.Controls.Add(this.panel_dashboard);
+            this.panel_sidebar.Location = new System.Drawing.Point(0, 1);
+            this.panel_sidebar.Name = "panel_sidebar";
+            this.panel_sidebar.Size = new System.Drawing.Size(192, 547);
+            this.panel_sidebar.TabIndex = 0;
+            // 
+            // logo_panel
+            // 
+            this.logo_panel.Location = new System.Drawing.Point(0, 0);
+            this.logo_panel.Name = "logo_panel";
+            this.logo_panel.Size = new System.Drawing.Size(208, 89);
+            this.logo_panel.TabIndex = 0;
+            // 
+            // panel_settings
+            // 
+            this.panel_settings.Controls.Add(this.pictureBox8);
+            this.panel_settings.Controls.Add(this.label9);
+            this.panel_settings.Location = new System.Drawing.Point(1, 398);
+            this.panel_settings.Name = "panel_settings";
+            this.panel_settings.Size = new System.Drawing.Size(190, 44);
+            this.panel_settings.TabIndex = 7;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(44, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 22);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Settings";
+            // 
+            // panel_configuration
+            // 
+            this.panel_configuration.Controls.Add(this.pictureBox7);
+            this.panel_configuration.Controls.Add(this.label8);
+            this.panel_configuration.Location = new System.Drawing.Point(0, 354);
+            this.panel_configuration.Name = "panel_configuration";
+            this.panel_configuration.Size = new System.Drawing.Size(191, 44);
+            this.panel_configuration.TabIndex = 6;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(42, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 22);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Configuration";
+            // 
+            // user_account
+            // 
+            this.user_account.Controls.Add(this.pictureBox6);
+            this.user_account.Controls.Add(this.label7);
+            this.user_account.Location = new System.Drawing.Point(1, 309);
+            this.user_account.Name = "user_account";
+            this.user_account.Size = new System.Drawing.Size(190, 44);
+            this.user_account.TabIndex = 5;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(11, 11);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox6.TabIndex = 4;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(40, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 22);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "User Account";
+            // 
+            // user_monitoring
+            // 
+            this.user_monitoring.Controls.Add(this.pictureBox5);
+            this.user_monitoring.Controls.Add(this.label6);
+            this.user_monitoring.Location = new System.Drawing.Point(0, 265);
+            this.user_monitoring.Name = "user_monitoring";
+            this.user_monitoring.Size = new System.Drawing.Size(191, 44);
+            this.user_monitoring.TabIndex = 4;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(41, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 22);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "User Monitoring";
+            // 
+            // user_statistics
+            // 
+            this.user_statistics.Controls.Add(this.pictureBox4);
+            this.user_statistics.Controls.Add(this.label5);
+            this.user_statistics.Location = new System.Drawing.Point(1, 221);
+            this.user_statistics.Name = "user_statistics";
+            this.user_statistics.Size = new System.Drawing.Size(190, 44);
+            this.user_statistics.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 28);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(40, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 22);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "User Statistics";
+            // 
+            // session_log
+            // 
+            this.session_log.Controls.Add(this.pictureBox3);
+            this.session_log.Controls.Add(this.label4);
+            this.session_log.Controls.Add(this.label3);
+            this.session_log.Location = new System.Drawing.Point(1, 177);
+            this.session_log.Name = "session_log";
+            this.session_log.Size = new System.Drawing.Size(191, 44);
+            this.session_log.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(11, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 27);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(40, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 22);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Session Logs";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(43, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 22);
+            this.label3.TabIndex = 1;
+            // 
+            // panel_managetask
+            // 
+            this.panel_managetask.Controls.Add(this.panel_manage_task);
+            this.panel_managetask.Controls.Add(this.pictureBox2);
+            this.panel_managetask.Controls.Add(this.label1);
+            this.panel_managetask.Location = new System.Drawing.Point(0, 133);
+            this.panel_managetask.Name = "panel_managetask";
+            this.panel_managetask.Size = new System.Drawing.Size(192, 44);
+            this.panel_managetask.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 28);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Manage Task";
+            // 
+            // panel_dashboard
+            // 
+            this.panel_dashboard.Controls.Add(this.pictureBox1);
+            this.panel_dashboard.Controls.Add(this.label2);
+            this.panel_dashboard.Location = new System.Drawing.Point(1, 88);
+            this.panel_dashboard.Name = "panel_dashboard";
+            this.panel_dashboard.Size = new System.Drawing.Size(191, 44);
+            this.panel_dashboard.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 19);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(41, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Dashboard";
+            // 
+            // header_panel
+            // 
+            this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.header_panel.Controls.Add(this.panel2);
+            this.header_panel.Controls.Add(this.panel_cross);
+            this.header_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.header_panel.Location = new System.Drawing.Point(192, 1);
+            this.header_panel.Name = "header_panel";
+            this.header_panel.Size = new System.Drawing.Size(589, 73);
+            this.header_panel.TabIndex = 1;
+            this.header_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_panel_MouseDown);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel_minimum);
+            this.panel2.Location = new System.Drawing.Point(543, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(23, 12);
+            this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.panel2.MouseHover += new System.EventHandler(this.panel2_MouseHover);
+            // 
+            // panel_minimum
+            // 
+            this.panel_minimum.AutoSize = true;
+            this.panel_minimum.ForeColor = System.Drawing.Color.LightGray;
+            this.panel_minimum.Location = new System.Drawing.Point(5, -4);
+            this.panel_minimum.Name = "panel_minimum";
+            this.panel_minimum.Size = new System.Drawing.Size(13, 13);
+            this.panel_minimum.TabIndex = 1;
+            this.panel_minimum.Text = "_";
+            this.panel_minimum.Click += new System.EventHandler(this.panel_minimum_Click);
+            this.panel_minimum.MouseLeave += new System.EventHandler(this.panel_minimum_MouseLeave);
+            this.panel_minimum.MouseHover += new System.EventHandler(this.panel_minimum_MouseHover);
+            // 
+            // panel_cross
+            // 
+            this.panel_cross.Controls.Add(this.lbl_cross);
+            this.panel_cross.Location = new System.Drawing.Point(567, 0);
+            this.panel_cross.Name = "panel_cross";
+            this.panel_cross.Size = new System.Drawing.Size(23, 12);
+            this.panel_cross.TabIndex = 0;
+            this.panel_cross.Click += new System.EventHandler(this.panel_cross_Click);
+            this.panel_cross.MouseLeave += new System.EventHandler(this.panel_cross_MouseLeave);
+            this.panel_cross.MouseHover += new System.EventHandler(this.panel_cross_MouseHover);
+            // 
+            // lbl_cross
+            // 
+            this.lbl_cross.AutoSize = true;
+            this.lbl_cross.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_cross.Location = new System.Drawing.Point(5, -1);
+            this.lbl_cross.Name = "lbl_cross";
+            this.lbl_cross.Size = new System.Drawing.Size(12, 13);
+            this.lbl_cross.TabIndex = 3;
+            this.lbl_cross.Text = "x";
+            this.lbl_cross.Click += new System.EventHandler(this.lbl_cross_Click);
+            this.lbl_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
+            this.lbl_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(208)))), ((int)(((byte)(214)))));
+            this.panel11.Location = new System.Drawing.Point(193, 73);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(587, 1);
+            this.panel11.TabIndex = 2;
+            // 
+            // dashboard_panel
+            // 
+            this.dashboard_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.dashboard_panel.Controls.Add(this.label10);
+            this.dashboard_panel.ForeColor = System.Drawing.Color.Transparent;
+            this.dashboard_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.dashboard_panel.Location = new System.Drawing.Point(192, 75);
+            this.dashboard_panel.Name = "dashboard_panel";
+            this.dashboard_panel.Size = new System.Drawing.Size(590, 470);
+            this.dashboard_panel.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(28, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "This is Dashbaord";
+            // 
+            // panel_manage_task
+            // 
+            this.panel_manage_task.Controls.Add(this.label11);
+            this.panel_manage_task.Location = new System.Drawing.Point(192, 21);
+            this.panel_manage_task.Name = "panel_manage_task";
+            this.panel_manage_task.Size = new System.Drawing.Size(587, 451);
+            this.panel_manage_task.TabIndex = 1;
+            this.panel_manage_task.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(63, 28);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "manage Task";
+            // 
+            // MainBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 273);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(783, 522);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.dashboard_panel);
+            this.Controls.Add(this.header_panel);
+            this.Controls.Add(this.panel_sidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "MainBoard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeamTracker";
+            this.panel_sidebar.ResumeLayout(false);
+            this.panel_settings.ResumeLayout(false);
+            this.panel_settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel_configuration.ResumeLayout(false);
+            this.panel_configuration.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.user_account.ResumeLayout(false);
+            this.user_account.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.user_monitoring.ResumeLayout(false);
+            this.user_monitoring.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.user_statistics.ResumeLayout(false);
+            this.user_statistics.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.session_log.ResumeLayout(false);
+            this.session_log.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel_managetask.ResumeLayout(false);
+            this.panel_managetask.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel_dashboard.ResumeLayout(false);
+            this.panel_dashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.header_panel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel_cross.ResumeLayout(false);
+            this.panel_cross.PerformLayout();
+            this.dashboard_panel.ResumeLayout(false);
+            this.dashboard_panel.PerformLayout();
+            this.panel_manage_task.ResumeLayout(false);
+            this.panel_manage_task.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel_sidebar;
+        private System.Windows.Forms.Panel user_account;
+        private System.Windows.Forms.Panel user_monitoring;
+        private System.Windows.Forms.Panel user_statistics;
+        private System.Windows.Forms.Panel session_log;
+        private System.Windows.Forms.Panel panel_managetask;
+        private System.Windows.Forms.Panel panel_dashboard;
+        private System.Windows.Forms.Panel panel_settings;
+        private System.Windows.Forms.Panel panel_configuration;
+        private System.Windows.Forms.Panel header_panel;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel dashboard_panel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel logo_panel;
+        private System.Windows.Forms.Panel panel_cross;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label panel_minimum;
+        private System.Windows.Forms.Label lbl_cross;
+        private System.Windows.Forms.Panel panel_manage_task;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
 
