@@ -112,7 +112,6 @@
             // header_panel
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-         
             this.header_panel.Controls.Add(this.pictureBox11);
             this.header_panel.Controls.Add(this.label10);
             this.header_panel.Controls.Add(this.pictureBox10);
@@ -545,7 +544,6 @@
             this.dashboard_panel.Name = "dashboard_panel";
             this.dashboard_panel.Size = new System.Drawing.Size(590, 454);
             this.dashboard_panel.TabIndex = 7;
-          
             // 
             // MainBoard
             // 
@@ -641,7 +639,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
-      
     }
 }
 
