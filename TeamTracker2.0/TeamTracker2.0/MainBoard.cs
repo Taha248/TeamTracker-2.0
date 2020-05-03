@@ -204,6 +204,18 @@ namespace TeamTracker2._0
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You Clicked Logout");
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You Clicked Profile");
+        }
+
+      
     }
 }
 
