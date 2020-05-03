@@ -180,6 +180,39 @@
   <ItemGroup>
     <None Include="Resources\cogwheel %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-and-web %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useronline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dash2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
