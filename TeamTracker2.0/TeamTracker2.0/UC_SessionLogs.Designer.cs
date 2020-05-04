@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SessionLogs));
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -46,32 +45,32 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Session Logs";
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(440, 11);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 140);
-            this.panel1.TabIndex = 3;
+            this.panel3.BackgroundImage = global::TeamTracker2._0.Properties.Resources.orange;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(440, 303);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(140, 140);
+            this.panel3.TabIndex = 5;
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImage = global::TeamTracker2._0.Properties.Resources.blue;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(440, 157);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 140);
             this.panel2.TabIndex = 4;
             // 
-            // panel3
+            // panel1
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(440, 303);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(140, 140);
-            this.panel3.TabIndex = 5;
+            this.panel1.BackgroundImage = global::TeamTracker2._0.Properties.Resources.green;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(440, 11);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(140, 140);
+            this.panel1.TabIndex = 3;
             // 
             // UC_SessionLogs
             // 
