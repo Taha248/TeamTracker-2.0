@@ -81,6 +81,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "UC_SessionLogs";
+            this.Size = new System.Drawing.Size(590, 454);
             this.ResumeLayout(false);
             this.PerformLayout();
 
