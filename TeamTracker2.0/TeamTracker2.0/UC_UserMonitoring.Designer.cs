@@ -48,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "UC_UserMonitoring";
+            this.Size = new System.Drawing.Size(590, 454);
             this.ResumeLayout(false);
             this.PerformLayout();
 
