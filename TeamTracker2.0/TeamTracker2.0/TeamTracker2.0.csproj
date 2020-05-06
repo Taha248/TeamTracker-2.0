@@ -50,7 +50,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="XanderUI">
-      <HintPath>..\..\..\..\..\..\..\Desktop\XanderUI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Downloads\XanderUI-master\XanderUI-master\XanderUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
