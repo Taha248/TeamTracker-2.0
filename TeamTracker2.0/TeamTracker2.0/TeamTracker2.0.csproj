@@ -44,7 +44,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,7 +56,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="XanderUI">
-      <HintPath>..\..\..\..\..\..\Downloads\XanderUI-master\XanderUI-master\XanderUI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Desktop\XanderUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
