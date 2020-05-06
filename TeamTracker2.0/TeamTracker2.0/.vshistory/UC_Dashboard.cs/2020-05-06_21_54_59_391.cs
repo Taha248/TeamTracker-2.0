@@ -23,6 +23,7 @@ namespace TeamTracker2._0
 
         private void LoadReputationGraph()
         {
+
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Month",
@@ -64,15 +65,15 @@ namespace TeamTracker2._0
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 2; i++)
-            {
-                Label l1 = new Label();
-                l1.Text = "hamza"+i;
-                l1.BackColor = Color.Black;
-                l1.Width = 30;
-                l1.AutoSize = true;
-                panel9.Controls.Add(l1);
-            }
+            Label newLabel = new Label();
+            newLabel.Name = "testLabel";
+            newLabel.Text = "my name is m hamza saleem";
+
+            //Do I need to call either of the following code to make it do this?
+            newLabel.Visible = true;
+            newLabel.Show();
+
+            flowLayoutPanel4.Container.Add(newLabel);
         }
 
         private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)

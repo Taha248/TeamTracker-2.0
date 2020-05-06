@@ -23,6 +23,7 @@ namespace TeamTracker2._0
 
         private void LoadReputationGraph()
         {
+
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Month",
@@ -36,7 +37,7 @@ namespace TeamTracker2._0
                     Values = new ChartValues<double> {4, 6, 5, 2, 7,6,9,4,6,3,2,6}
                 }
             };
-            cartesianChart1.LegendLocation = LegendLocation.Bottom;
+            cartesianChart1.LegendLocation = LegendLocation.Right;
         }
 
         private void LoadPieChart()
@@ -64,15 +65,7 @@ namespace TeamTracker2._0
 
         private void UC_Dashboard_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 2; i++)
-            {
-                Label l1 = new Label();
-                l1.Text = "hamza"+i;
-                l1.BackColor = Color.Black;
-                l1.Width = 30;
-                l1.AutoSize = true;
-                panel9.Controls.Add(l1);
-            }
+
         }
 
         private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)

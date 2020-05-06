@@ -71,8 +71,8 @@ namespace TeamTracker2._0
                 l1.BackColor = Color.Black;
                 l1.Width = 30;
                 l1.AutoSize = true;
-                panel9.Controls.Add(l1);
-            }
+             }
+            panel9.Controls.Add(l1);
         }
 
         private void flowLayoutPanel4_Paint(object sender, PaintEventArgs e)
