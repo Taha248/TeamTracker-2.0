@@ -70,8 +70,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dashboard_panel = new System.Windows.Forms.Panel();
-            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel_main.SuspendLayout();
             this.header_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -114,8 +112,7 @@
             // header_panel
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.header_panel.Controls.Add(this.label13);
-            this.header_panel.Controls.Add(this.bunifuiOSSwitch1);
+         
             this.header_panel.Controls.Add(this.pictureBox11);
             this.header_panel.Controls.Add(this.label10);
             this.header_panel.Controls.Add(this.pictureBox10);
@@ -548,30 +545,7 @@
             this.dashboard_panel.Name = "dashboard_panel";
             this.dashboard_panel.Size = new System.Drawing.Size(590, 454);
             this.dashboard_panel.TabIndex = 7;
-            // 
-            // bunifuiOSSwitch1
-            // 
-            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
-            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(13, 34);
-            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
-            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
-            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(202)))), ((int)(((byte)(94)))));
-            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
-            this.bunifuiOSSwitch1.TabIndex = 7;
-            this.bunifuiOSSwitch1.Value = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(62, 37);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 21);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "TimeIn/Out";
+          
             // 
             // MainBoard
             // 
@@ -667,8 +641,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label13;
-        private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
+      
     }
 }
 
