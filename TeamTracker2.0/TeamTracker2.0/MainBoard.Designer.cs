@@ -493,6 +493,12 @@
             this.dashboard_panel.Size = new System.Drawing.Size(590, 454);
             this.dashboard_panel.TabIndex = 7;
             // 
+            // bunifuiOSSwitch1
+            // 
+            // 
+            // label13
+            // 
+            // 
             // MainBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

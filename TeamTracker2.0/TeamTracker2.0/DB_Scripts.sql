@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TeamTracker2._0
 {
-    public partial class UC_UserMonitoring : UserControl
+    public partial class UC_UserStatistics : UserControl
     {
-        public UC_UserMonitoring()
+        public UC_UserStatistics()
         {
             InitializeComponent();
-        }
-
-        private void UC_UserMonitoring_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
