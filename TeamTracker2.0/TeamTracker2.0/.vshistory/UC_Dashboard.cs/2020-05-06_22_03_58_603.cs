@@ -67,7 +67,7 @@ namespace TeamTracker2._0
             for (int i = 0; i < 2; i++)
             {
                 Label l1 = new Label();
-                l1.Text = "hamza"+i;
+                l1.Text = "hamza";
                 l1.BackColor = Color.Black;
                 l1.Width = 30;
                 l1.AutoSize = true;

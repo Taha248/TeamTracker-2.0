@@ -46,6 +46,7 @@
             this.xuiFlatProgressBar1 = new XanderUI.XUIFlatProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -280,6 +280,15 @@
             this.label7.Text = "Design Dashboard";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(442, 280);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(138, 160);
+            this.flowLayoutPanel4.TabIndex = 26;
+            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
+            // 
             // pieChart1
             // 
             this.pieChart1.Location = new System.Drawing.Point(7, 3);
@@ -334,7 +343,7 @@
             // 
             this.cartesianChart1.Location = new System.Drawing.Point(0, 3);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(423, 165);
+            this.cartesianChart1.Size = new System.Drawing.Size(434, 178);
             this.cartesianChart1.TabIndex = 0;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -461,21 +470,14 @@
             this.label10.Text = "DECEMBER";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(442, 280);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(138, 160);
-            this.panel9.TabIndex = 1;
-            // 
             // UC_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -531,6 +533,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
@@ -546,6 +549,5 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel9;
     }
 }

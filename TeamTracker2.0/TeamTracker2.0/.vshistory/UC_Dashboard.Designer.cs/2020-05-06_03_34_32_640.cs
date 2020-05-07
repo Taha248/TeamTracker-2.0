@@ -42,27 +42,27 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.xuiFlatProgressBar1 = new XanderUI.XUIFlatProgressBar();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.xuiFlatProgressBar1 = new XanderUI.XUIFlatProgressBar();
+            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.xuiGradientPanel2 = new XanderUI.XUIGradientPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -75,9 +75,9 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.xuiGradientPanel1.SuspendLayout();
             this.xuiGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.xuiGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,17 +227,26 @@
             this.panel5.Size = new System.Drawing.Size(210, 146);
             this.panel5.TabIndex = 23;
             // 
-            // label6
+            // flowLayoutPanel4
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(29, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 23);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "TIME REMAINING";
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(442, 280);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(138, 160);
+            this.flowLayoutPanel4.TabIndex = 26;
+            this.flowLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel4_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(38, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CURRENT TASK";
             // 
             // xuiFlatProgressBar1
             // 
@@ -254,17 +263,17 @@
             this.xuiFlatProgressBar1.Text = "xuiFlatProgressBar1";
             this.xuiFlatProgressBar1.Value = 50;
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(38, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CURRENT TASK";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(29, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 23);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "TIME REMAINING";
             // 
             // label7
             // 
@@ -319,24 +328,24 @@
             this.panel7.Size = new System.Drawing.Size(426, 174);
             this.panel7.TabIndex = 1;
             // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Location = new System.Drawing.Point(0, 14);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(423, 160);
+            this.cartesianChart1.TabIndex = 0;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(120, 4);
+            this.label9.Location = new System.Drawing.Point(120, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 26);
             this.label9.TabIndex = 1;
             this.label9.Text = "Monthly Repuation";
-            // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Location = new System.Drawing.Point(0, 3);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(423, 165);
-            this.cartesianChart1.TabIndex = 0;
-            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // panel8
             // 
@@ -348,56 +357,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(138, 160);
             this.panel8.TabIndex = 27;
-            // 
-            // xuiGradientPanel2
-            // 
-            this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.Navy;
-            this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Blue;
-            this.xuiGradientPanel2.Controls.Add(this.label13);
-            this.xuiGradientPanel2.Controls.Add(this.label12);
-            this.xuiGradientPanel2.Controls.Add(this.pictureBox4);
-            this.xuiGradientPanel2.Location = new System.Drawing.Point(10, 94);
-            this.xuiGradientPanel2.Name = "xuiGradientPanel2";
-            this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
-            this.xuiGradientPanel2.Size = new System.Drawing.Size(118, 59);
-            this.xuiGradientPanel2.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
-            this.xuiGradientPanel2.TabIndex = 1;
-            this.xuiGradientPanel2.TopLeft = System.Drawing.SystemColors.Highlight;
-            this.xuiGradientPanel2.TopRight = System.Drawing.SystemColors.Highlight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(19, 7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 26);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "02";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(9, 33);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 18);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "DAY OFF";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(75, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 34);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // xuiGradientPanel1
             // 
@@ -416,27 +375,42 @@
             this.xuiGradientPanel1.TopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.xuiGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.xuiGradientPanel1_Paint);
             // 
-            // label14
+            // xuiGradientPanel2
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(68, 8);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 26);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "01";
+            this.xuiGradientPanel2.BottomLeft = System.Drawing.Color.Navy;
+            this.xuiGradientPanel2.BottomRight = System.Drawing.Color.Blue;
+            this.xuiGradientPanel2.Controls.Add(this.label13);
+            this.xuiGradientPanel2.Controls.Add(this.label12);
+            this.xuiGradientPanel2.Controls.Add(this.pictureBox4);
+            this.xuiGradientPanel2.Location = new System.Drawing.Point(10, 94);
+            this.xuiGradientPanel2.Name = "xuiGradientPanel2";
+            this.xuiGradientPanel2.PrimerColor = System.Drawing.Color.White;
+            this.xuiGradientPanel2.Size = new System.Drawing.Size(118, 59);
+            this.xuiGradientPanel2.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
+            this.xuiGradientPanel2.TabIndex = 1;
+            this.xuiGradientPanel2.TopLeft = System.Drawing.SystemColors.Highlight;
+            this.xuiGradientPanel2.TopRight = System.Drawing.SystemColors.Highlight;
             // 
-            // pictureBox5
+            // label10
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
+            this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label10.Location = new System.Drawing.Point(1, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 26);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "DECEMBER";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(75, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 34);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // label11
             // 
@@ -450,32 +424,60 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "LATE";
             // 
-            // label10
+            // pictureBox5
             // 
-            this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(1, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 26);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "DECEMBER";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
             // 
-            // panel9
+            // label12
             // 
-            this.panel9.Location = new System.Drawing.Point(442, 280);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(138, 160);
-            this.panel9.TabIndex = 1;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(9, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 18);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "DAY OFF";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(19, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 26);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "02";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(68, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 26);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "01";
             // 
             // UC_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -502,11 +504,11 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.xuiGradientPanel1.ResumeLayout(false);
+            this.xuiGradientPanel1.PerformLayout();
             this.xuiGradientPanel2.ResumeLayout(false);
             this.xuiGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.xuiGradientPanel1.ResumeLayout(false);
-            this.xuiGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
@@ -531,6 +533,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
@@ -546,6 +549,5 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel9;
     }
 }
