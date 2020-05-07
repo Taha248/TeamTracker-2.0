@@ -184,6 +184,27 @@
   <ItemGroup>
     <None Include="Resources\cogwheel %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ggg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rrr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grrrr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grgrgr.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

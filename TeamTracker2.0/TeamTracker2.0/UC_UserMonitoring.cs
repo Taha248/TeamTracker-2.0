@@ -16,5 +16,10 @@ namespace TeamTracker2._0
         {
             InitializeComponent();
         }
+
+        private void UC_UserMonitoring_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
