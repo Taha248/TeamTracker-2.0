@@ -163,16 +163,6 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap green {
-            get {
-                object obj = ResourceManager.GetObject("green", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap grgrgr {
             get {
                 object obj = ResourceManager.GetObject("grgrgr", resourceCulture);
@@ -263,6 +253,26 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ppp {
+            get {
+                object obj = ResourceManager.GetObject("ppp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rrr {
+            get {
+                object obj = ResourceManager.GetObject("rrr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seo_and_web__1_ {
             get {
                 object obj = ResourceManager.GetObject("seo-and-web (1)", resourceCulture);
@@ -286,26 +296,6 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap Webp_net_resizeimage__17_ {
             get {
                 object obj = ResourceManager.GetObject("Webp.net-resizeimage (17)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ppp {
-            get {
-                object obj = ResourceManager.GetObject("ppp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rrr {
-            get {
-                object obj = ResourceManager.GetObject("rrr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

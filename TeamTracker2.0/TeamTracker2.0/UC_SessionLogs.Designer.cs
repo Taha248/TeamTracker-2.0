@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::TeamTracker2._0.Properties.Resources.green;
+            this.panel1.BackgroundImage = global::TeamTracker2._0.Properties.Resources.blue;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(440, 11);
             this.panel1.Name = "panel1";
