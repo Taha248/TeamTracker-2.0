@@ -67,7 +67,7 @@ namespace TeamTracker2._0
             pieChart1.Visible = true;
             cartesianChart1.Visible = true;
             List<MessageFormat> msgList = new List<MessageFormat>();
-            msgList.Add(new MessageFormat { Subject = "Meeting For Planning", Body = "Mr Taha & Zeeshan Please Come On Time ", MsgRecTime=DateTime.Now });
+            msgList.Add(new MessageFormat { Subject = "Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time  ", MsgRecTime=DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Meeting For Next Step", Body = "Mr Taha & Zeeshan You have to come bcz you both are the seniors and important pillar of our company",MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Hello Mere Bhaiyoon ASsalam-o-Alikum", Body = "Mr Taha & Zeeshan apky biwi bachien kese hain sb theek hain? Hello Mere Bhaiyoon ASsalam-o-Alikum.... Hello Mere Bhaiyoon ASsalam-o-Alikum", MsgRecTime = DateTime.Now });
@@ -86,10 +86,9 @@ namespace TeamTracker2._0
             Label top = new Label();
             top.Width = 208;
             top.Height = 2;
-            top.BackColor = Color.DeepSkyBlue;
+            top.BackColor = Color.SkyBlue;
             flowLayoutPanel1.Controls.Add(bottom_);
             flowLayoutPanel1.Controls.Add(top);
-            int height = 0;
             for (int i = 0; i < Messages.Count; i++)
             { 
                 Label subject = new Label();
@@ -112,12 +111,12 @@ namespace TeamTracker2._0
                 messages.Width = 208;
                 if ((Messages[i].Body.Length) > 30)
                     messages.Height = getNotificationLabelHeight(Messages[i].Body);
-                else { messages.Height = 25; }
+                else { messages.Height = 17; }
                 messages.Text = Messages[i].Body;
 
                 Label date = new Label();
                 date.Width = 208;
-                date.Height = 23;
+                date.Height = 17;
                 date.Font = new Font("Corbel", 9, FontStyle.Regular);
                 date.Text = msgTime(Messages[i].MsgRecTime);
                 date.TextAlign = ContentAlignment.TopRight;
@@ -127,7 +126,7 @@ namespace TeamTracker2._0
                 Label bottom = new Label();
                 bottom.Width = 208;
                 bottom.Height = 2;
-                bottom.BackColor = Color.DeepSkyBlue;
+                bottom.BackColor = Color.SkyBlue;
                 flowLayoutPanel1.Controls.Add(subject);
                 flowLayoutPanel1.Controls.Add(messages);
                 flowLayoutPanel1.Controls.Add(date);
@@ -146,9 +145,9 @@ namespace TeamTracker2._0
         {
             int textLen = body.Length;
             int temp = textLen / 30;
-            if (textLen % 30 > 0 && temp>0) { if (temp > 2) { temp = ((temp + 1) * 14); } else { temp = ((temp + 1) * 17); } }
+            if (textLen % 30 > 0 && temp>0) { if (temp > 1) { temp = ((temp + 1) * 13); } else { temp = ((temp + 1) * 17); } }
             else if(temp==0) { temp =20; }
-            else { temp = (temp * 17); }
+            else { temp = (temp * 16); }
             return temp;
         }
 
@@ -226,6 +225,16 @@ namespace TeamTracker2._0
         //}
         
         private void xuiGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
         {
 
         }
