@@ -14,13 +14,29 @@ namespace TeamTracker2._0
 {
     public partial class UC_Dashboard : UserControl
     {
+        int totalHeight = 0;
         public UC_Dashboard()
         {
             InitializeComponent();
             LoadPieChart();
             LoadReputationGraph();
+            this.flowLayoutPanel1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseWheel);
         }
+        private void panel1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                if (pictureBox6.Top > 4)
+                {
+                    pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y - 20);
 
+                }
+            }
+            else if (pictureBox6.Bottom < 155)
+            {
+                pictureBox6.Location = new Point(pictureBox6.Location.X, pictureBox6.Location.Y + 20);
+            }
+        }
         private void LoadReputationGraph()
         {
             cartesianChart1.AxisX.Add(new Axis
@@ -70,11 +86,20 @@ namespace TeamTracker2._0
             msgList.Add(new MessageFormat { Subject = "Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time  ", MsgRecTime=DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Meeting For Next Step", Body = "Mr Taha & Zeeshan You have to come bcz you both are the seniors and important pillar of our company",MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
+            msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Hello Mere Bhaiyoon ASsalam-o-Alikum", Body = "Mr Taha & Zeeshan apky biwi bachien kese hain sb theek hain? Hello Mere Bhaiyoon ASsalam-o-Alikum.... Hello Mere Bhaiyoon ASsalam-o-Alikum", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "test", Body = "test", MsgRecTime = DateTime.Now });
             LoadNotification(msgList);
+
+            // -0.15119X + 164.48074
+            double val = 0;
+            val = (-0.15119 * totalHeight)+ 178.48074;
+            pictureBox6.Height = (int)val;
+
+            if (totalHeight < 145)
+                panel9.Hide();
         }
-        
+
         private void LoadNotification(List<MessageFormat> Messages)
         {
             this.flowLayoutPanel1.WrapContents = false;
@@ -82,10 +107,11 @@ namespace TeamTracker2._0
             Label bottom_ = new Label();
             bottom_.Width = 208;
             bottom_.Height = 2;
+            totalHeight += 2;
             bottom_.BackColor = Color.White;
             Label top = new Label();
             top.Width = 208;
-            top.Height = 2;
+            top.Height = 2; totalHeight += 2;
             top.BackColor = Color.SkyBlue;
             flowLayoutPanel1.Controls.Add(bottom_);
             flowLayoutPanel1.Controls.Add(top);
@@ -93,16 +119,19 @@ namespace TeamTracker2._0
             { 
                 Label subject = new Label();
                 subject.Text = Messages[i].Subject;
-                subject.Font = new Font("Corbel", 9, FontStyle.Bold);
+                subject.Font = new Font("Raavi", 9, FontStyle.Bold);
                 subject.TextAlign = ContentAlignment.BottomLeft;
                 subject.ForeColor = Color.Black;
                 subject.BackColor = Color.White;
                 subject.Padding = new Padding(3);
                 subject.Width = 208;
-                subject.Height = getNotificationLabelHeight(Messages[i].Subject);
+
+                    int height = getNotificationLabelHeight(Messages[i].Subject);
+                subject.Height = height;
+                totalHeight += height;
 
                 Label messages = new Label();
-                messages.Font = new Font("Corbel", 9, FontStyle.Regular);
+                messages.Font = new Font("Raavi", 7, FontStyle.Regular);
                 messages.ForeColor = Color.Gray;
                 messages.BackColor = Color.White;
                 messages.TextAlign = ContentAlignment.TopLeft;
@@ -110,14 +139,19 @@ namespace TeamTracker2._0
                 messages.Padding = new Padding(3);
                 messages.Width = 208;
                 if ((Messages[i].Body.Length) > 30)
-                    messages.Height = getNotificationLabelHeight(Messages[i].Body);
-                else { messages.Height = 17; }
+                { 
+                    height = getNotificationLabelHeight(Messages[i].Body);
+                    messages.Height = height;
+                    totalHeight += height;
+                }
+                else { messages.Height = 17; totalHeight += height; }
                 messages.Text = Messages[i].Body;
 
                 Label date = new Label();
                 date.Width = 208;
                 date.Height = 17;
-                date.Font = new Font("Corbel", 9, FontStyle.Regular);
+                totalHeight += 17;
+                date.Font = new Font("Raavi", 6, FontStyle.Regular);
                 date.Text = msgTime(Messages[i].MsgRecTime);
                 date.TextAlign = ContentAlignment.TopRight;
                 date.BackColor = Color.White;
@@ -126,11 +160,17 @@ namespace TeamTracker2._0
                 Label bottom = new Label();
                 bottom.Width = 208;
                 bottom.Height = 2;
+                totalHeight += 2;
                 bottom.BackColor = Color.SkyBlue;
                 flowLayoutPanel1.Controls.Add(subject);
                 flowLayoutPanel1.Controls.Add(messages);
                 flowLayoutPanel1.Controls.Add(date);
                 flowLayoutPanel1.Controls.Add(bottom);
+
+                subject.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
+                messages.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
+                date.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
+                bottom.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
 
             }
             Label top_ = new Label();
@@ -237,6 +277,34 @@ namespace TeamTracker2._0
         private void label15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+          OnlineUsers online =   new OnlineUsers();
+            online.ShowDialog();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            TotalUsers online = new TotalUsers();
+            online.ShowDialog();
+
+        }
+
+        private void flowLayoutPanel1_MouseHover(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Focus();
         }
     }
     public class MessageFormat
