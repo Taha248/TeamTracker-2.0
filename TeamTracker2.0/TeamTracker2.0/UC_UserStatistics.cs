@@ -16,5 +16,10 @@ namespace TeamTracker2._0
         {
             InitializeComponent();
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

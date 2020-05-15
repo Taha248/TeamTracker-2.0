@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using GridViewExample;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GridViewExample
+namespace TeamTracker2._0
 {
     public static class ManData
     {
