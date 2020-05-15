@@ -120,32 +120,27 @@ namespace GridViewExample
         }
 
 
-        public static DataTable getDataReader(string col, string table, string condition)
+        public static MySqlDataReader getDataReader(string col, string table, string condition)
         {
             MySqlConnection conn = ManData.getConnection();
             String query = "SELECT " + col + " FROM " + table + " " + (condition != null ? " where " + condition : "");
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader reader = null;
 
-            DataTable dataTable = new DataTable();
-            var columns = new Dictionary<string,string>();
-            var list  = new List< Dictionary<string, string>>();
             try
             {
                 using (conn)
                 {
                     conn.Open();
                     reader = cmd.ExecuteReader();
-                    dataTable.Load(reader);
+                    LogWriter.LogWrite(query);
                 }
-                
             }
             catch (Exception ex)
             {
                 LogWriter.LogWrite(ex.StackTrace);
             }
-
-            return dataTable;
+            return reader;
         }
 
 
