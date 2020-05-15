@@ -91,6 +91,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlassyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GridViewHelper.cs" />
     <Compile Include="LogWriter.cs" />
     <Compile Include="MainBoard.cs">
@@ -100,8 +103,21 @@
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="ManData.cs" />
+<<<<<<< HEAD
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+=======
+    <Compile Include="OnlineUsers.cs" />
+    <Compile Include="OnlineUsers.Designer.cs">
+      <DependentUpon>OnlineUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TotalUsers.cs" />
+    <Compile Include="TotalUsers.Designer.cs">
+      <DependentUpon>TotalUsers.cs</DependentUpon>
+    </Compile>
+>>>>>>> 3e9d7d9b3cceb0c580aaa88f8957c5839ddfcf66
     <Compile Include="UC_Configuration.cs">
       <SubType>UserControl</SubType>
     </Compile>
