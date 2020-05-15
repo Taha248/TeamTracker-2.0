@@ -100,8 +100,20 @@
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="ManData.cs" />
+    <Compile Include="OnlineUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineUsers.Designer.cs">
+      <DependentUpon>OnlineUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TotalUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalUsers.Designer.cs">
+      <DependentUpon>TotalUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Configuration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +168,9 @@
     <EmbeddedResource Include="MainBoard.resx">
       <DependentUpon>MainBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OnlineUsers.resx">
+      <DependentUpon>OnlineUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TotalUsers.resx">
+      <DependentUpon>TotalUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Configuration.resx">
       <DependentUpon>UC_Configuration.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +289,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_Scripts.sql" />
+    <Content Include="Resources\onlinebullet.png" />
+    <Content Include="Resources\sampleimage1.jpg" />
+    <Content Include="Resources\sampleimage2.jpg" />
+    <Content Include="Resources\therock.jpg" />
+    <Content Include="Resources\therock1.jpg" />
+    <Content Include="Resources\therock2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

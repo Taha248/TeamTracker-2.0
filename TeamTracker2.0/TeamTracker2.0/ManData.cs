@@ -121,27 +121,32 @@ namespace TeamTracker2._0
         }
 
 
-        public static MySqlDataReader getDataReader(string col, string table, string condition)
+        public static DataTable getDataReader(string col, string table, string condition)
         {
             MySqlConnection conn = ManData.getConnection();
             String query = "SELECT " + col + " FROM " + table + " " + (condition != null ? " where " + condition : "");
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader reader = null;
 
+            DataTable dataTable = new DataTable();
+            var columns = new Dictionary<string,string>();
+            var list  = new List< Dictionary<string, string>>();
             try
             {
                 using (conn)
                 {
                     conn.Open();
                     reader = cmd.ExecuteReader();
-                    LogWriter.LogWrite(query);
+                    dataTable.Load(reader);
                 }
+                
             }
             catch (Exception ex)
             {
                 LogWriter.LogWrite(ex.StackTrace);
             }
-            return reader;
+
+            return dataTable;
         }
 
 
