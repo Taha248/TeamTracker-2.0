@@ -18,12 +18,15 @@ namespace TeamTracker2._0
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
+        
 
         public MainBoard()
         {
             InitializeComponent();
             lbl_cross.BackColor = Color.Transparent;
-            dashboard_panel.Controls.Add(new UC_Dashboard());
+            dashboard_panel.Controls.Add(new UC_Dashboard(this));
+            this.DoubleBuffered = false;
+
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
@@ -186,7 +189,7 @@ namespace TeamTracker2._0
         {
             clearSelection();
             dashboard_panel.Controls.Clear();
-            dashboard_panel.Controls.Add(new UC_Dashboard());
+            dashboard_panel.Controls.Add(new UC_Dashboard(this));
             panel_dashboard.BackColor = Color.FromArgb(27, 194, 203);
 
         }
@@ -203,6 +206,11 @@ namespace TeamTracker2._0
             panel_session_log.BackColor = Color.FromArgb(42, 64, 84);
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
+        }
+
+        private void dashboard_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
