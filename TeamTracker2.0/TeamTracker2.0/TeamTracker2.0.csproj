@@ -91,9 +91,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlassyPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="GridViewHelper.cs" />
     <Compile Include="LogWriter.cs" />
     <Compile Include="MainBoard.cs">
@@ -274,16 +271,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_Scripts.sql" />
-    <None Include="Resources\icons8-meeting-time-50.png" />
-    <None Include="Resources\Webp.net-resizeimage %2823%29.png" />
-    <None Include="Resources\Webp.net-resizeimage %2822%29.png" />
-    <None Include="Resources\Webp.net-resizeimage %2821%29.png" />
-    <None Include="Resources\Webp.net-resizeimage %2820%29.png" />
-    <None Include="Resources\time-and-date.png" />
-    <None Include="Resources\3_.png" />
-    <None Include="Resources\clock.png" />
-    <Content Include="Resources\Dashboard.png" />
-    <None Include="Resources\Dashboard1.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

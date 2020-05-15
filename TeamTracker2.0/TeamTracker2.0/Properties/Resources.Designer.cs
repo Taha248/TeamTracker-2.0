@@ -63,16 +63,6 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3_ {
-            get {
-                object obj = ResourceManager.GetObject("3_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bbb {
             get {
                 object obj = ResourceManager.GetObject("bbb", resourceCulture);
@@ -96,16 +86,6 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap boss {
             get {
                 object obj = ResourceManager.GetObject("boss", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clock {
-            get {
-                object obj = ResourceManager.GetObject("clock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,16 +136,6 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap Dash2 {
             get {
                 object obj = ResourceManager.GetObject("Dash2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Dashboard {
-            get {
-                object obj = ResourceManager.GetObject("Dashboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,16 +196,6 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap icons8_conference_33 {
             get {
                 object obj = ResourceManager.GetObject("icons8-conference-33", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_meeting_time_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-meeting-time-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,16 +283,6 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap time_and_date {
-            get {
-                object obj = ResourceManager.GetObject("time-and-date", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap useronline {
             get {
                 object obj = ResourceManager.GetObject("useronline", resourceCulture);
@@ -346,46 +296,6 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap Webp_net_resizeimage__17_ {
             get {
                 object obj = ResourceManager.GetObject("Webp.net-resizeimage (17)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Webp_net_resizeimage__20_ {
-            get {
-                object obj = ResourceManager.GetObject("Webp.net-resizeimage (20)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Webp_net_resizeimage__21_ {
-            get {
-                object obj = ResourceManager.GetObject("Webp.net-resizeimage (21)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Webp_net_resizeimage__22_ {
-            get {
-                object obj = ResourceManager.GetObject("Webp.net-resizeimage (22)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Webp_net_resizeimage__23_ {
-            get {
-                object obj = ResourceManager.GetObject("Webp.net-resizeimage (23)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
