@@ -101,6 +101,7 @@
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(783, 522);
             this.panel_main.TabIndex = 0;
+            this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
             // 
             // header_panel
             // 
@@ -492,12 +493,7 @@
             this.dashboard_panel.Name = "dashboard_panel";
             this.dashboard_panel.Size = new System.Drawing.Size(590, 454);
             this.dashboard_panel.TabIndex = 7;
-            // 
-            // bunifuiOSSwitch1
-            // 
-            // 
-            // label13
-            // 
+            this.dashboard_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboard_panel_Paint);
             // 
             // MainBoard
             // 

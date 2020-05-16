@@ -85,11 +85,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataManupilation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManupilation.designer.cs">
+      <DependentUpon>DataManupilation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditScreenGeneral.cs" />
+    <Compile Include="EditScreenGeneral.designer.cs">
+      <DependentUpon>EditScreenGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlassyPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="GridViewHelper.cs" />
     <Compile Include="LogWriter.cs" />
@@ -162,6 +175,12 @@
     <Compile Include="UC_UserStatistics.Designer.cs">
       <DependentUpon>UC_UserStatistics.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DataManupilation.resx">
+      <DependentUpon>DataManupilation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditScreenGeneral.resx">
+      <DependentUpon>EditScreenGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,7 +307,6 @@
     <None Include="Resources\grrrr.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB_Scripts.sql" />
     <None Include="Resources\Webp.net-resizeimage %2823%291.png" />
     <None Include="Resources\interface %284%29.png" />
     <None Include="Resources\interface %286%29.png" />

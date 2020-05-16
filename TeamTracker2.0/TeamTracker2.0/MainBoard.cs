@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GridViewExample;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,7 @@ namespace TeamTracker2._0
             InitializeComponent();
             lbl_cross.BackColor = Color.Transparent;
             dashboard_panel.Controls.Add(new UC_Dashboard());
+            new Form1().Show();
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
@@ -121,7 +123,7 @@ namespace TeamTracker2._0
         {
             clearSelection();
             dashboard_panel.Controls.Clear();
-            dashboard_panel.Controls.Add(new UC_ManageTask());
+            dashboard_panel.Controls.Add(new UC_ManageTask(this));
             panel_managetask.BackColor = Color.FromArgb(27, 194, 203);
 
         }
@@ -203,6 +205,16 @@ namespace TeamTracker2._0
             panel_session_log.BackColor = Color.FromArgb(42, 64, 84);
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
             panel_dashboard.BackColor = Color.FromArgb(42, 64, 84);
+        }
+
+        private void panel_main_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

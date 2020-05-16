@@ -26,7 +26,7 @@ namespace TeamTracker2._0
         private BunifuMetroTextbox searchBox;
         private PictureBox pictureBox1;
         private Panel panel4;
-        private Form form = null;
+        private UserControl form = null;
         private Dictionary<int, int> colWidth = null;
         private List<String> searchColumns = null;
         private List<int> hideColumns = null;
@@ -76,10 +76,10 @@ namespace TeamTracker2._0
             }
         }
 
-        public GridViewHelper(string columns, string table, string condition, Form form, BunifuCustomDataGrid bunifuCustomDataGrid)
+        public GridViewHelper(string columns, string table, string condition, UserControl form, BunifuCustomDataGrid bunifuCustomDataGrid)
         {
             InitializeGridView(columns, table, condition, form, bunifuCustomDataGrid);
-            this.BunifuCustomDataGrid.ColumnHeadersHeight = 32;
+          
         }
 
 
@@ -90,7 +90,7 @@ namespace TeamTracker2._0
         //    addEditColumn();
         //}
 
-        public void InitializeGridView(string columns, string table, string condition, Form form, BunifuCustomDataGrid bunifuCustomDataGrid)
+        public void InitializeGridView(string columns, string table, string condition, UserControl form, BunifuCustomDataGrid bunifuCustomDataGrid)
         {
 
             this.cols = columns;
@@ -101,7 +101,6 @@ namespace TeamTracker2._0
             this.BunifuCustomDataGrid = null;
             this.BunifuCustomDataGrid = bunifuCustomDataGrid;
             this.bunifuCustomDataGridCopy = bunifuCustomDataGrid;
-            this.BunifuCustomDataGrid.RowTemplate.Height = 28;
             this.BunifuCustomDataGrid.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bunifuCustomDataGrid1_ColumnHeaderMouseClick);
 
             //          this.bunifuCustomDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid_CellContentClick);
@@ -123,7 +122,6 @@ namespace TeamTracker2._0
         private void addCellContentEvent()
         {
         }
-
         private void loadProperties()
         {
 
@@ -133,9 +131,10 @@ namespace TeamTracker2._0
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
 
             this.BunifuCustomDataGrid.AllowUserToAddRows = false;
-            this.BunifuCustomDataGrid.AllowUserToDeleteRows = false;
+            ////this.BunifuCustomDataGrid.AllowUserToDeleteRows = false;
             this.BunifuCustomDataGrid.AllowUserToResizeColumns = false;
             this.BunifuCustomDataGrid.AllowUserToResizeRows = false;
+           
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.ForeColor = Color.Navy;
@@ -151,18 +150,19 @@ namespace TeamTracker2._0
             this.BunifuCustomDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             //dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
-            //dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             //dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle2.NullValue = null;
             //dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            //this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.BunifuCustomDataGrid.ColumnHeadersHeight =49;
             this.BunifuCustomDataGrid.DoubleBuffered = true;
             this.BunifuCustomDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.BunifuCustomDataGrid.EnableHeadersVisualStyles = false;
             this.BunifuCustomDataGrid.GridColor = System.Drawing.Color.Beige;
-            //this.BunifuCustomDataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+           this.BunifuCustomDataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
             this.BunifuCustomDataGrid.HeaderForeColor = System.Drawing.Color.White;
             this.BunifuCustomDataGrid.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.BunifuCustomDataGrid.MultiSelect = false;
@@ -176,17 +176,17 @@ namespace TeamTracker2._0
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            // this.BunifuCustomDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+             this.BunifuCustomDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.BunifuCustomDataGrid.RowHeadersVisible = false;
             this.BunifuCustomDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            //dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+           dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.BunifuCustomDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.BunifuCustomDataGrid.RowTemplate.Height = 28;
+           this.BunifuCustomDataGrid.RowTemplate.Height = 32;
             this.BunifuCustomDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BunifuCustomDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BunifuCustomDataGrid.ShowCellErrors = false;
@@ -195,26 +195,41 @@ namespace TeamTracker2._0
             this.BunifuCustomDataGrid.ShowRowErrors = false;
             this.BunifuCustomDataGrid.StandardTab = true;
             this.BunifuCustomDataGrid.TabIndex = 0;
-            //dataGridViewCellStyle1.BackColor = Color.Red;
-            //dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;ay
-            //dataGridViewCellStyle4.SelectionBackColor = Color.Orange;
-            //dataGridViewCellStyle1.SelectionBackColor = Color.Orange;
 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
+            // -----------------------------------
+            dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+
+            //dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            //dataGridViewCellStyle1.SelectionBackColor = Color.White;
+
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle1.BackColor = Color.White;
+
+            this.BunifuCustomDataGrid.ColumnHeadersHeight = 33;
+
+            this.BunifuCustomDataGrid.HeaderForeColor = Color.White;
+            this.BunifuCustomDataGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            
+            //dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
+            //dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             //this.BunifuCustomDataGrid.ColumnHeadersHeight = 40;
             //this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9.75F, FontStyle.Bold);
 
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10.5F, FontStyle.Bold);
-            this.BunifuCustomDataGrid.ColumnHeadersHeight = 40;
-            this.BunifuCustomDataGrid.HeaderBgColor = Color.Navy;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Gold;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Gold;
+            //dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
+            //dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            //dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            //this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10.5F, FontStyle.Bold);
+            //this.BunifuCustomDataGrid.ColumnHeadersHeight = 40;
+            //this.BunifuCustomDataGrid.HeaderBgColor = Color.Navy;
+            //dataGridViewCellStyle1.SelectionBackColor = Color.Gold;
+            //dataGridViewCellStyle4.SelectionBackColor = Color.Gold;
 
         }
+
 
         internal void reloadGridView()
         {
@@ -281,7 +296,7 @@ namespace TeamTracker2._0
             this.panel4 = new Panel();
             this.panel4.SuspendLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.Location = new System.Drawing.Point(536, BunifuCustomDataGrid.Location.Y - 40);
+            this.panel4.Location = new System.Drawing.Point(BunifuCustomDataGrid.Width - 188, BunifuCustomDataGrid.Location.Y - 40);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(188, 29);
             this.panel4.TabIndex = 11;
@@ -321,6 +336,7 @@ namespace TeamTracker2._0
             this.searchBox.MouseLeave += new System.EventHandler(this.bunifuMetroTextbox3_MouseLeave);
             this.searchBox.Leave += new System.EventHandler(this.searchBox_LostFocus);
             panel4.Controls.Add(searchBox);
+            searchBox.BringToFront();
 
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 
@@ -452,9 +468,12 @@ namespace TeamTracker2._0
         {
 
             Random r = new Random();
+            double prog = 0;
             for (int i = 0; i < this.BunifuCustomDataGrid.Rows.Count; i++)
             {
-                this.BunifuCustomDataGrid.Rows[i].Cells[BunifuCustomDataGrid.Columns.Count - 1].Value = generate_pp(Convert.ToDouble(progress[i].Split('%')[0]), panel, pictureBox);
+                prog = Convert.ToDouble(progress[i].Split('%')[0]);
+                if (prog < 20) pictureBox.BackColor = Color.Orange; else if (prog >= 20 && prog < 99) pictureBox.BackColor = Color.Yellow; else pictureBox.BackColor = Color.LightGreen;
+                this.BunifuCustomDataGrid.Rows[i].Cells[BunifuCustomDataGrid.Columns.Count - 1].Value = generate_pp(prog, panel, pictureBox);
             }
 
         }
@@ -480,7 +499,6 @@ namespace TeamTracker2._0
         public List<String> getColumnValues(String colName)
         {
             List<string> values = new List<string>();
-            if (values.Count > 0)
                 foreach (DataRow row in this.ds.Tables[0].Rows)
                     values.Add(row["Progress"].ToString());
 
