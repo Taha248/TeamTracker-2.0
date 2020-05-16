@@ -83,8 +83,8 @@ namespace TeamTracker2._0
             pieChart1.Visible = true;
             cartesianChart1.Visible = true;
             List<MessageFormat> msgList = new List<MessageFormat>();
-            msgList.Add(new MessageFormat { Subject = "Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time  ", MsgRecTime=DateTime.Now });
-            msgList.Add(new MessageFormat { Subject = "Meeting For Next Step", Body = "Mr Taha & Zeeshan You have to come bcz you both are the seniors and important pillar of our company",MsgRecTime = DateTime.Now });
+            msgList.Add(new MessageFormat { Subject = "Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time  ", MsgRecTime = DateTime.Now });
+            msgList.Add(new MessageFormat { Subject = "Meeting For Next Step", Body = "Mr Taha & Zeeshan You have to come bcz you both are the seniors and important pillar of our company", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Hello Mere Bhaiyoon ASsalam-o-Alikum", Body = "Mr Taha & Zeeshan apky biwi bachien kese hain sb theek hain? Hello Mere Bhaiyoon ASsalam-o-Alikum.... Hello Mere Bhaiyoon ASsalam-o-Alikum", MsgRecTime = DateTime.Now });
@@ -93,7 +93,7 @@ namespace TeamTracker2._0
 
             // -0.15119X + 164.48074
             double val = 0;
-            val = (-0.15119 * totalHeight)+ 178.48074;
+            val = (-0.15119 * totalHeight) + 178.48074;
             pictureBox6.Height = (int)val;
 
             if (totalHeight < 145)
@@ -116,7 +116,7 @@ namespace TeamTracker2._0
             flowLayoutPanel1.Controls.Add(bottom_);
             flowLayoutPanel1.Controls.Add(top);
             for (int i = 0; i < Messages.Count; i++)
-            { 
+            {
                 Label subject = new Label();
                 subject.Text = Messages[i].Subject;
                 subject.Font = new Font("Raavi", 9, FontStyle.Bold);
@@ -126,7 +126,7 @@ namespace TeamTracker2._0
                 subject.Padding = new Padding(3);
                 subject.Width = 208;
 
-                    int height = getNotificationLabelHeight(Messages[i].Subject);
+                int height = getNotificationLabelHeight(Messages[i].Subject);
                 subject.Height = height;
                 totalHeight += height;
 
@@ -139,7 +139,7 @@ namespace TeamTracker2._0
                 messages.Padding = new Padding(3);
                 messages.Width = 208;
                 if ((Messages[i].Body.Length) > 30)
-                { 
+                {
                     height = getNotificationLabelHeight(Messages[i].Body);
                     messages.Height = height;
                     totalHeight += height;
@@ -185,8 +185,8 @@ namespace TeamTracker2._0
         {
             int textLen = body.Length;
             int temp = textLen / 30;
-            if (textLen % 30 > 0 && temp>0) { if (temp > 1) { temp = ((temp + 1) * 13); } else { temp = ((temp + 1) * 17); } }
-            else if(temp==0) { temp =20; }
+            if (textLen % 30 > 0 && temp > 0) { if (temp > 1) { temp = ((temp + 1) * 13); } else { temp = ((temp + 1) * 17); } }
+            else if (temp == 0) { temp = 20; }
             else { temp = (temp * 16); }
             return temp;
         }
@@ -205,9 +205,11 @@ namespace TeamTracker2._0
                 return minutes == 1 ? minutes + " Minute Ago" : minutes + " Minutes Ago";
             else if (days >= 1 && hours >= 24)
                 return days == 1 ? " Day Ago" : days + " Days Ago";
-            else if (days >= 365) { 
-               int yearCount = days / 365;
-               return days == 365 ? " Year Ago" : yearCount + " Years Ago"; }
+            else if (days >= 365)
+            {
+                int yearCount = days / 365;
+                return days == 365 ? " Year Ago" : yearCount + " Years Ago";
+            }
             else
                 return "Just Received...";
         }
@@ -263,7 +265,7 @@ namespace TeamTracker2._0
         //    }
         //    return temp;
         //}
-        
+
         private void xuiGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -281,7 +283,7 @@ namespace TeamTracker2._0
 
         private void label4_Click(object sender, EventArgs e)
         {
-          OnlineUsers online =   new OnlineUsers();
+            OnlineUsers online = new OnlineUsers();
             online.ShowDialog();
         }
 
@@ -306,11 +308,16 @@ namespace TeamTracker2._0
         {
             flowLayoutPanel1.Focus();
         }
+
+        private void flowLayoutPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
     public class MessageFormat
     {
         public string Subject { get; set; }
         public string Body { get; set; }
-        public DateTime MsgRecTime { get; set; } 
+        public DateTime MsgRecTime { get; set; }
     }
 }

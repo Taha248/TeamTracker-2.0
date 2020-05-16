@@ -50,6 +50,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
@@ -66,7 +67,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -294,7 +294,7 @@
             // 
             // pieChart1
             // 
-            this.pieChart1.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pieChart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pieChart1.Location = new System.Drawing.Point(-1, 26);
             this.pieChart1.Name = "pieChart1";
             this.pieChart1.Size = new System.Drawing.Size(190, 118);
@@ -333,9 +333,20 @@
             this.panel7.Size = new System.Drawing.Size(345, 176);
             this.panel7.TabIndex = 1;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label16.Location = new System.Drawing.Point(86, 1);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(186, 30);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "ANNUAL REPUTATION";
+            // 
             // cartesianChart1
             // 
-            this.cartesianChart1.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartesianChart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cartesianChart1.Location = new System.Drawing.Point(0, 4);
             this.cartesianChart1.Name = "cartesianChart1";
             this.cartesianChart1.Size = new System.Drawing.Size(345, 166);
@@ -350,7 +361,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(361, 286);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -359,6 +370,7 @@
             this.flowLayoutPanel1.TabIndex = 3;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             this.flowLayoutPanel1.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
+            this.flowLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
             // 
             // xuiGradientPanel1
             // 
@@ -486,7 +498,7 @@
             // label15
             // 
             this.label15.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Font = new System.Drawing.Font("Alegreya Sans SC", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(361, 266);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
@@ -520,17 +532,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(11, 80);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(86, 1);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(186, 30);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "ANNUAL REPUTATION";
             // 
             // UC_Dashboard
             // 

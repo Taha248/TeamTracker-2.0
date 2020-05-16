@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GridViewExample;
 
 namespace TeamTracker2._0
 {
     public partial class UC_SessionLogs : UserControl
     {
-        public UC_SessionLogs()
+        GridViewHelper gridViewHelper = null;
+        Form prevForm = null;
+        
+        public UC_SessionLogs(Form form )
         {
+            this.prevForm = form;
             InitializeComponent();
         }
 

@@ -1414,7 +1414,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profile2)).EndInit();
             this.Controls.Add(this.label1);
-            this.Name = "UC_UserStatistics";
+       //     this.Name = "UC_UserStatistics";
             this.ResumeLayout(false);
             this.PerformLayout();
 
