@@ -200,17 +200,22 @@ namespace TeamTracker2._0
             //dataGridViewCellStyle4.SelectionBackColor = Color.Orange;
             //dataGridViewCellStyle1.SelectionBackColor = Color.Orange;
 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             //this.BunifuCustomDataGrid.ColumnHeadersHeight = 40;
             //this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9.75F, FontStyle.Bold);
 
-            dataGridViewCellStyle4.BackColor = System.Drawing.ColorTranslator.FromHtml("#F5F5F5");
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(243, 246, 249);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.BunifuCustomDataGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 10.5F, FontStyle.Bold);
             this.BunifuCustomDataGrid.ColumnHeadersHeight = 40;
-            this.BunifuCustomDataGrid.HeaderBgColor = System.Drawing.ColorTranslator.FromHtml("#191970");
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.ColorTranslator.FromHtml("#1E90FF");
+            this.BunifuCustomDataGrid.HeaderBgColor = Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Gold;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Gold;
+
 
         }
 

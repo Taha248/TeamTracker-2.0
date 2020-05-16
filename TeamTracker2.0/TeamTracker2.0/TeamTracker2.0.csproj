@@ -274,6 +274,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_Scripts.sql" />
+    <None Include="Resources\interface %286%29.png" />
+    <None Include="Resources\interface %285%29.png" />
     <None Include="Resources\icons8-meeting-time-50.png" />
     <None Include="Resources\Webp.net-resizeimage %2823%29.png" />
     <None Include="Resources\Webp.net-resizeimage %2822%29.png" />

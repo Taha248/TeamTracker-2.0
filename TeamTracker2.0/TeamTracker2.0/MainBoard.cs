@@ -133,7 +133,7 @@ namespace TeamTracker2._0
 
             clearSelection();
             dashboard_panel.Controls.Clear();
-            dashboard_panel.Controls.Add(new UC_SessionLogs());
+            dashboard_panel.Controls.Add(new UC_SessionLogs(this));
             panel_session_log.BackColor = Color.FromArgb(27, 194, 203);
         }
 
