@@ -132,9 +132,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profile2)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // xuiFlatTab1
+            // label1
             // 
             this.xuiFlatTab1.ActiveHeaderColor = System.Drawing.Color.DodgerBlue;
             this.xuiFlatTab1.ActiveTextColor = System.Drawing.Color.White;
@@ -1365,6 +1366,14 @@
             this.metroLabel47.UseCustomBackColor = true;
             this.metroLabel47.UseCustomForeColor = true;
             this.metroLabel47.UseStyleColors = true;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(17, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "User Statistics";
             // 
             // tabPage1
             // 
@@ -1404,7 +1413,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profile2)).EndInit();
+            this.Controls.Add(this.label1);
+            this.Name = "UC_UserStatistics";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1491,5 +1503,6 @@
         private MetroFramework.Controls.MetroLabel rep10;
         private MetroFramework.Controls.MetroLabel metroLabel47;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.Label label1;
     }
 }

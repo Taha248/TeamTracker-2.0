@@ -50,7 +50,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.xuiGradientPanel1 = new XanderUI.XUIGradientPanel();
@@ -64,6 +63,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -80,6 +83,8 @@
             this.xuiGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -158,6 +163,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(138, 93);
             this.panel2.TabIndex = 20;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 
@@ -170,6 +177,7 @@
             this.label2.Size = new System.Drawing.Size(78, 26);
             this.label2.TabIndex = 20;
             this.label2.Text = "244444";
+            this.label2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // pictureBox1
             // 
@@ -180,6 +188,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(51, 34);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel1
             // 
@@ -201,6 +210,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(40, 34);
             this.pictureBox9.TabIndex = 18;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.label4_Click);
             // 
             // label4
             // 
@@ -215,6 +225,7 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "20000";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel5
             // 
@@ -232,11 +243,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(13, 85);
+            this.label6.Location = new System.Drawing.Point(19, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 18);
+            this.label6.Size = new System.Drawing.Size(148, 30);
             this.label6.TabIndex = 2;
             this.label6.Text = "TIME REMAINING";
             // 
@@ -246,11 +257,11 @@
             this.xuiFlatProgressBar1.BorderColor = System.Drawing.Color.Black;
             this.xuiFlatProgressBar1.CompleteColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(119)))), ((int)(((byte)(215)))));
             this.xuiFlatProgressBar1.InocmpletedColor = System.Drawing.Color.White;
-            this.xuiFlatProgressBar1.Location = new System.Drawing.Point(32, 112);
+            this.xuiFlatProgressBar1.Location = new System.Drawing.Point(16, 114);
             this.xuiFlatProgressBar1.MaxValue = 100;
             this.xuiFlatProgressBar1.Name = "xuiFlatProgressBar1";
             this.xuiFlatProgressBar1.ShowBorder = true;
-            this.xuiFlatProgressBar1.Size = new System.Drawing.Size(120, 11);
+            this.xuiFlatProgressBar1.Size = new System.Drawing.Size(157, 11);
             this.xuiFlatProgressBar1.TabIndex = 1;
             this.xuiFlatProgressBar1.Text = "xuiFlatProgressBar1";
             this.xuiFlatProgressBar1.Value = 50;
@@ -259,11 +270,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F);
+            this.label1.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(18, 18);
+            this.label1.Location = new System.Drawing.Point(23, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 18);
+            this.label1.Size = new System.Drawing.Size(139, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "CURRENT TASK";
             // 
@@ -271,7 +282,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F);
+            this.label7.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
@@ -283,6 +294,7 @@
             // 
             // pieChart1
             // 
+            this.pieChart1.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pieChart1.Location = new System.Drawing.Point(-1, 26);
             this.pieChart1.Name = "pieChart1";
             this.pieChart1.Size = new System.Drawing.Size(190, 118);
@@ -303,37 +315,27 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(63, 6);
+            this.label8.Location = new System.Drawing.Point(63, 3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 23);
+            this.label8.Size = new System.Drawing.Size(67, 30);
             this.label8.TabIndex = 0;
             this.label8.Text = "TASKS";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.cartesianChart1);
             this.panel7.Location = new System.Drawing.Point(10, 266);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(345, 176);
             this.panel7.TabIndex = 1;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(98, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(179, 26);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Monthly Repuation";
-            // 
             // cartesianChart1
             // 
+            this.cartesianChart1.Font = new System.Drawing.Font("Quicksand Medium", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cartesianChart1.Location = new System.Drawing.Point(0, 4);
             this.cartesianChart1.Name = "cartesianChart1";
             this.cartesianChart1.Size = new System.Drawing.Size(345, 166);
@@ -348,7 +350,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("MS Outlook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(361, 286);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -356,6 +358,7 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(232, 156);
             this.flowLayoutPanel1.TabIndex = 3;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
             // 
             // xuiGradientPanel1
             // 
@@ -471,9 +474,9 @@
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(24, 6);
+            this.label10.Location = new System.Drawing.Point(24, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(137, 26);
             this.label10.TabIndex = 2;
@@ -483,7 +486,7 @@
             // label15
             // 
             this.label15.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Alegreya Sans SC", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(361, 266);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
@@ -494,10 +497,47 @@
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(580, 270);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(11, 172);
+            this.panel10.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox6);
+            this.panel9.Location = new System.Drawing.Point(575, 286);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(4, 156);
+            this.panel9.TabIndex = 29;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox6.Location = new System.Drawing.Point(-5, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(11, 80);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Raavi", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label16.Location = new System.Drawing.Point(86, 1);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(186, 30);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "ANNUAL REPUTATION";
+            // 
             // UC_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel8);
@@ -535,6 +575,8 @@
             this.xuiGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,7 +603,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label9;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private XanderUI.XUIGradientPanel xuiGradientPanel1;
@@ -575,5 +616,9 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label16;
     }
 }
