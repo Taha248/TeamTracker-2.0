@@ -19,7 +19,11 @@ namespace TeamTracker2._0
         public UC_SessionLogs(Form form )
         {
             this.prevForm = form;
+           
             InitializeComponent();
+
+            gridViewHelper = new GridViewHelper("u.name as Name ,s.timein as TimeIn ,s.timeout as TimeOut", "session as s, user as u", "s.UserID=u.UserID ORDER BY timein DESC ", this, bunifuCustomDataGrid1);
+
         }
 
 
@@ -155,6 +159,32 @@ namespace TeamTracker2._0
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        bool isPainted = false;
+        private void bunifuCustomDataGrid1_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isPainted)
+            {
+                //gridViewHelper.addProgressBarColumn("Progress", gridViewHelper.getColumnValues("Progress"), Color.LightGreen, 5);
+                //gridViewHelper.addEditColumn();
+                //gridViewHelper.addDeleteColumn();
+                //gridViewHelper.enableSearchEngine(new String[] { "Status", "TaskName" });
+
+             //   gridViewHelper.addColumnWidth(3, 120);
+             //   gridViewHelper.addColumnWidth(4, 70);
+            //    gridViewHelper.addColumnWidth(5, 81);
+                //gridViewHelper.addColumnWidth(6, 50);
+                //gridViewHelper.addColumnWidth(7, 53);
+                //gridViewHelper.addColumnWidth(8, 33);
+            //    gridViewHelper.adjustWidth();
+                //gridViewHelper.hideColumn(0);
+                //gridViewHelper.hideColumn(1);
+                //gridViewHelper.hideColumn(2);
+
+                panel1.SendToBack();
+                isPainted = true;
+            }
         }
     }
 }

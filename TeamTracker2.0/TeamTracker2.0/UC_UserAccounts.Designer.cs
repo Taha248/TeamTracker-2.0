@@ -28,33 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // bunifuCustomDataGrid1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(17, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "User Accounts";
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuCustomDataGrid1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.bunifuCustomDataGrid1.DoubleBuffered = true;
+            this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
+            this.bunifuCustomDataGrid1.GridColor = System.Drawing.Color.White;
+            this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(9, 48);
+            this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
+            this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.bunifuCustomDataGrid1.RowHeadersWidth = 42;
+            this.bunifuCustomDataGrid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(572, 347);
+            this.bunifuCustomDataGrid1.TabIndex = 17;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(213, 405);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 40);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "ADD ACCOUNT";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // UC_UserAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bunifuCustomDataGrid1);
             this.Name = "UC_UserAccounts";
+            this.Size = new System.Drawing.Size(590, 454);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private System.Windows.Forms.Button button2;
     }
 }

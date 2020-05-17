@@ -100,6 +100,7 @@
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(419, 372);
             this.bunifuCustomDataGrid1.TabIndex = 13;
             this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
+            this.bunifuCustomDataGrid1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCustomDataGrid1_Paint);
             // 
             // label1
             // 
