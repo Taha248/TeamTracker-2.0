@@ -22,7 +22,7 @@ namespace TeamTracker2._0
            
             InitializeComponent();
 
-            gridViewHelper = new GridViewHelper("u.name as Name ,s.timein as TimeIn ,s.timeout as TimeOut", "session as s, user as u", "s.UserID=u.UserID ORDER BY timein DESC ", this, bunifuCustomDataGrid1);
+            gridViewHelper = new GridViewHelper("u.name as Name ,s.timein as TimeIn ,s.timeout as TimeOut,TIMEDIFF(timeout,timein) AS TimeDifference", "session as s, user as u", "s.UserID=u.UserID ORDER BY timein DESC ", this, bunifuCustomDataGrid1);
 
         }
 
