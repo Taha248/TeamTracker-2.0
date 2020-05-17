@@ -22,7 +22,7 @@ namespace TeamTracker2._0
         public static System.Windows.Forms.BindingSource bs;
         private BunifuCustomDataGrid bunifuCustomDataGrid = null;
         private BunifuCustomDataGrid bunifuCustomDataGridCopy = null;
-
+        private bool isProgressEnable = false;
         private BunifuMetroTextbox searchBox;
         private PictureBox pictureBox1;
         private Panel panel4;
@@ -237,7 +237,6 @@ namespace TeamTracker2._0
             {
                 this.BunifuCustomDataGrid.Columns.Clear();
 
-
                 ds = ManData.getDataSet(this.cols, table, condition);
                 this.BunifuCustomDataGrid.DataSource = ds.Tables[0];
 
@@ -245,9 +244,14 @@ namespace TeamTracker2._0
                 {
                     this.BunifuCustomDataGrid.Columns[colNum].Visible = false;
                 }
+
+                if(isProgressEnable)
                 this.addProgressBarColumn("Progress", this.getColumnValues("Progress"), Color.LightGreen, 5);
+                if(isEditEnable)
                 addEditColumn();
+                if(isDeleteEnable)
                 addDeleteColumn();
+
                 this.adjustWidth();
 
             }
@@ -397,6 +401,8 @@ namespace TeamTracker2._0
             this.BunifuCustomDataGrid.Columns.Add(prog);
             setProgressbar(panel, pictureBox, columnNo, progress);
             setColumnWidth(columnNo, 70);
+
+            isProgressEnable = true;
 
 
         }
