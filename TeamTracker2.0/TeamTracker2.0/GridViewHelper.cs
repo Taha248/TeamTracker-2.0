@@ -282,9 +282,11 @@ namespace TeamTracker2._0
 
             (this.BunifuCustomDataGrid.DataSource as DataTable).DefaultView.RowFilter = string.Format(q_search);
 
+            if(isProgressEnable)
             this.addProgressBarImage("Progress", this.getColumnValues("Progress"), Color.LightGreen, 5);
-
+            if(isEditEnable)
             addEditColumnImage();
+            if(isDeleteEnable)
             addDeleteColumnImage();
 
 
@@ -378,9 +380,12 @@ namespace TeamTracker2._0
         private void bunifuCustomDataGrid1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
+            if(isProgressEnable)
             this.addProgressBarImage("Progress", this.getColumnValues("Progress"), Color.LightGreen, 5);
-            this.addDeleteColumnImage();
-            this.addEditColumnImage();
+            if (isDeleteEnable)
+                this.addDeleteColumnImage();
+            if (isEditEnable)
+                this.addEditColumnImage();
             adjustWidth();
         }
 
