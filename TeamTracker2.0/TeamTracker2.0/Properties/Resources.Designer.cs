@@ -273,6 +273,16 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap interfaceZ {
+            get {
+                object obj = ResourceManager.GetObject("interfaceZ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ooo {
             get {
                 object obj = ResourceManager.GetObject("ooo", resourceCulture);
@@ -316,6 +326,26 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap seo_and_web__1_ {
             get {
                 object obj = ResourceManager.GetObject("seo-and-web (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signs {
+            get {
+                object obj = ResourceManager.GetObject("signs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap social {
+            get {
+                object obj = ResourceManager.GetObject("social", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

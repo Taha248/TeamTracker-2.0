@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBoard));
             this.panel_main = new System.Windows.Forms.Panel();
             this.header_panel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.bunifuiOSSwitch1 = new Bunifu.Framework.UI.BunifuiOSSwitch();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_minimum = new System.Windows.Forms.Label();
             this.panel_cross = new System.Windows.Forms.Panel();
@@ -68,6 +75,9 @@
             this.dashboard_panel = new System.Windows.Forms.Panel();
             this.panel_main.SuspendLayout();
             this.header_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_cross.SuspendLayout();
             this.panel_sidebar.SuspendLayout();
@@ -106,6 +116,13 @@
             // header_panel
             // 
             this.header_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.header_panel.Controls.Add(this.label13);
+            this.header_panel.Controls.Add(this.pictureBox11);
+            this.header_panel.Controls.Add(this.pictureBox10);
+            this.header_panel.Controls.Add(this.pictureBox9);
+            this.header_panel.Controls.Add(this.label12);
+            this.header_panel.Controls.Add(this.label10);
+            this.header_panel.Controls.Add(this.bunifuiOSSwitch1);
             this.header_panel.Controls.Add(this.panel2);
             this.header_panel.Controls.Add(this.panel_cross);
             this.header_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
@@ -114,6 +131,77 @@
             this.header_panel.Size = new System.Drawing.Size(590, 67);
             this.header_panel.TabIndex = 5;
             this.header_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_panel_MouseDown);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(471, 36);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "label13";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::TeamTracker2._0.Properties.Resources.signs;
+            this.pictureBox11.Location = new System.Drawing.Point(443, 31);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox11.TabIndex = 7;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::TeamTracker2._0.Properties.Resources.social;
+            this.pictureBox10.Location = new System.Drawing.Point(520, 32);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.TabIndex = 6;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::TeamTracker2._0.Properties.Resources.interfaceZ;
+            this.pictureBox9.Location = new System.Drawing.Point(553, 32);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.TabIndex = 5;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(250, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "label12";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(63, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "label10";
+            // 
+            // bunifuiOSSwitch1
+            // 
+            this.bunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch1.BackgroundImage")));
+            this.bunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch1.Location = new System.Drawing.Point(11, 25);
+            this.bunifuiOSSwitch1.Name = "bunifuiOSSwitch1";
+            this.bunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(202)))), ((int)(((byte)(94)))));
+            this.bunifuiOSSwitch1.Size = new System.Drawing.Size(43, 25);
+            this.bunifuiOSSwitch1.TabIndex = 2;
+            this.bunifuiOSSwitch1.Value = true;
+            this.bunifuiOSSwitch1.OnValueChange += new System.EventHandler(this.bunifuiOSSwitch1_OnValueChange);
             // 
             // panel2
             // 
@@ -507,6 +595,10 @@
             this.Text = "TeamTracker";
             this.panel_main.ResumeLayout(false);
             this.header_panel.ResumeLayout(false);
+            this.header_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel_cross.ResumeLayout(false);
@@ -581,6 +673,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel dashboard_panel;
+        private System.Windows.Forms.Label label10;
+        private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label13;
     }
 }
 

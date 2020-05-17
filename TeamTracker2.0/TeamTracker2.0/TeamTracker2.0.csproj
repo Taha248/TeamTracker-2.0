@@ -123,6 +123,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="TotalUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +178,7 @@
     <Compile Include="UC_UserStatistics.Designer.cs">
       <DependentUpon>UC_UserStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="DataManupilation.resx">
       <DependentUpon>DataManupilation.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +311,9 @@
     <None Include="Resources\grrrr.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\signs.png" />
+    <None Include="Resources\social.png" />
+    <None Include="Resources\interfaceZ.png" />
     <None Include="Resources\Webp.net-resizeimage %2823%291.png" />
     <None Include="Resources\interface %284%29.png" />
     <None Include="Resources\interface %286%29.png" />

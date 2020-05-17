@@ -12,6 +12,7 @@ namespace TeamTracker2._0
 {
     public partial class MainBoard : Form
     {
+        public static string username = "zee";
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -26,6 +27,16 @@ namespace TeamTracker2._0
             lbl_cross.BackColor = Color.Transparent;
             dashboard_panel.Controls.Add(new UC_Dashboard());
             new Form1().Show();
+
+            initUI();
+        }
+
+        private void initUI()
+        {
+            label12.Text = "welcome : " + username;
+            label10.Text = "Time In";
+            bunifuiOSSwitch1.Value = false;
+
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
@@ -215,6 +226,40 @@ namespace TeamTracker2._0
         private void dashboard_panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public static string getUserID()
+        {
+            string userid = "";
+
+            DataTable getuser = GridViewExample.ManData.getDataReader("*", "user", " Username='" + username + "'");
+            foreach (DataRow row in getuser.Rows)
+            {
+                userid = row["UserID"].ToString();
+            }
+            return userid;
+        }
+
+        private void bunifuiOSSwitch1_OnValueChange(object sender, EventArgs e)
+        {
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                label10.Text = "Time In";
+            }
+            else
+            {
+                label10.Text = "Time Out";
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Log out sucessfully!");
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("User Profile!");
         }
     }
 }
