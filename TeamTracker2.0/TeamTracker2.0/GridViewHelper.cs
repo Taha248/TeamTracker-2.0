@@ -522,7 +522,11 @@ namespace TeamTracker2._0
             Bitmap image = (Bitmap)getImage("iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAcQAAAHEBHD+AdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGeSURBVDiNldI7SEJhFAfw833385pmKYQ1RENQ4FAQNvSiWhpq6DG15yOapCGJUsKpMUiiqefSa2gKA+lF9LAhaAsCM+hBSw+09Kb33tOSEd2reM/8//3P+eAjiAhaxtA16kTKxgHwWie8uQgigr51qJ4ibcyGEOFJiCyGFbjbM4nIfF+OMSO9j8m68PY+M7S4AxRZNRL5/DdJOV4NS7VWL5SXyuxk50PsHDABITaGgH1CZMGe9+wfnAn0WoCjwOaOPvjVmSSRpBVGAagW/PNImYipzdTe7JRmzOYO49xpdEvYnXUB5NmeE59FN4XdoDubY2q4qMfjlXPhUHD4b1ZxASGEWNKfE2VCnAMJ/+Dbjf9Y9QJjk8vebvvMdDfcGP2+tcRLVSXQi9t1IRQcUbtWUVBqEvsrzKL16k7/LkVfePaYXkqGgp7/OUOLy08z3KKigKMg7FwWLz8ndFtf8H6MB0sptc0AUCPyYFYUPISXp3MA1cn7DwoqQIDXkg6HVQsidYM8IFSnLfoYMTQ725DAFCCYC2+ANJFhPhlZ2PgG3Hy3V++SfzgAAAAASUVORK5CYII=");
             int col = 0;
             DataGridViewImageColumn edit = new DataGridViewImageColumn();
+            if(isProgressEnable)
             col = ds.Tables[0].Columns.Count + 1;
+            else
+                col = ds.Tables[0].Columns.Count;
+
 
             this.BunifuCustomDataGrid.Columns.Add(edit);
 
@@ -541,7 +545,10 @@ namespace TeamTracker2._0
             Bitmap image = (Bitmap)getImage("iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAcQAAAHEBHD+AdwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGeSURBVDiNldI7SEJhFAfw833385pmKYQ1RENQ4FAQNvSiWhpq6DG15yOapCGJUsKpMUiiqefSa2gKA+lF9LAhaAsCM+hBSw+09Kb33tOSEd2reM/8//3P+eAjiAhaxtA16kTKxgHwWie8uQgigr51qJ4ibcyGEOFJiCyGFbjbM4nIfF+OMSO9j8m68PY+M7S4AxRZNRL5/DdJOV4NS7VWL5SXyuxk50PsHDABITaGgH1CZMGe9+wfnAn0WoCjwOaOPvjVmSSRpBVGAagW/PNImYipzdTe7JRmzOYO49xpdEvYnXUB5NmeE59FN4XdoDubY2q4qMfjlXPhUHD4b1ZxASGEWNKfE2VCnAMJ/+Dbjf9Y9QJjk8vebvvMdDfcGP2+tcRLVSXQi9t1IRQcUbtWUVBqEvsrzKL16k7/LkVfePaYXkqGgp7/OUOLy08z3KKigKMg7FwWLz8ndFtf8H6MB0sptc0AUCPyYFYUPISXp3MA1cn7DwoqQIDXkg6HVQsidYM8IFSnLfoYMTQ725DAFCCYC2+ANJFhPhlZ2PgG3Hy3V++SfzgAAAAASUVORK5CYII=");
             int col = 0;
             DataGridViewImageColumn edit = new DataGridViewImageColumn();
-            col = ds.Tables[0].Columns.Count + 1;
+            if (isProgressEnable)
+                col = ds.Tables[0].Columns.Count + 1;
+            else
+                col = ds.Tables[0].Columns.Count;
 
 
 
@@ -588,10 +595,12 @@ namespace TeamTracker2._0
             int col = 0;
             DataGridViewImageColumn delete = new DataGridViewImageColumn();
 
-            if (isEditEnable)
+            if (isProgressEnable && isEditEnable)
                 col = ds.Tables[0].Columns.Count + 2;
-            else
+            else if ((isProgressEnable && !isEditEnable )|| (!isProgressEnable && isEditEnable))
                 col = ds.Tables[0].Columns.Count + 1;
+            else
+                col = ds.Tables[0].Columns.Count; ;
 
 
             this.BunifuCustomDataGrid.Columns.Add(delete);
@@ -613,10 +622,12 @@ namespace TeamTracker2._0
             int col = 0;
             DataGridViewImageColumn delete = new DataGridViewImageColumn();
 
-            if (isEditEnable)
+            if (isProgressEnable && isEditEnable)
                 col = ds.Tables[0].Columns.Count + 2;
-            else
+            else if ((isProgressEnable && !isEditEnable) || (!isProgressEnable && isEditEnable))
                 col = ds.Tables[0].Columns.Count + 1;
+            else
+                col = ds.Tables[0].Columns.Count; ;
 
 
 
