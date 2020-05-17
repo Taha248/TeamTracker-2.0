@@ -20,7 +20,7 @@ namespace GridViewExample
 
         public static MySqlConnection getConnection()
         {
-            return new MySqlConnection(@"server=localhost;user id=root;database=teamtracker");
+            return new MySqlConnection(@"server=localhost;user id=root;database=teamtracker;Convert Zero Datetime=True");
         }
 
         public static bool executeInsertQuery(Dictionary<String, String> data, String table)
