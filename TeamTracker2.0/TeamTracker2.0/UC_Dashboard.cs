@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
+using GridViewExample;
 
 namespace TeamTracker2._0
 {
@@ -90,6 +91,7 @@ namespace TeamTracker2._0
             msgList.Add(new MessageFormat { Subject = "Hello Mere Bhaiyoon ASsalam-o-Alikum", Body = "Mr Taha & Zeeshan apky biwi bachien kese hain sb theek hain? Hello Mere Bhaiyoon ASsalam-o-Alikum.... Hello Mere Bhaiyoon ASsalam-o-Alikum", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "test", Body = "test", MsgRecTime = DateTime.Now });
             LoadNotification(msgList);
+            initUI();
 
             // -0.15119X + 164.48074
             double val = 0;
@@ -98,6 +100,24 @@ namespace TeamTracker2._0
 
             if (totalHeight < 145)
                 panel9.Hide();
+        }
+
+        private void initUI()
+        {
+            List<User> userids = showActiveUsers();
+            label4.Text = userids[0].ActiveUsers;
+
+            List<User> tot = getTotaluser();
+            label2.Text = tot[0].TotalUsers;
+          
+
+            List<User> incUser = getincompleteTasks();
+            label3.Text = incUser[0].TaskInProgress;
+
+            List<User> cmpUser = tasksCompleted();
+            label5.Text = cmpUser[0].TaskCompleted;
+
+            label7.Text = getCurrentTask("4").TaskName;
         }
 
         private void LoadNotification(List<MessageFormat> Messages)
@@ -313,6 +333,79 @@ namespace TeamTracker2._0
         {
 
         }
+
+        public List<User> showActiveUsers()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = GridViewExample.ManData.getDataReader("COUNT(*) AS users_active", "session", " ISACTIVE='False'");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+                user.ActiveUsers = row["users_active"].ToString();
+
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static Task getCurrentTask(string userId)
+        {
+            Task taskname = new Task();
+            DataTable readUserTask = ManData.getDataReader("task.TaskTitle,DATEDIFF(NOW(),LastDate) AS deadline ", "task", "  AssignedTo = '" + userId + "' AND (TaskStatus != 'Rejected' AND TaskStatus != 'Approved' ) ORDER BY deadline ASC LIMIT 0,1");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                taskname.TaskName = row["TaskTitle"].ToString();
+            }
+            return taskname;
+        }
+
+        public static List<User> getTotaluser()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = GridViewExample.ManData.getDataReader("COUNT(UserID) AS total_users ", "user", null);
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+                user.TotalUsers = row["total_users"].ToString();
+
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static List<User> getincompleteTasks()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = ManData.getDataReader("COUNT(*) AS incomplete_tasks ", "task", " Progress != '100%' AND TaskStatus != 'Rejected' ");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+                user.TaskInProgress = row["incomplete_tasks"].ToString();
+
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static List<User> tasksCompleted()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = ManData.getDataReader("COUNT(*) AS tasks_completed ", "task", " Progress = '100%' AND TaskStatus = 'Approved' ");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+                user.TaskCompleted = row["tasks_completed"].ToString();
+
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+
     }
     public class MessageFormat
     {
