@@ -16,9 +16,11 @@ namespace TeamTracker2._0
     public partial class UC_Dashboard : UserControl
     {
         int totalHeight = 0;
-        public UC_Dashboard()
+        Form form = null;
+        public UC_Dashboard(Form form)
         {
             InitializeComponent();
+            this.form = form; 
             LoadPieChart();
             LoadReputationGraph();
             this.flowLayoutPanel1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseWheel);
@@ -303,7 +305,7 @@ namespace TeamTracker2._0
 
         private void label4_Click(object sender, EventArgs e)
         {
-            OnlineUsers online = new OnlineUsers();
+            OnlineUsers online = new OnlineUsers(form);
             online.ShowDialog();
         }
 
@@ -319,7 +321,7 @@ namespace TeamTracker2._0
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            TotalUsers online = new TotalUsers();
+            TotalUsers online = new TotalUsers(form);
             online.ShowDialog();
 
         }
