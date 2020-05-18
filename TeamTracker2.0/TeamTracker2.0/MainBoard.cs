@@ -33,7 +33,7 @@ namespace TeamTracker2._0
 
         private void initUI()
         {
-            label12.Text = "welcome : " + username;
+            //label12.Text = "welcome : " + username;
             label10.Text = "Time In";
             bunifuiOSSwitch1.Value = false;
 
@@ -260,6 +260,11 @@ namespace TeamTracker2._0
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             MessageBox.Show("User Profile!");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
