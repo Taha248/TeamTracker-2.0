@@ -13,6 +13,7 @@ namespace TeamTracker2._0
 {
     public partial class OnlineUsers : Form
     {
+     //   Color TransparencyKey = Color.Fuchsia;
         Form prevForm = null;
         public OnlineUsers()
         {
@@ -129,9 +130,9 @@ namespace TeamTracker2._0
         private void OnlineUsers_Paint(object sender, PaintEventArgs e)
         {
 
-            var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
+            //var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
 
-            e.Graphics.FillRectangle(hb, this.DisplayRectangle);
+            //e.Graphics.FillRectangle(hb, this.DisplayRectangle);
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)

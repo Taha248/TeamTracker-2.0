@@ -51,5 +51,10 @@ namespace TeamTracker2._0
                 isPainted = true;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
