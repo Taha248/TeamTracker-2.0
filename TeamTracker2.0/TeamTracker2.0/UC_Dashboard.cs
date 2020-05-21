@@ -153,7 +153,7 @@ namespace TeamTracker2._0
                 totalHeight += height;
 
                 Label messages = new Label();
-                messages.Font = new Font("Raavi", 7, FontStyle.Regular);
+                messages.Font = new Font("Montserrat", 7, FontStyle.Regular);
                 messages.ForeColor = Color.Gray;
                 messages.BackColor = Color.White;
                 messages.TextAlign = ContentAlignment.TopLeft;
@@ -173,7 +173,7 @@ namespace TeamTracker2._0
                 date.Width = 208;
                 date.Height = 17;
                 totalHeight += 17;
-                date.Font = new Font("Raavi", 6, FontStyle.Regular);
+                date.Font = new Font("Montserrat", 7, FontStyle.Regular);
                 date.Text = msgTime(Messages[i].MsgRecTime);
                 date.TextAlign = ContentAlignment.TopRight;
                 date.BackColor = Color.White;
@@ -208,7 +208,7 @@ namespace TeamTracker2._0
             int textLen = body.Length;
             int temp = textLen / 30;
             if (textLen % 30 > 0 && temp > 0) { if (temp > 1) { temp = ((temp + 1) * 13); } else { temp = ((temp + 1) * 17); } }
-            else if (temp == 0) { temp = 20; }
+            else if (temp == 0) { temp = 21; }
             else { temp = (temp * 16); }
             return temp;
         }
@@ -407,7 +407,17 @@ namespace TeamTracker2._0
             return taskList;
         }
 
+        private void xuiGradientPanel1_MouseHover(object sender, EventArgs e)
+        {
+            //this.xuiGradientPanel1.BackColor = Color.Red;
+        }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+            TaskLogs taskLogs = new TaskLogs();
+            taskLogs.ShowDialog();
+        }
     }
     public class MessageFormat
     {
