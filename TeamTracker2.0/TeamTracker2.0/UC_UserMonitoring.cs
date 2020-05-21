@@ -39,8 +39,9 @@ namespace TeamTracker2._0
         {
             //   panel6.BackColor = Color.Transparent; //
             // panel6.BackColor= Color.FromArgb(0, 153, 204);
-            panel6.BackColor = ColorTranslator.FromHtml("#8eacbb");
+            //panel6.BackColor = ColorTranslator.FromHtml("#8eacbb");
             //panel6.ForeColor = Color.DeepSkyBlue;
+            panel5.BackColor = Color.FromArgb(1, 55, 91); 
             loadEmployeeDropDown();
             loadProcessList();
             loadScreenShot();
@@ -62,11 +63,12 @@ namespace TeamTracker2._0
             pro.Add(new ProcessList { processName = "Notepad" });
             pro.Add(new ProcessList { processName = "TeamViewer" });
             pro.Add(new ProcessList { processName = "Snipping Tool" });
+            pro.Add(new ProcessList { processName = "Snipping Tool" });
             this.flowLayoutPanel8.WrapContents = false;
             this.flowLayoutPanel8.AutoScroll = true;
 
             Label top = new Label();
-            top.Width = 200;
+            top.Width = 150;
             top.Height = 5;
             top.BackColor = Color.White;
 
@@ -76,16 +78,16 @@ namespace TeamTracker2._0
             {
                 Label process = new Label();
                 process.Text = pro[i].processName;
-                process.Font = new Font("Corbel", 9, FontStyle.Bold);
+                process.Font = new Font("Montserrat", 8, FontStyle.Regular);
                 process.TextAlign = ContentAlignment.MiddleCenter;
                 process.ForeColor = Color.Black;//229,244,255//135,206, 250
-                process.BackColor = ColorTranslator.FromHtml("#ffff72");//Color.FromArgb(229, 244, 255);
+                process.BackColor = Color.FromArgb(229, 244, 255);//Color.FromArgb(237,140,120);//Color.SkyBlue; //ColorTranslator.FromHtml("#FFD197");
 
                 process.Padding = new Padding(3);
-                process.Width = 217;
-                process.Height = 30;
+                process.Width = 162;
+                process.Height = 23;
                 Label bottom = new Label();
-                bottom.Width = 217;
+                bottom.Width = 162;
                 bottom.Height = 3;
                 bottom.BackColor = Color.White;
 
@@ -115,6 +117,21 @@ namespace TeamTracker2._0
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

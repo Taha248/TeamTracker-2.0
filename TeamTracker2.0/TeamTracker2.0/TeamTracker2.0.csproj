@@ -124,6 +124,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="TaskLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskLogs.Designer.cs">
+      <DependentUpon>TaskLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="TotalUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TaskLogs.resx">
+      <DependentUpon>TaskLogs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TotalUsers.resx">
       <DependentUpon>TotalUsers.cs</DependentUpon>
     </EmbeddedResource>
