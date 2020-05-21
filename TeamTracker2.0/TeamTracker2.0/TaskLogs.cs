@@ -12,9 +12,14 @@ namespace TeamTracker2._0
 {
     public partial class TaskLogs : Form
     {
+        GridViewHelper gridViewHelper = null;
+        public static int userID=2;
         public TaskLogs()
         {
             InitializeComponent();
+
+            gridViewHelper = new GridViewHelper("taskTitle as Task,taskstatus as Status ,progress as Progress,lastdate as Deadline, DeadlineCrossed as DeadlineCrossed", "task", "AssignedTo = '"+userID+"' ORDER BY lastdate DESC ", null, bunifuCustomDataGrid1);
+
         }
 
         private void TaskLogs_Load(object sender, EventArgs e)
@@ -48,6 +53,37 @@ namespace TeamTracker2._0
         private void lbl_cross_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void taskLog_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.LightGray, ButtonBorderStyle.Dashed);
+        }
+        bool isPainted;
+        private void bunifuCustomDataGrid1_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isPainted)
+            {
+                //gridViewHelper.addProgressBarColumn("Progress", gridViewHelper.getColumnValues("Progress"), Color.LightGreen, 5);
+                //gridViewHelper.addEditColumn();
+                //gridViewHelper.addDeleteColumn();
+                //gridViewHelper.enableSearchEngine(new String[] { "Status", "Task" });
+
+                //   gridViewHelper.addColumnWidth(3, 120);
+                //   gridViewHelper.addColumnWidth(4, 70);
+                //    gridViewHelper.addColumnWidth(5, 81);
+                //gridViewHelper.addColumnWidth(6, 50);
+                gridViewHelper.addColumnWidth(1, 80);
+                gridViewHelper.addColumnWidth(2, 80);
+                gridViewHelper.addColumnWidth(3, 110);
+                gridViewHelper.adjustWidth();
+                //gridViewHelper.hideColumn(0);
+                //gridViewHelper.hideColumn(1);
+                //gridViewHelper.hideColumn(2);
+
+                panel1.SendToBack();
+                isPainted = true;
+            }
         }
     }
 }
