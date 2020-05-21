@@ -26,7 +26,6 @@ namespace TeamTracker2._0
             InitializeComponent();
             lbl_cross.BackColor = Color.Transparent;
             dashboard_panel.Controls.Add(new UC_Dashboard(this));
-            new Form1().Show();
 
             initUI();
         }

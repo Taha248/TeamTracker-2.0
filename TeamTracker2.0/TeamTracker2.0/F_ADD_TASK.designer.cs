@@ -3,7 +3,7 @@ using System;
 
 namespace GridViewExample
 {
-    partial class DataManupilation
+    partial class F_ADD_TASK
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,16 @@ namespace GridViewExample
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManupilation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ADD_TASK));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_cross = new System.Windows.Forms.Panel();
             this.lbl_cross = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_taskdtl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chkbox_extend = new System.Windows.Forms.CheckBox();
+            this.dropDownAssTo = new System.Windows.Forms.ComboBox();
+            this.dropdownSts = new System.Windows.Forms.ComboBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_date = new System.Windows.Forms.DateTimePicker();
             this.txtExtension = new System.Windows.Forms.TextBox();
@@ -53,9 +56,6 @@ namespace GridViewExample
             this.Detail = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.TaskID = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dropdownSts = new System.Windows.Forms.ComboBox();
-            this.dropDownAssTo = new System.Windows.Forms.ComboBox();
-            this.chkbox_extend = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel_cross.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,9 +118,9 @@ namespace GridViewExample
             this.lbl_taskdtl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_taskdtl.Location = new System.Drawing.Point(15, 0);
             this.lbl_taskdtl.Name = "lbl_taskdtl";
-            this.lbl_taskdtl.Size = new System.Drawing.Size(79, 16);
+            this.lbl_taskdtl.Size = new System.Drawing.Size(71, 16);
             this.lbl_taskdtl.TabIndex = 1;
-            this.lbl_taskdtl.Text = "Task Details";
+            this.lbl_taskdtl.Text = "Task Entry";
             // 
             // panel3
             // 
@@ -147,6 +147,33 @@ namespace GridViewExample
             this.panel3.Size = new System.Drawing.Size(480, 391);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
+            // 
+            // chkbox_extend
+            // 
+            this.chkbox_extend.AutoSize = true;
+            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
+            this.chkbox_extend.Name = "chkbox_extend";
+            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
+            this.chkbox_extend.TabIndex = 20;
+            this.chkbox_extend.UseVisualStyleBackColor = true;
+            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
+            // 
+            // dropDownAssTo
+            // 
+            this.dropDownAssTo.FormattingEnabled = true;
+            this.dropDownAssTo.Location = new System.Drawing.Point(210, 268);
+            this.dropDownAssTo.Name = "dropDownAssTo";
+            this.dropDownAssTo.Size = new System.Drawing.Size(185, 21);
+            this.dropDownAssTo.TabIndex = 19;
+            // 
+            // dropdownSts
+            // 
+            this.dropdownSts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdownSts.FormattingEnabled = true;
+            this.dropdownSts.Location = new System.Drawing.Point(209, 207);
+            this.dropdownSts.Name = "dropdownSts";
+            this.dropdownSts.Size = new System.Drawing.Size(185, 21);
+            this.dropdownSts.TabIndex = 19;
             // 
             // bunifuThinButton21
             // 
@@ -308,34 +335,7 @@ namespace GridViewExample
             this.TaskID.TabIndex = 0;
             this.TaskID.Text = "Task Id";
             // 
-            // dropdownSts
-            // 
-            this.dropdownSts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dropdownSts.FormattingEnabled = true;
-            this.dropdownSts.Location = new System.Drawing.Point(209, 207);
-            this.dropdownSts.Name = "dropdownSts";
-            this.dropdownSts.Size = new System.Drawing.Size(185, 21);
-            this.dropdownSts.TabIndex = 19;
-            // 
-            // dropDownAssTo
-            // 
-            this.dropDownAssTo.FormattingEnabled = true;
-            this.dropDownAssTo.Location = new System.Drawing.Point(210, 268);
-            this.dropDownAssTo.Name = "dropDownAssTo";
-            this.dropDownAssTo.Size = new System.Drawing.Size(185, 21);
-            this.dropDownAssTo.TabIndex = 19;
-            // 
-            // chkbox_extend
-            // 
-            this.chkbox_extend.AutoSize = true;
-            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
-            this.chkbox_extend.Name = "chkbox_extend";
-            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
-            this.chkbox_extend.TabIndex = 20;
-            this.chkbox_extend.UseVisualStyleBackColor = true;
-            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
-            // 
-            // DataManupilation
+            // F_ADD_TASK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,11 +343,11 @@ namespace GridViewExample
             this.ClientSize = new System.Drawing.Size(783, 522);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DataManupilation";
+            this.Name = "F_ADD_TASK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DataManupilation";
-            this.Load += new System.EventHandler(this.DataManupilation_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.DataManupilation_Paint);
+            this.Text = "F_ADD_TASK";
+            this.Load += new System.EventHandler(this.F_ADD_TASK_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_ADD_TASK_Paint);
             this.panel1.ResumeLayout(false);
             this.panel_cross.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

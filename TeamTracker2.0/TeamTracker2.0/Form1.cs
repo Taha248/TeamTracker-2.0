@@ -75,7 +75,7 @@ namespace GridViewExample
                 panel.Width = this.Width;
                 this.Controls.Add(panel);
                 panel.BringToFront();
-                DataManupilation dm = new DataManupilation(panel);
+                DataManupilation dm = null;
 
              //   var c = GetAll(dm, typeof(TextBox));
 

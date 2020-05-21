@@ -13,7 +13,7 @@ using TeamTracker2._0;
 
 namespace GridViewExample
 {
-    public partial class DataManupilation : EditScreenGeneral
+    public partial class F_ADD_TASK : EditScreenGeneral
     {
         private GlassyPanel prevPanel;
         private TextBox taskid = null;
@@ -188,7 +188,7 @@ namespace GridViewExample
         }
 
         // TaskId,TaskTitle,TaskDesc,Progress,TaskStatus,AssignedTo,LastDate,DateOfCreation,LastUpdated,Extension_reason
-        public DataManupilation()
+        public F_ADD_TASK()
         {
             InitializeComponent();
             txt_date.Format = DateTimePickerFormat.Custom;
@@ -209,7 +209,7 @@ namespace GridViewExample
 
         }
 
-        public DataManupilation(Form prevForm , GridViewHelper gridView )
+        public F_ADD_TASK(Form prevForm , GridViewHelper gridView )
         {
             this.gridView = gridView;
             this.prevForm = prevForm;
@@ -307,14 +307,14 @@ namespace GridViewExample
             this.Close();
         }
 
-        private void DataManupilation_Paint(object sender, PaintEventArgs e)
+        private void F_ADD_TASK_Paint(object sender, PaintEventArgs e)
         {
 
             var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
             e.Graphics.FillRectangle(hb, this.DisplayRectangle);
         }
 
-        private void DataManupilation_Load(object sender, EventArgs e)
+        private void F_ADD_TASK_Load(object sender, EventArgs e)
         {
 
             this.Height = prevForm.Height;

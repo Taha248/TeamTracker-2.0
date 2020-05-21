@@ -23,6 +23,14 @@ namespace GridViewExample
             return new MySqlConnection(@"server=localhost;user id=root;database=teamtracker;Convert Zero Datetime=True");
         }
 
+        public static bool executeDeleteQuery(String table, String condition)
+        {
+            return executeQuery(getDeleteQuery(table,condition));
+        }
+        private static string getDeleteQuery(String table, String condition) {
+
+            return "DELETE FROM `"+table+"` WHERE "+condition;
+        }
         public static bool executeInsertQuery(Dictionary<String, String> data, String table)
         {
             return executeQuery(getInsertQuery(data, table));
@@ -91,7 +99,6 @@ namespace GridViewExample
 
             return "UPDATE " + table + " SET " + col + " where " + condition;
         }
-
         public static DataSet getDataSet(string col, string table, string condition)
         {
 
