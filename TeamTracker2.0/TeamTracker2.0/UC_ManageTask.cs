@@ -17,7 +17,7 @@ namespace TeamTracker2._0
         GridViewHelper gridViewHelper = null;
         Form prevForm = null;
         GlassyPanel panel = new GlassyPanel();
-        DataManupilation dm = null;
+        F_EDIT_TASK dm = null;
         Color TransparencyKey = Color.Fuchsia;
 
         public UC_ManageTask(Form form)
@@ -94,7 +94,7 @@ namespace TeamTracker2._0
 
             if (gridViewHelper.IsEditEnable && e.ColumnIndex == bunifuCustomDataGrid1.ColumnCount - 2)
             {
-                dm = new DataManupilation(prevForm , gridViewHelper);
+                dm = new F_EDIT_TASK(prevForm , gridViewHelper);
                 panel.BringToFront();
                 string value = this.bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
 

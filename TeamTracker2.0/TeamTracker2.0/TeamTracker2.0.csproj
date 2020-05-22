@@ -91,11 +91,11 @@
     <Compile Include="F_ADD_TASK.designer.cs">
       <DependentUpon>F_ADD_TASK.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataManupilation.cs">
+    <Compile Include="F_EDIT_TASK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataManupilation.designer.cs">
-      <DependentUpon>DataManupilation.cs</DependentUpon>
+    <Compile Include="F_EDIT_TASK.designer.cs">
+      <DependentUpon>F_EDIT_TASK.cs</DependentUpon>
     </Compile>
     <Compile Include="EditScreenGeneral.cs">
       <SubType>Form</SubType>
@@ -194,8 +194,8 @@
     <EmbeddedResource Include="F_ADD_TASK.resx">
       <DependentUpon>F_ADD_TASK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataManupilation.resx">
-      <DependentUpon>DataManupilation.cs</DependentUpon>
+    <EmbeddedResource Include="F_EDIT_TASK.resx">
+      <DependentUpon>F_EDIT_TASK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditScreenGeneral.resx">
       <DependentUpon>EditScreenGeneral.cs</DependentUpon>

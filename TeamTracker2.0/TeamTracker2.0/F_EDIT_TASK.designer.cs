@@ -3,7 +3,7 @@ using System;
 
 namespace GridViewExample
 {
-    partial class DataManupilation
+    partial class F_EDIT_TASK
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace GridViewExample
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManupilation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_EDIT_TASK));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_cross = new System.Windows.Forms.Panel();
             this.lbl_cross = new System.Windows.Forms.Label();
@@ -335,7 +335,7 @@ namespace GridViewExample
             this.chkbox_extend.UseVisualStyleBackColor = true;
             this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
             // 
-            // DataManupilation
+            // F_EDIT_TASK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,11 +343,11 @@ namespace GridViewExample
             this.ClientSize = new System.Drawing.Size(783, 522);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DataManupilation";
+            this.Name = "F_EDIT_TASK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DataManupilation";
-            this.Load += new System.EventHandler(this.DataManupilation_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.DataManupilation_Paint);
+            this.Text = "F_EDIT_TASK";
+            this.Load += new System.EventHandler(this.F_EDIT_TASK_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_EDIT_TASK_Paint);
             this.panel1.ResumeLayout(false);
             this.panel_cross.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
