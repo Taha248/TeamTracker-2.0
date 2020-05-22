@@ -174,12 +174,12 @@ namespace TeamTracker2._0
                 messages.Width = 208;
                 if ((Messages[i].Body.Length) > 30)
                 {
-                    height = 33; //getNotificationLabelHeight(Messages[i].Body);
+                    height = getNotificationLabelHeight(Messages[i].Body);
                     messages.Height = height;
                     totalHeight += height;
                     messagePanelHeight += height;
                 }
-                else { messages.Height = 21; totalHeight += height; }
+                else { messages.Height = 20; totalHeight += 20; messagePanelHeight += 20; }
                 if (Messages[i].Body.Length > 69)
                     messages.Text = Messages[i].Body.Substring(0, 69).TrimEnd() + "....";
                 else
@@ -191,7 +191,7 @@ namespace TeamTracker2._0
                 messagePanelHeight += 17;
                 date.Font = new Font("Montserrat", 7, FontStyle.Regular);
                 date.Text = msgTime(Messages[i].MsgRecTime);
-                date.TextAlign = ContentAlignment.TopRight;
+                date.TextAlign = ContentAlignment.MiddleRight;
                 date.BackColor = Color.White;
                 date.ForeColor = panel.ForeColor;
 
@@ -215,11 +215,7 @@ namespace TeamTracker2._0
                 flowLayoutPanel1.Controls.Add(panel);
                 flowLayoutPanel1.Controls.Add(bottom1);
                 flowLayoutPanel1.Controls.Add(bottom);
-                //flowLayoutPanel1.Controls.Add(subject);
-                //flowLayoutPanel1.Controls.Add(messages);
-                //flowLayoutPanel1.Controls.Add(date);
-                //flowLayoutPanel1.Controls.Add(bottom);
-
+                
                 subject.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
                 messages.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
                 date.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
@@ -229,7 +225,7 @@ namespace TeamTracker2._0
                 date.Name = "panel" + i;
                 messages.Name = "panel" + i;
                 subject.Name = "panel" + i;
-                panel.Click += new System.EventHandler(this.labelClick);
+                subject.Click += new System.EventHandler(this.labelClick);
                 date.Click += new System.EventHandler(this.labelClick);
                 messages.Click += new System.EventHandler(this.labelClick);
                 panel.Click += new System.EventHandler(this.messageClick);
@@ -264,23 +260,17 @@ namespace TeamTracker2._0
         {
             Label currentMessage = (Label)sender;
             currentMessage.Parent.BackColor = Color.White;
-          //  currentMessage.Parent.HasChildren = Color.White;
-            //currentMessage.ForeColor = Color.Black;
         }
         void labelHover(object sender, EventArgs e)
         {
             Label currentMessage = (Label)sender;
             currentMessage.Parent.BackColor = Color.FromArgb(222, 239, 252);
-            //currentMessage.ForeColor = Color.Black;
         }
         void labelClick(object sender,EventArgs e)
         {
             NotificationViewer notificationView = new NotificationViewer();
             notificationView.ShowDialog();
             Label currentMessage = (Label)sender;
-            //MessageBox.Show(currentMessage.Name);
-            //Label currentMessage = (Label)sender;
-            //MessageBox.Show(currentMessage.Text);
         }
         private int getNotificationLabelHeight(string body)
         {

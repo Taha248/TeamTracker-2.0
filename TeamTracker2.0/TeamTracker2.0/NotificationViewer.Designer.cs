@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotificationViewer));
             this.panel2 = new System.Windows.Forms.Panel();
             this.notiCard = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_cross = new System.Windows.Forms.Panel();
             this.notiCross = new System.Windows.Forms.Label();
             this.notiHeader = new System.Windows.Forms.Label();
             this.lbl_cross = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.notiCard.SuspendLayout();
             this.panel_cross.SuspendLayout();
@@ -68,6 +68,44 @@
             this.notiCard.Name = "notiCard";
             this.notiCard.Size = new System.Drawing.Size(272, 367);
             this.notiCard.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label3.Location = new System.Drawing.Point(9, 334);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
+            this.label3.Size = new System.Drawing.Size(255, 26);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Just Recieved....";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label2.Location = new System.Drawing.Point(9, 52);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.label2.Size = new System.Drawing.Size(255, 286);
+            this.label2.TabIndex = 9;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(9, 25);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(255, 27);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Shoudn\'t be greater than 32 char";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel_cross
             // 
@@ -122,44 +160,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(785, 522);
             this.panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(9, 25);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3);
-            this.label1.Size = new System.Drawing.Size(255, 27);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Shoudn\'t be greater than 32 char";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label2.Location = new System.Drawing.Point(9, 52);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.label2.Size = new System.Drawing.Size(255, 286);
-            this.label2.TabIndex = 9;
-            this.label2.Text = resources.GetString("label2.Text");
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label3.Location = new System.Drawing.Point(9, 334);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
-            this.label3.Size = new System.Drawing.Size(255, 26);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Just Recieved....";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NotificationViewer
             // 
