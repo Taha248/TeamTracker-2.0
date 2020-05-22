@@ -88,8 +88,9 @@ namespace GridViewExample
             // 
             // lbl_cross
             // 
+            this.lbl_cross.BackColor = System.Drawing.Color.White;
             this.lbl_cross.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_cross.Location = new System.Drawing.Point(1, -1);
+            this.lbl_cross.Location = new System.Drawing.Point(-1, 1);
             this.lbl_cross.Name = "lbl_cross";
             this.lbl_cross.Size = new System.Drawing.Size(26, 19);
             this.lbl_cross.TabIndex = 3;
@@ -115,7 +116,7 @@ namespace GridViewExample
             this.lbl_taskdtl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_taskdtl.Location = new System.Drawing.Point(15, 0);
             this.lbl_taskdtl.Name = "lbl_taskdtl";
-            this.lbl_taskdtl.Size = new System.Drawing.Size(71, 16);
+            this.lbl_taskdtl.Size = new System.Drawing.Size(69, 15);
             this.lbl_taskdtl.TabIndex = 1;
             this.lbl_taskdtl.Text = "Task Entry";
             // 
@@ -302,7 +303,7 @@ namespace GridViewExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(783, 522);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

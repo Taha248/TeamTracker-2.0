@@ -309,7 +309,6 @@ namespace GridViewExample
 
         private void F_EDIT_TASK_Paint(object sender, PaintEventArgs e)
         {
-
             var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
             e.Graphics.FillRectangle(hb, this.DisplayRectangle);
         }
