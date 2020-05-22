@@ -24,3 +24,32 @@ FOREIGN KEY (USER_ID) REFERENCES USER(UserID)
 
 ALTER TABLE SESSION 
 ADD COLUMN ISACTIVE VARCHAR(20) NOT NULL;
+
+/* 
+ USER PERMISSION TABLE 
+*/
+CREATE TABLE USER_PERMISSIONS(
+UP_ID INT(10) AUTO_INCREMENT PRIMARY KEY,
+PERMISSION_TITLE VARCHAR(30) UNIQUE NOT NULL,
+PERMISSION_KEY VARCHAR(10) UNIQUE  NOT NULL,
+USER_ACCESS VARCHAR(100) UNIQUE NOT NULL
+);
+
+
+INSERT INTO `teamtracker`.`user_permissions`
+            (
+             `PERMISSION_KEY`,`PERMISSION_TITLE`,
+             `USER_ACCESS`)
+VALUES 
+('a','Manage Task', 'TAB_MANAGE_TASK'),
+('a1','Edit Task','EDIT_TASK'),
+('a2','Delete Task','DELETE_TASK'),
+('a3','Add Task','ADD_TASK'),
+('a4','Deadline Extension','DEADLINE_EXTENSION'),
+('a5','Progress Change','PROGRESS_CHANGE'),
+('b','Session Logs','TAB_SESSION_LOGS'),
+('c','User Statistics','TAB_USER_STATISTICS'),
+('d','User Monitoring','TAB_USER_MONITORING'),
+('e','Configuration','TAB_CONFIGURATION'),
+('f','Settings','TAB_SETTINGS'),
+('g','Notification','TAB_NOTIFICATION');
