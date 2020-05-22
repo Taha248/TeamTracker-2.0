@@ -121,6 +121,12 @@
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="ManData.cs" />
+    <Compile Include="NotificationViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationViewer.Designer.cs">
+      <DependentUpon>NotificationViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="OnlineUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainBoard.resx">
       <DependentUpon>MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationViewer.resx">
+      <DependentUpon>NotificationViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OnlineUsers.resx">
       <DependentUpon>OnlineUsers.cs</DependentUpon>

@@ -57,7 +57,7 @@ namespace TeamTracker2._0
 
         private void taskLog_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.LightGray, ButtonBorderStyle.Dashed);
+            ControlPaint.DrawBorder(e.Graphics, this.panel2.ClientRectangle, Color.LightGray, ButtonBorderStyle.Dotted);
         }
         bool isPainted;
         private void bunifuCustomDataGrid1_Paint(object sender, PaintEventArgs e)

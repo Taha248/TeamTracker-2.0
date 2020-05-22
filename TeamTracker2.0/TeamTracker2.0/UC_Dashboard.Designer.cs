@@ -244,6 +244,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(189, 146);
             this.panel5.TabIndex = 23;
+            this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // label6
             // 
@@ -256,6 +257,7 @@
             this.label6.Size = new System.Drawing.Size(148, 30);
             this.label6.TabIndex = 2;
             this.label6.Text = "TIME REMAINING";
+            this.label6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // xuiFlatProgressBar1
             // 
@@ -271,6 +273,7 @@
             this.xuiFlatProgressBar1.TabIndex = 1;
             this.xuiFlatProgressBar1.Text = "xuiFlatProgressBar1";
             this.xuiFlatProgressBar1.Value = 50;
+            this.xuiFlatProgressBar1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // label1
             // 
@@ -283,6 +286,7 @@
             this.label1.Size = new System.Drawing.Size(139, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "CURRENT TASK";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // label7
             // 
@@ -298,6 +302,7 @@
             this.label7.Text = "Design Dashboard";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // pieChart1
             // 
