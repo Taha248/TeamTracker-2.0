@@ -56,5 +56,10 @@ namespace TeamTracker2._0
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
     }
 }
