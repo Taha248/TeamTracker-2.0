@@ -35,6 +35,7 @@ namespace GridViewExample
         {
             return executeQuery(getInsertQuery(data, table));
         }
+
         public static bool executeUpdateQuery(Dictionary<String, String> data, String table, String condition)
         {
             return executeQuery(getUpdateQuery(data, table, condition));
@@ -156,7 +157,32 @@ namespace GridViewExample
         }
 
 
+        public static String getNewId(String table , String col_id) {
 
+            MySqlConnection conn = ManData.getConnection();
+            String query = "SELECT MAX(" + col_id + ")+1 FROM " + table + "";
+            String id = null;
+
+            DataTable dataTable = new DataTable();
+            MySqlCommand cmd = new MySqlCommand(query,conn);
+            try
+            {
+                conn.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                    id = reader[0].ToString();
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                LogWriter.LogWrite(ex.StackTrace);
+            }
+
+            return id;
+        }
 
     }
 }
