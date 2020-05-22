@@ -38,17 +38,14 @@ namespace GridViewExample
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_taskdtl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chkbox_extend = new System.Windows.Forms.CheckBox();
             this.dropDownAssTo = new System.Windows.Forms.ComboBox();
             this.dropdownSts = new System.Windows.Forms.ComboBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txt_date = new System.Windows.Forms.DateTimePicker();
-            this.txtExtension = new System.Windows.Forms.TextBox();
             this.txt_progress = new System.Windows.Forms.TextBox();
             this.txt_taskDTL = new System.Windows.Forms.RichTextBox();
             this.txt_tasktitle = new System.Windows.Forms.TextBox();
             this.txt_taskid = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -124,17 +121,14 @@ namespace GridViewExample
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.chkbox_extend);
             this.panel3.Controls.Add(this.dropDownAssTo);
             this.panel3.Controls.Add(this.dropdownSts);
             this.panel3.Controls.Add(this.bunifuThinButton21);
             this.panel3.Controls.Add(this.txt_date);
-            this.panel3.Controls.Add(this.txtExtension);
             this.panel3.Controls.Add(this.txt_progress);
             this.panel3.Controls.Add(this.txt_taskDTL);
             this.panel3.Controls.Add(this.txt_tasktitle);
             this.panel3.Controls.Add(this.txt_taskid);
-            this.panel3.Controls.Add(this.bunifuCustomLabel4);
             this.panel3.Controls.Add(this.bunifuCustomLabel3);
             this.panel3.Controls.Add(this.bunifuCustomLabel2);
             this.panel3.Controls.Add(this.bunifuCustomLabel1);
@@ -147,16 +141,6 @@ namespace GridViewExample
             this.panel3.Size = new System.Drawing.Size(480, 391);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
-            // 
-            // chkbox_extend
-            // 
-            this.chkbox_extend.AutoSize = true;
-            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
-            this.chkbox_extend.Name = "chkbox_extend";
-            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
-            this.chkbox_extend.TabIndex = 20;
-            this.chkbox_extend.UseVisualStyleBackColor = true;
-            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
             // 
             // dropDownAssTo
             // 
@@ -184,7 +168,7 @@ namespace GridViewExample
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
             this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Update";
+            this.bunifuThinButton21.ButtonText = "Add";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Quicksand", 8.25F);
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
@@ -203,22 +187,12 @@ namespace GridViewExample
             // 
             // txt_date
             // 
-            this.txt_date.Enabled = false;
             this.txt_date.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_date.Location = new System.Drawing.Point(209, 237);
             this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(164, 21);
+            this.txt_date.Size = new System.Drawing.Size(185, 21);
             this.txt_date.TabIndex = 17;
-            // 
-            // txtExtension
-            // 
-            this.txtExtension.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExtension.Location = new System.Drawing.Point(209, 299);
-            this.txtExtension.Name = "txtExtension";
-            this.txtExtension.Size = new System.Drawing.Size(185, 24);
-            this.txtExtension.TabIndex = 15;
-            this.txtExtension.Visible = false;
             // 
             // txt_progress
             // 
@@ -253,17 +227,6 @@ namespace GridViewExample
             this.txt_taskid.Name = "txt_taskid";
             this.txt_taskid.Size = new System.Drawing.Size(48, 24);
             this.txt_taskid.TabIndex = 8;
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(59, 302);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(97, 16);
-            this.bunifuCustomLabel4.TabIndex = 7;
-            this.bunifuCustomLabel4.Text = "Extension Reason";
-            this.bunifuCustomLabel4.Visible = false;
             // 
             // bunifuCustomLabel3
             // 
@@ -370,11 +333,9 @@ namespace GridViewExample
         private BunifuCustomLabel Progress;
         private BunifuCustomLabel Detail;
         private BunifuCustomLabel Title;
-        private BunifuCustomLabel bunifuCustomLabel4;
         private BunifuCustomLabel bunifuCustomLabel3;
         private BunifuCustomLabel bunifuCustomLabel2;
         private BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.TextBox txtExtension;
         private System.Windows.Forms.TextBox txt_progress;
         private System.Windows.Forms.RichTextBox txt_taskDTL;
         private System.Windows.Forms.TextBox txt_tasktitle;
@@ -383,6 +344,5 @@ namespace GridViewExample
         private System.Windows.Forms.DateTimePicker txt_date;
         private System.Windows.Forms.ComboBox dropDownAssTo;
         private System.Windows.Forms.ComboBox dropdownSts;
-        private System.Windows.Forms.CheckBox chkbox_extend;
     }
 }

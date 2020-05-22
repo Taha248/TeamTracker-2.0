@@ -95,9 +95,6 @@ namespace TeamTracker2._0
             if (gridViewHelper.IsEditEnable && e.ColumnIndex == bunifuCustomDataGrid1.ColumnCount - 2)
             {
                 dm = new DataManupilation(prevForm , gridViewHelper);
-                //     panel.Height = this.Height;
-                //   panel.Width = this.Width;
-                //   this.Controls.Add(panel);
                 panel.BringToFront();
                 string value = this.bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
 
@@ -144,8 +141,7 @@ namespace TeamTracker2._0
                     dm.LastDate1.Enabled = true;
                 }
 
-
-                //      DataTable dt_User = ManData.getDataReader("UserID,Name", "USER", "1=1  GROUP BY UserID");
+             
 
 
                 dm.ShowDialog();
@@ -166,6 +162,35 @@ namespace TeamTracker2._0
             var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
 
             e.Graphics.FillRectangle(hb, this.DisplayRectangle);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet ds_status = null, ds_AssignTo = null;
+            F_ADD_TASK addTask = new F_ADD_TASK(prevForm,gridViewHelper);
+            addTask.Taskid.Text = ManData.getNewId("Task","taskID");
+            ds_status = ManData.getDataSet("TaskStatus", "task", "1=1  GROUP BY TaskStatus");
+            addTask.TaskStatus1.DisplayMember = "TaskStatus";
+            addTask.TaskStatus1.ValueMember = "TaskStatus";
+            addTask.TaskStatus1.DataSource = ds_status.Tables[0];
+            addTask.TaskStatus1.SelectedIndex = 1;
+            addTask.TaskStatus1.Enabled = false;
+
+            addTask.TxtProgress.Text = "0%";
+            addTask.TxtProgress.Enabled = false;
+
+
+            ds_AssignTo = ManData.getDataSet("UserID,Name", "USER", "1=1  GROUP BY UserID");
+            addTask.AssignedTo1.DisplayMember = "Name";
+            addTask.AssignedTo1.ValueMember = "UserID";
+            addTask.AssignedTo1.DataSource = ds_AssignTo.Tables[0];
+
+            addTask.AssignedTo1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            addTask.AssignedTo1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            addTask.Show();
+
+
+
         }
     }
 }

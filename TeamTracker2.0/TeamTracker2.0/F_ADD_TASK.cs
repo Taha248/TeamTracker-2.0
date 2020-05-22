@@ -201,9 +201,6 @@ namespace GridViewExample
             this.TaskStatus1 = dropdownSts;
             this.AssignedTo1 = dropDownAssTo;
             this.LastDate1 = txt_date;
-            this.Extension_reason1 = txtExtension;
-            this.ChkboxExtend = chkbox_extend;
-            this.Lbl_text1 = bunifuCustomLabel4;
 
 
 
@@ -225,9 +222,6 @@ namespace GridViewExample
             this.TaskStatus1 = dropdownSts;
             this.AssignedTo1 = dropDownAssTo;
             this.LastDate1 = txt_date;
-            this.Extension_reason1 = txtExtension;
-            this.ChkboxExtend = chkbox_extend;
-            this.Lbl_text1 = bunifuCustomLabel4;
 
 
         }
@@ -288,21 +282,16 @@ namespace GridViewExample
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> updateList = new Dictionary<string, string>();
+            Dictionary<string, string> addList = new Dictionary<string, string>();
 
-            updateList.Add("TaskTitle", txt_tasktitle.Text);
-            updateList.Add("TaskDesc", txt_taskDTL.Text);
-            updateList.Add("Progress", txt_progress.Text);
-            updateList.Add("TaskStatus", dropdownSts.Text);
-            updateList.Add("AssignedTo", dropDownAssTo.SelectedValue.ToString());
-            //6/2/2019 3:32:29 AM
+            addList.Add("TaskTitle", txt_tasktitle.Text);
+            addList.Add("TaskDesc", txt_taskDTL.Text);
+            addList.Add("Progress", txt_progress.Text);
+            addList.Add("TaskStatus", dropdownSts.Text);
+            addList.Add("AssignedTo", dropDownAssTo.SelectedValue.ToString());
+            addList.Add("LastDate", LastDate.Value.Date.ToString("yyyy-MM-dd h:mm:ss tt"));
 
-            if (chkbox_extend.Checked) { 
-                updateList.Add("LastDate",  LastDate.Value.Date.ToString("yyyy-MM-dd h:mm:ss tt"));
-                updateList.Add("Extension_Reason", Extension_reason.Text);
-            }
-
-            ManData.executeUpdateQuery(updateList,"task"," taskID = '"+taskid.Text+"'");
+            ManData.executeInsertQuery(addList,"task");
             gridView.reloadGridView();
             this.Close();
         }
@@ -331,18 +320,6 @@ namespace GridViewExample
 
         private void chkbox_extend_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkbox_extend.Checked)
-            {
-                txtExtension.Visible = true;
-                bunifuCustomLabel4.Visible = true;
-                txt_date.Enabled = true;
-            }
-            else {
-
-                txtExtension.Visible = false;
-                bunifuCustomLabel4.Visible = false;
-                txt_date.Enabled = false;
-            }
         }
     }
 }
