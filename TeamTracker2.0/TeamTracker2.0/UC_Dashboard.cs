@@ -86,7 +86,7 @@ namespace TeamTracker2._0
             pieChart1.Visible = true;
             cartesianChart1.Visible = true;
             List<MessageFormat> msgList = new List<MessageFormat>();
-            msgList.Add(new MessageFormat { Subject = "Meeting For Planning Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time  ", MsgRecTime = DateTime.Now });
+            msgList.Add(new MessageFormat { Subject = "Meeting For Planning Meeting For Planning", Body = "Taha & Zeeshan Please Come On Time,Please Come On Time thanks from hamza saleem5", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Meeting For Next Step", Body = "h are the se imof our company", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
             msgList.Add(new MessageFormat { Subject = "Eid Mubarak", Body = "Mr Taha & Zeeshan We Have Sent the Eidi in your accounts BTE Eid Mubarak!!", MsgRecTime = DateTime.Now });
@@ -174,7 +174,7 @@ namespace TeamTracker2._0
                 messages.Width = 208;
                 if ((Messages[i].Body.Length) > 30)
                 {
-                    height = getNotificationLabelHeight(Messages[i].Body);
+                    height = 33; // getNotificationLabelHeight(Messages[i].Body);
                     messages.Height = height;
                     totalHeight += height;
                     messagePanelHeight += height;
