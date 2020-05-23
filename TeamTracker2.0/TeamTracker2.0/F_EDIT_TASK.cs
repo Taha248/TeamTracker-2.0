@@ -1,4 +1,5 @@
 ﻿using Bunifu.Framework.UI;
+using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +18,14 @@ namespace GridViewExample
     {
         private GlassyPanel prevPanel;
         private TextBox taskid = null;
-        private TextBox TaskTitle = null;
-        private RichTextBox TaskDesc = null;
-        private TextBox txtProgress = null;
+        private MetroTextBox TaskTitle = null;
+        private MetroTextBox TaskDesc = null;
+        private MetroTextBox txtProgress = null;
         private ComboBox TaskStatus = null;
         private ComboBox AssignedTo = null;
         private DateTimePicker LastDate = null;
         private DateTimePicker LastTime = null;
-        private TextBox Extension_reason = null;
+        private MetroTextBox Extension_reason = null;
         private BunifuCustomLabel lbl_text = null;
         private CheckBox chkboxExtend = null;
         private Form prevForm = null;
@@ -44,7 +45,7 @@ namespace GridViewExample
             }
         }
 
-        public TextBox TaskTitle1
+        public MetroTextBox TaskTitle1
         {
             get
             {
@@ -57,7 +58,7 @@ namespace GridViewExample
             }
         }
 
-        public RichTextBox TaskDesc1
+        public MetroTextBox TaskDesc1
         {
             get
             {
@@ -70,7 +71,7 @@ namespace GridViewExample
             }
         }
 
-        public TextBox TxtProgress
+        public MetroTextBox TxtProgress
         {
             get
             {
@@ -135,7 +136,7 @@ namespace GridViewExample
             }
         }
 
-        public TextBox Extension_reason1
+        public MetroTextBox Extension_reason1
         {
             get
             {
