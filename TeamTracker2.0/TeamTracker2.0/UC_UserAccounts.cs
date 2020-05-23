@@ -17,7 +17,7 @@ namespace TeamTracker2._0
         public UC_UserAccounts()
         {
             InitializeComponent();
-            gridViewHelper = new GridViewHelper("NAME as Name,Username as UserName,PASSWORD as Password", "user",null, this, bunifuCustomDataGrid1);
+            gridViewHelper = new GridViewHelper("NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user",null, this, bunifuCustomDataGrid1);
 
         }
 
@@ -31,23 +31,9 @@ namespace TeamTracker2._0
         {
             if (!isPainted)
             {
-            //    //gridViewHelper.addProgressBarColumn("Progress", gridViewHelper.getColumnValues("Progress"), Color.LightGreen, 5);
                 gridViewHelper.addEditColumn();
                 gridViewHelper.addDeleteColumn();
                 gridViewHelper.enableSearchEngine(new String[] { "Name"});
-
-            //    //gridViewHelper.addColumnWidth(3, 120);
-            //        gridViewHelper.addColumnWidth(4, 70);
-            //        gridViewHelper.addColumnWidth(5, 81);
-            //    //gridViewHelper.addColumnWidth(6, 50);
-            //    gridViewHelper.addColumnWidth(7, 53);
-            //    gridViewHelper.addColumnWidth(8, 33);
-            //    //    gridViewHelper.adjustWidth();
-            //    //gridViewHelper.hideColumn(0);
-            //    //gridViewHelper.hideColumn(1);
-            //    //gridViewHelper.hideColumn(2);
-
-            //    panel1.SendToBack();
                 isPainted = true;
             }
         }
@@ -60,6 +46,15 @@ namespace TeamTracker2._0
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.LightGray, ButtonBorderStyle.Solid);
+        }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gridViewHelper.IsEditEnable && e.ColumnIndex == bunifuCustomDataGrid1.ColumnCount - 2)
+            {
+
+            }
+
         }
     }
 }
