@@ -14,27 +14,27 @@ namespace GridViewExample
     {
         // Local
 
-        /* 
+
         public static string HOST = "localhost";
         public static string USER_NAME = "root";
         public static string PASSWORD = "";
         public static string DB_NAME = "teamtracker";
         public static string DB_PORT = "3306";
-        */
+
 
         // Centralized
 
-        public static string HOST = "maxilon.ddns.net";
-        public static string USER_NAME = "taha";
-        public static string PASSWORD = "32724";
-        public static string DB_NAME = "teamtracker";
-        public static string DB_PORT = "3307";
+        //public static string HOST = "maxilon.ddns.net";
+        //public static string USER_NAME = "taha";
+        //public static string PASSWORD = "32724";
+        //public static string DB_NAME = "teamtracker";
+        //public static string DB_PORT = "3307";
 
         public static MySqlConnection getConnection()
         {
-            //String connectionString = @"server=" + HOST + ";user id=" + USER_NAME + ";Password = " + PASSWORD + ";database=" + DB_NAME + ";Convert Zero Datetime=True";
+            String connectionString = @"server=" + HOST + ";user id=" + USER_NAME + ";database=" + DB_NAME + ";Convert Zero Datetime=True";
        
-            String connectionString = @"Server="+HOST+";Port="+ DB_PORT + ";Database="+DB_NAME+";Uid="+USER_NAME+";Pwd="+PASSWORD+ ";Convert Zero Datetime=True;";
+            //String connectionString = @"Server="+HOST+";Port="+ DB_PORT + ";Database="+DB_NAME+";Uid="+USER_NAME+";Pwd="+PASSWORD+ ";Convert Zero Datetime=True;";
             return new MySqlConnection(connectionString);
         }
 
