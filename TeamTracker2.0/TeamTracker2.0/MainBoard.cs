@@ -33,7 +33,7 @@ namespace TeamTracker2._0
         private void initUI()
         {
             //label12.Text = "welcome : " + username;
-            label10.Text = "Time In";
+            //label10.Text = "Time In";
             bunifuiOSSwitch1.Value = false;
 
         }
@@ -243,11 +243,11 @@ namespace TeamTracker2._0
         {
             if (bunifuiOSSwitch1.Value == true)
             {
-                label10.Text = "Time In";
+                //label10.Text = "Time In";
             }
             else
             {
-                label10.Text = "Time Out";
+                //label10.Text = "Time Out";
             }
         }
 
