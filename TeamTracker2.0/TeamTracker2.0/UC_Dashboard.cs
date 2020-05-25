@@ -107,17 +107,18 @@ namespace TeamTracker2._0
         private void initUI()
         {
             List<User> userids = showActiveUsers();
-            label4.Text = userids[0].ActiveUsers;
+            label4.Text = userids.Count.ToString();
 
             List<User> tot = getTotaluser();
-            label2.Text = tot[0].TotalUsers;
-          
+            label2.Text = tot.Count.ToString();
+
 
             List<User> incUser = getincompleteTasks();
-            label3.Text = incUser[0].TaskInProgress;
+            label3.Text = incUser.Count.ToString();
 
             List<User> cmpUser = tasksCompleted();
-            label5.Text = cmpUser[0].TaskCompleted;
+            label5.Text = cmpUser.Count.ToString();
+
 
             label7.Text = getCurrentTask("4").TaskName;
         }
@@ -409,12 +410,21 @@ namespace TeamTracker2._0
         {
             User user = null;
             List<User> taskList = new List<User>();
-            DataTable readUserTask = GridViewExample.ManData.getDataReader("COUNT(*) AS users_active", "session", " ISACTIVE='False'");
+            DataTable readUserTask = GridViewExample.ManData.getDataReader("*", "user", " IS_ACTIVE='1'");
             foreach (DataRow row in readUserTask.Rows)
             {
                 user = new User();
-                user.ActiveUsers = row["users_active"].ToString();
-
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
                 taskList.Add(user);
             }
             return taskList;
@@ -435,12 +445,22 @@ namespace TeamTracker2._0
         {
             User user = null;
             List<User> taskList = new List<User>();
-            DataTable readUserTask = GridViewExample.ManData.getDataReader("COUNT(UserID) AS total_users ", "user", null);
+            DataTable readUserTask = ManData.getDataReader("*", "user", null);
             foreach (DataRow row in readUserTask.Rows)
             {
                 user = new User();
-                user.TotalUsers = row["total_users"].ToString();
 
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
                 taskList.Add(user);
             }
             return taskList;
@@ -450,12 +470,22 @@ namespace TeamTracker2._0
         {
             User user = null;
             List<User> taskList = new List<User>();
-            DataTable readUserTask = ManData.getDataReader("COUNT(*) AS incomplete_tasks ", "task", " Progress != '100%' AND TaskStatus != 'Rejected' ");
+            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress != '100%' AND TaskStatus = 'Unapproved' ");
             foreach (DataRow row in readUserTask.Rows)
             {
                 user = new User();
-                user.TaskInProgress = row["incomplete_tasks"].ToString();
 
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
                 taskList.Add(user);
             }
             return taskList;
@@ -465,12 +495,23 @@ namespace TeamTracker2._0
         {
             User user = null;
             List<User> taskList = new List<User>();
-            DataTable readUserTask = ManData.getDataReader("COUNT(*) AS tasks_completed ", "task", " Progress = '100%' AND TaskStatus = 'Approved' ");
+            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress = '100%' AND TaskStatus = 'Approved' ");
+
             foreach (DataRow row in readUserTask.Rows)
             {
                 user = new User();
-                user.TaskCompleted = row["tasks_completed"].ToString();
 
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
                 taskList.Add(user);
             }
             return taskList;

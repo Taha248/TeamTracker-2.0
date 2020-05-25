@@ -8,30 +8,159 @@ namespace TeamTracker2._0
 {
     public class User
     {
-        private string UserID;
-        private string total_users;
-        private string incomplete_tasks;
-        private string tasks_completed;
-        public string ActiveUsers
+        int userID = 0;
+        String name = null;
+        String userName = null;
+        String reputation = null;
+        String completedTask = null;
+        String role = null;
+        String lastLogin = null;
+        String cretedBy = null;
+        String createdOn = null;
+        String permissions = null;
+        int activeBit = 0;
+        public int UserID
         {
-            get { return UserID; }
-            set { UserID = value; }
+            get
+            {
+                return userID;
+            }
+
+            set
+            {
+                userID = value;
+            }
         }
-        public string TotalUsers
+
+        public string UserName
         {
-            get { return total_users; }
-            set { total_users = value; }
+            get
+            {
+                return userName;
+            }
+
+            set
+            {
+                userName = value;
+            }
         }
-        private string CompletedTask { get; set; }
-        public string TaskInProgress
+
+        public string Reputation
         {
-            get { return incomplete_tasks; }
-            set { incomplete_tasks = value; }
+            get
+            {
+                return reputation;
+            }
+
+            set
+            {
+                reputation = value;
+            }
         }
-        public string TaskCompleted
+
+        public string CompletedTask
         {
-            get { return tasks_completed; }
-            set { tasks_completed = value; }
+            get
+            {
+                return completedTask;
+            }
+
+            set
+            {
+                completedTask = value;
+            }
+        }
+
+        public string Role
+        {
+            get
+            {
+                return role;
+            }
+
+            set
+            {
+                role = value;
+            }
+        }
+
+        public string LastLogin
+        {
+            get
+            {
+                return lastLogin;
+            }
+
+            set
+            {
+                lastLogin = value;
+            }
+        }
+
+        public string CretedBy
+        {
+            get
+            {
+                return cretedBy;
+            }
+
+            set
+            {
+                cretedBy = value;
+            }
+        }
+
+        public string CreatedOn
+        {
+            get
+            {
+                return createdOn;
+            }
+
+            set
+            {
+                createdOn = value;
+            }
+        }
+
+        public string Permissions
+        {
+            get
+            {
+                return permissions;
+            }
+
+            set
+            {
+                permissions = value;
+            }
+        }
+
+        public int Active
+        {
+            get
+            {
+                return this.activeBit;
+            }
+
+            set
+            {
+
+                activeBit = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
         }
     }
 }
