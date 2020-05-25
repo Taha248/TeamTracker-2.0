@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace TeamTracker2._0
@@ -26,7 +27,7 @@ namespace TeamTracker2._0
             InitializeComponent();
             lbl_cross.BackColor = Color.Transparent;
             dashboard_panel.Controls.Add(new UC_Dashboard(this));
-
+            
             initUI();
         }
 
@@ -197,9 +198,12 @@ namespace TeamTracker2._0
         private void panel_dashboard_Click(object sender, EventArgs e)
         {
             clearSelection();
+
+            label10.BringToFront();
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_Dashboard(this));
             panel_dashboard.BackColor = Color.FromArgb(27, 194, 203);
+            GenerateNotification("Saved", messageType.Success);
 
         }
 
@@ -265,6 +269,98 @@ namespace TeamTracker2._0
         {
 
         }
+        private void dropShadow(object sender, PaintEventArgs e)
+        {
+            //panel1.Container += dropShadow;
+            Panel panel = (Panel)sender;
+            Color[] shadow = new Color[3];
+            shadow[0] = Color.FromArgb(181, 181, 181);
+            shadow[1] = Color.FromArgb(195, 195, 195);
+            shadow[2] = Color.FromArgb(211, 211, 211);
+            Pen pen = new Pen(shadow[0]);
+            using (pen)
+            {
+                foreach (Panel p in panel.Controls.OfType<Panel>())
+                {
+                    Point pt = p.Location;
+                    pt.Y += p.Height;
+                    for (var sp = 0; sp < 3; sp++)
+                    {
+                        pen.Color = shadow[sp];
+                        e.Graphics.DrawLine(pen, pt.X, pt.Y, pt.X + p.Width - 1, pt.Y);
+                        pt.Y++;
+                    }
+                }
+            }
+        }
+        System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+
+        void timer1_Tick(object sender, System.EventArgs e)
+        {
+            timer1.Stop();
+            messageBox.SendToBack();
+        }
+        public void GenerateNotification(string message,messageType msgType)
+        {
+            messageType result;
+            if (Enum.TryParse(msgType.ToString(),out result))
+            {
+                switch (result)
+                {
+                    case messageType.Success:
+                        messageBox.BringToFront();
+                        panel1.BackColor = Color.FromArgb(0,200,81); 
+                        label10.Text = message + " Successfully!";
+                        success.BringToFront();
+                        error.Hide();
+                        //custom.Hide();
+                        timer1.Interval = 3000; // here time in milliseconds
+                        timer1.Tick += timer1_Tick;
+                        timer1.Start();
+                        break;
+
+                    case messageType.Error:
+                        messageBox.BringToFront();
+                        panel1.BackColor = Color.FromArgb(255, 136, 0);
+                        label10.Text = message + " Successfully!";
+                        error.BringToFront();
+                        success.Hide();
+                        //custom.Hide();
+                        timer1.Interval = 3000; // here time in milliseconds
+                        timer1.Tick += timer1_Tick;
+                        timer1.Start();
+                        break;
+
+                    case messageType.Custom:
+                        panel1.BackColor = Color.FromArgb(255, 136, 0);
+                        messageBox.BringToFront();
+                        error.BringToFront();
+                        success.Hide();
+                        //custom.Hide();
+                        timer1.Interval = 3000; // here time in milliseconds
+                        timer1.Tick += timer1_Tick;
+                        timer1.Start();
+                        label10.Text = "Please Enter Email In Right Format";
+                        if(label10.Text.Length>20)
+                            label10.Font = new Font("Montserrat", 7, FontStyle.Regular);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void messageBox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
+public enum messageType
+{
+    Success,
+    Error,
+    Custom
+}

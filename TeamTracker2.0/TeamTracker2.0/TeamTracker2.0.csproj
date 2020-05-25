@@ -215,6 +215,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditScreenGeneral.resx">
       <DependentUpon>EditScreenGeneral.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -249,6 +250,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ManageTask.resx">
       <DependentUpon>UC_ManageTask.cs</DependentUpon>
@@ -348,6 +350,7 @@
     <None Include="Resources\grrrr.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\warning-6-24.png" />
     <None Include="Resources\icons8-shutdown-37-2.png" />
     <None Include="Resources\icons8-shutdown-38-21.png" />
     <None Include="Resources\icons8-sign-out-381.png" />
@@ -395,6 +398,26 @@
     <None Include="Resources\time-and-date.png" />
     <None Include="Resources\3_.png" />
     <None Include="Resources\clock.png" />
+    <Content Include="Images\Dashboard.png" />
+    <None Include="Resources\check-mark-3-241.png" />
+    <None Include="Resources\check-mark-3-16.png" />
+    <None Include="Resources\error-6-24.png" />
+    <None Include="Resources\error-7-24.png" />
+    <None Include="Resources\error-7-16.png" />
+    <None Include="Resources\shadow.png" />
+    <None Include="Resources\shadow1.png" />
+    <None Include="Resources\shadow2.png" />
+    <None Include="Resources\msg.png" />
+    <None Include="Resources\msg1.png" />
+    <None Include="Resources\msg3.png" />
+    <None Include="Resources\msg31.png" />
+    <None Include="Resources\msg32.png" />
+    <None Include="Resources\icons8-double-tick-16.png" />
+    <None Include="Resources\icons8-double-tick-20.png" />
+    <None Include="Resources\icons8-double-tick-22.png" />
+    <None Include="Resources\icons8-error-22.png" />
+    <None Include="Resources\icons8-error-20.png" />
+    <Content Include="Resources\success.png" />
     <Content Include="Resources\Dashboard.png" />
     <None Include="Resources\Dashboard1.png" />
   </ItemGroup>
