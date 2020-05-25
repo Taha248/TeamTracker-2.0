@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainBoard));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.dashboard_panel = new System.Windows.Forms.Panel();
             this.header_panel = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -73,7 +74,11 @@
             this.panel_dashboard = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dashboard_panel = new System.Windows.Forms.Panel();
+            this.messageBox = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.error = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.success = new System.Windows.Forms.PictureBox();
             this.panel_main.SuspendLayout();
             this.header_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -100,20 +105,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_dashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.messageBox.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.success)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_main
             // 
             this.panel_main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_main.Controls.Add(this.dashboard_panel);
             this.panel_main.Controls.Add(this.header_panel);
             this.panel_main.Controls.Add(this.panel11);
             this.panel_main.Controls.Add(this.panel_sidebar);
-            this.panel_main.Controls.Add(this.dashboard_panel);
+            this.panel_main.Controls.Add(this.messageBox);
             this.panel_main.Location = new System.Drawing.Point(0, 0);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(783, 522);
             this.panel_main.TabIndex = 0;
             this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
+            // 
+            // dashboard_panel
+            // 
+            this.dashboard_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.dashboard_panel.ForeColor = System.Drawing.Color.Transparent;
+            this.dashboard_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.dashboard_panel.Location = new System.Drawing.Point(191, 66);
+            this.dashboard_panel.Name = "dashboard_panel";
+            this.dashboard_panel.Size = new System.Drawing.Size(591, 455);
+            this.dashboard_panel.TabIndex = 7;
+            this.dashboard_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboard_panel_Paint);
             // 
             // header_panel
             // 
@@ -603,16 +624,58 @@
             this.label2.Text = "Dashboard";
             this.label2.Click += new System.EventHandler(this.panel_dashboard_Click);
             // 
-            // dashboard_panel
+            // messageBox
             // 
-            this.dashboard_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.dashboard_panel.ForeColor = System.Drawing.Color.Transparent;
-            this.dashboard_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.dashboard_panel.Location = new System.Drawing.Point(191, 69);
-            this.dashboard_panel.Name = "dashboard_panel";
-            this.dashboard_panel.Size = new System.Drawing.Size(590, 452);
-            this.dashboard_panel.TabIndex = 7;
-            this.dashboard_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboard_panel_Paint);
+            this.messageBox.BackgroundImage = global::TeamTracker2._0.Properties.Resources.msg32;
+            this.messageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.messageBox.Controls.Add(this.panel1);
+            this.messageBox.Location = new System.Drawing.Point(604, 76);
+            this.messageBox.Name = "messageBox";
+            this.messageBox.Size = new System.Drawing.Size(164, 38);
+            this.messageBox.TabIndex = 12;
+            this.messageBox.Paint += new System.Windows.Forms.PaintEventHandler(this.messageBox_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.error);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.success);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(162, 36);
+            this.panel1.TabIndex = 8;
+            // 
+            // error
+            // 
+            this.error.Image = global::TeamTracker2._0.Properties.Resources.icons8_error_20;
+            this.error.Location = new System.Drawing.Point(8, 7);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(20, 20);
+            this.error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.error.TabIndex = 10;
+            this.error.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(28, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 35);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Saved Succesfully";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // success
+            // 
+            this.success.Image = global::TeamTracker2._0.Properties.Resources.icons8_double_tick_22;
+            this.success.Location = new System.Drawing.Point(7, 6);
+            this.success.Name = "success";
+            this.success.Size = new System.Drawing.Size(22, 22);
+            this.success.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.success.TabIndex = 9;
+            this.success.TabStop = false;
             // 
             // MainBoard
             // 
@@ -662,6 +725,11 @@
             this.panel_dashboard.ResumeLayout(false);
             this.panel_dashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.messageBox.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.success)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -703,7 +771,6 @@
         private System.Windows.Forms.Panel panel_dashboard;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel dashboard_panel;
         private Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch1;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label14;
@@ -713,6 +780,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox success;
+        private System.Windows.Forms.PictureBox error;
+        private System.Windows.Forms.Panel messageBox;
+        private System.Windows.Forms.Panel dashboard_panel;
     }
 }
 
