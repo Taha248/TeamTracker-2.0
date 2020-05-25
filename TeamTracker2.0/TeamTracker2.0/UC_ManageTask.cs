@@ -14,7 +14,7 @@ namespace TeamTracker2._0
 {
     public partial class UC_ManageTask : UserControl 
     {
-        GridViewHelper gridViewHelper = null;
+        public static GridViewHelper gridViewHelper = null;
         Form prevForm = null;
         GlassyPanel panel = new GlassyPanel();
         F_EDIT_TASK dm = null;
@@ -24,8 +24,10 @@ namespace TeamTracker2._0
         {
             prevForm = form;
             InitializeComponent();
-            gridViewHelper = new GridViewHelper(" Progress,taskID AS TaskID, TaskDesc , TaskTitle AS TaskName," +
-                                      "TaskStatus AS Status,LastDate AS LastDate", "task", null, this, bunifuCustomDataGrid1);
+
+            gridViewHelper.Form = this;
+            gridViewHelper.BunifuCustomDataGrid = bunifuCustomDataGrid1;
+  
 
         }
 

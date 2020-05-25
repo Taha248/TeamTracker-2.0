@@ -31,11 +31,6 @@ namespace TeamTracker2._0
         private List<String> searchColumns = null;
         private List<int> hideColumns = null;
         private string cols = null, table = null, condition = null;
-        private string v1;
-        private string v2;
-        private object p;
-        private UC_SessionLogs uC_SessionLogs;
-        private BunifuCustomDataGrid bunifuCustomDataGrid1;
 
         public BunifuCustomDataGrid BunifuCustomDataGrid
         {
@@ -47,6 +42,12 @@ namespace TeamTracker2._0
             set
             {
                 bunifuCustomDataGrid = value;
+                this.bunifuCustomDataGrid.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bunifuCustomDataGrid1_ColumnHeaderMouseClick);
+                this.bunifuCustomDataGrid.DataSource = ds.Tables[0];
+                this.searchColumns = new List<String>();
+                colWidth = new Dictionary<int, int>();
+                hideColumns = new List<int>();
+                loadProperties();
             }
         }
 
@@ -76,6 +77,19 @@ namespace TeamTracker2._0
             }
         }
 
+        public UserControl Form
+        {
+            get
+            {
+                return form;
+            }
+
+            set
+            {
+                form = value;
+            }
+        }
+
         public GridViewHelper(string columns, string table, string condition, UserControl form, BunifuCustomDataGrid bunifuCustomDataGrid)
         {
             InitializeGridView(columns, table, condition, form, bunifuCustomDataGrid);
@@ -84,12 +98,13 @@ namespace TeamTracker2._0
 
 
 
-        //internal void addEditColumn(EditScreenGeneral dataManupilation)
-        //{
-        //    this.editForm = dataManupilation;
-        //    addEditColumn();
-        //}
+        public  GridViewHelper(string columns, string table, string condition) {
+            this.cols = columns;
+            this.table = table;
+            this.condition = condition;
+            ds = ManData.getDataSet(columns, table, condition);
 
+        }
         public void InitializeGridView(string columns, string table, string condition, UserControl form, BunifuCustomDataGrid bunifuCustomDataGrid)
         {
 
@@ -97,20 +112,15 @@ namespace TeamTracker2._0
             this.table = table;
             this.condition = condition;
             ds = ManData.getDataSet(columns, table, condition);
-            this.form = form;
+            this.Form = form;
             this.BunifuCustomDataGrid = null;
             this.BunifuCustomDataGrid = bunifuCustomDataGrid;
             this.bunifuCustomDataGridCopy = bunifuCustomDataGrid;
             this.BunifuCustomDataGrid.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bunifuCustomDataGrid1_ColumnHeaderMouseClick);
-
-            //          this.bunifuCustomDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid_CellContentClick);
-
-
             this.BunifuCustomDataGrid.DataSource = ds.Tables[0];
             this.searchColumns = new List<String>();
             colWidth = new Dictionary<int, int>();
             hideColumns = new List<int>();
-
             loadProperties();
         }
 
@@ -307,8 +317,8 @@ namespace TeamTracker2._0
             this.panel4.Size = new System.Drawing.Size(188, 29);
             this.panel4.TabIndex = 11;
             this.panel4.BackColor = Color.Black;
-            form.Controls.Add(panel4);
-            form.Controls.Add(this.panel4);
+            Form.Controls.Add(panel4);
+            Form.Controls.Add(this.panel4);
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(getImage(icon)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

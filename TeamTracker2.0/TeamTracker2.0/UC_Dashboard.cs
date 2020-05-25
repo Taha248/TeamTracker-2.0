@@ -17,10 +17,17 @@ namespace TeamTracker2._0
     {
         int totalHeight = 0;
         Form form = null;
+
+        public static List<User> activeUsers = null;
+        public static List<User> totalUsers = null; 
+        public static List<User> incompletedTask = null;
+        public static List<User> completedTask = null;
+        public static Task currentTask = null;
+
         public UC_Dashboard(Form form)
         {
             InitializeComponent();
-            this.form = form; 
+            this.form = form;
             LoadPieChart();
             LoadReputationGraph();
             this.flowLayoutPanel1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseWheel);
@@ -95,7 +102,6 @@ namespace TeamTracker2._0
             LoadNotification(msgList);
             initUI();
 
-            // -0.15119X + 164.48074
             double val = 0;
             val = (-0.15119 * totalHeight) + 178.48074;
             pictureBox6.Height = (int)val;
@@ -106,21 +112,12 @@ namespace TeamTracker2._0
 
         private void initUI()
         {
-            List<User> userids = showActiveUsers();
-            label4.Text = userids.Count.ToString();
-
-            List<User> tot = getTotaluser();
-            label2.Text = tot.Count.ToString();
-
-
-            List<User> incUser = getincompleteTasks();
-            label3.Text = incUser.Count.ToString();
-
-            List<User> cmpUser = tasksCompleted();
-            label5.Text = cmpUser.Count.ToString();
-
-
-            label7.Text = getCurrentTask("4").TaskName;
+    
+            label4.Text = activeUsers.Count.ToString();
+            label2.Text = totalUsers.Count.ToString();
+            label3.Text = incompletedTask.Count.ToString();
+            label5.Text = completedTask.Count.ToString();
+            label7.Text = currentTask.TaskName;
         }
 
         private void LoadNotification(List<MessageFormat> Messages)
@@ -136,9 +133,9 @@ namespace TeamTracker2._0
             top.Width = 208;
             top.Height = 2; totalHeight += 2;
             top.BackColor = Color.SkyBlue;
-             //flowLayoutPanel1.Controls.Add(bottom_);
-             flowLayoutPanel1.Controls.Add(top);
-            
+            //flowLayoutPanel1.Controls.Add(bottom_);
+            flowLayoutPanel1.Controls.Add(top);
+
             for (int i = 0; i < Messages.Count; i++)
             {
                 int messagePanelHeight = 0;
@@ -159,7 +156,7 @@ namespace TeamTracker2._0
                 subject.Width = 208;
 
                 int height = 21;// getNotificationLabelHeight(Messages[i].Subject);
-               
+
                 subject.Height = height;
                 totalHeight += height;
                 messagePanelHeight += height;
@@ -216,7 +213,7 @@ namespace TeamTracker2._0
                 flowLayoutPanel1.Controls.Add(panel);
                 flowLayoutPanel1.Controls.Add(bottom1);
                 flowLayoutPanel1.Controls.Add(bottom);
-                
+
                 subject.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
                 messages.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
                 date.MouseHover += new System.EventHandler(this.flowLayoutPanel1_MouseHover);
@@ -267,7 +264,7 @@ namespace TeamTracker2._0
             Label currentMessage = (Label)sender;
             currentMessage.Parent.BackColor = Color.FromArgb(222, 239, 252);
         }
-        void labelClick(object sender,EventArgs e)
+        void labelClick(object sender, EventArgs e)
         {
             NotificationViewer notificationView = new NotificationViewer();
             notificationView.ShowDialog();
@@ -406,7 +403,7 @@ namespace TeamTracker2._0
 
         }
 
-        public List<User> showActiveUsers()
+        public static List<User> showActiveUsers()
         {
             User user = null;
             List<User> taskList = new List<User>();
@@ -525,8 +522,8 @@ namespace TeamTracker2._0
         private void label7_Click(object sender, EventArgs e)
         {
 
-           // TaskLogs taskLogs = new TaskLogs();
-           // taskLogs.ShowDialog();
+            // TaskLogs taskLogs = new TaskLogs();
+            // taskLogs.ShowDialog();
         }
 
         private void panel5_MouseClick(object sender, MouseEventArgs e)

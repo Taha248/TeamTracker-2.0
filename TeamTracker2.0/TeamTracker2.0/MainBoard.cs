@@ -25,6 +25,7 @@ namespace TeamTracker2._0
         public MainBoard()
         {
             InitializeComponent();
+            DB_Initialization.initializeDB();
             lbl_cross.BackColor = Color.Transparent;
             dashboard_panel.Controls.Add(new UC_Dashboard(this));
             

@@ -13,16 +13,15 @@ namespace TeamTracker2._0
 {
     public partial class UC_SessionLogs : UserControl
     {
-        GridViewHelper gridViewHelper = null;
+        public static GridViewHelper gridViewHelper = null;
         Form prevForm = null;
         
         public UC_SessionLogs(Form form )
         {
             this.prevForm = form;
-           
             InitializeComponent();
-
-            gridViewHelper = new GridViewHelper("u.name as Name ,s.timein as TimeIn ,s.timeout as TimeOut,TIMEDIFF(timeout,timein) AS TimeDifference", "session as s, user as u", "s.UserID=u.UserID ORDER BY timein DESC ", this, bunifuCustomDataGrid1);
+            gridViewHelper.Form = this;
+            gridViewHelper.BunifuCustomDataGrid = bunifuCustomDataGrid1;
 
         }
 

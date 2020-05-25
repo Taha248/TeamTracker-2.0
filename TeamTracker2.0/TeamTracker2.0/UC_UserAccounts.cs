@@ -12,13 +12,13 @@ namespace TeamTracker2._0
 {
     public partial class UC_UserAccounts : UserControl
     {
-        GridViewHelper gridViewHelper = null;
+        public static GridViewHelper gridViewHelper = null;
 
         public UC_UserAccounts()
         {
             InitializeComponent();
-            gridViewHelper = new GridViewHelper("NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user",null, this, bunifuCustomDataGrid1);
-
+            gridViewHelper.Form = this;
+            gridViewHelper.BunifuCustomDataGrid = bunifuCustomDataGrid1;
         }
 
         private void UC_UserAccounts_Load(object sender, EventArgs e)
