@@ -173,6 +173,12 @@
     <Compile Include="UC_ManageTask.Designer.cs">
       <DependentUpon>UC_ManageTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Permissions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Permissions.Designer.cs">
+      <DependentUpon>UC_Permissions.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_SessionLogs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ManageTask.resx">
       <DependentUpon>UC_ManageTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Permissions.resx">
+      <DependentUpon>UC_Permissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_SessionLogs.resx">
       <DependentUpon>UC_SessionLogs.cs</DependentUpon>

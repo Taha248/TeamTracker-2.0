@@ -31,34 +31,28 @@ namespace GridViewExample
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_EDIT_ACCOUNT));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_cross = new System.Windows.Forms.Panel();
             this.lbl_cross = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_taskdtl = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chkbox_extend = new System.Windows.Forms.CheckBox();
-            this.dropDownAssTo = new System.Windows.Forms.ComboBox();
-            this.dropdownSts = new System.Windows.Forms.ComboBox();
-            this.txt_date = new System.Windows.Forms.DateTimePicker();
-            this.txtExtension = new System.Windows.Forms.TextBox();
-            this.txt_progress = new System.Windows.Forms.TextBox();
-            this.txt_tasktitle = new System.Windows.Forms.TextBox();
-            this.txt_taskid = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txt_Role = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Previllages = new System.Windows.Forms.Button();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Progress = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lbl_pw = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Username = new System.Windows.Forms.TextBox();
+            this.txt_taskid = new System.Windows.Forms.TextBox();
+            this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel_cross.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_cross.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,19 +62,29 @@ namespace GridViewExample
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panel_cross);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 522);
+            this.panel1.Size = new System.Drawing.Size(783, 522);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel_cross);
+            this.panel2.Controls.Add(this.lbl_taskdtl);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(142, 86);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(491, 331);
+            this.panel2.TabIndex = 3;
             // 
             // panel_cross
             // 
             this.panel_cross.Controls.Add(this.lbl_cross);
             this.panel_cross.ForeColor = System.Drawing.Color.Transparent;
-            this.panel_cross.Location = new System.Drawing.Point(595, 37);
+            this.panel_cross.Location = new System.Drawing.Point(465, 0);
             this.panel_cross.Name = "panel_cross";
             this.panel_cross.Size = new System.Drawing.Size(26, 19);
             this.panel_cross.TabIndex = 2;
@@ -102,16 +106,6 @@ namespace GridViewExample
             this.lbl_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
             this.lbl_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lbl_taskdtl);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(130, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 403);
-            this.panel2.TabIndex = 3;
-            // 
             // lbl_taskdtl
             // 
             this.lbl_taskdtl.AutoSize = true;
@@ -124,215 +118,153 @@ namespace GridViewExample
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.bunifuCustomLabel5);
-            this.panel3.Controls.Add(this.chkbox_extend);
-            this.panel3.Controls.Add(this.dropDownAssTo);
-            this.panel3.Controls.Add(this.dropdownSts);
-            this.panel3.Controls.Add(this.bunifuThinButton21);
-            this.panel3.Controls.Add(this.txt_date);
-            this.panel3.Controls.Add(this.txtExtension);
-            this.panel3.Controls.Add(this.txt_progress);
-            this.panel3.Controls.Add(this.txt_tasktitle);
-            this.panel3.Controls.Add(this.txt_taskid);
-            this.panel3.Controls.Add(this.bunifuCustomLabel4);
-            this.panel3.Controls.Add(this.bunifuCustomLabel3);
+            this.panel3.Controls.Add(this.txt_Role);
             this.panel3.Controls.Add(this.bunifuCustomLabel2);
+            this.panel3.Controls.Add(this.btn_update);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btn_Previllages);
             this.panel3.Controls.Add(this.bunifuCustomLabel1);
-            this.panel3.Controls.Add(this.Progress);
-            this.panel3.Controls.Add(this.lbl_pw);
+            this.panel3.Controls.Add(this.txt_Name);
+            this.panel3.Controls.Add(this.bunifuCustomLabel6);
+            this.panel3.Controls.Add(this.bunifuCustomLabel5);
+            this.panel3.Controls.Add(this.txt_Username);
+            this.panel3.Controls.Add(this.txt_taskid);
             this.panel3.Controls.Add(this.Title);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(5, 7);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 391);
+            this.panel3.Size = new System.Drawing.Size(480, 319);
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
-            // chkbox_extend
+            // txt_Role
             // 
-            this.chkbox_extend.AutoSize = true;
-            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
-            this.chkbox_extend.Name = "chkbox_extend";
-            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
-            this.chkbox_extend.TabIndex = 20;
-            this.chkbox_extend.UseVisualStyleBackColor = true;
-            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
-            // 
-            // dropDownAssTo
-            // 
-            this.dropDownAssTo.FormattingEnabled = true;
-            this.dropDownAssTo.Location = new System.Drawing.Point(210, 268);
-            this.dropDownAssTo.Name = "dropDownAssTo";
-            this.dropDownAssTo.Size = new System.Drawing.Size(185, 21);
-            this.dropDownAssTo.TabIndex = 19;
-            // 
-            // dropdownSts
-            // 
-            this.dropdownSts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dropdownSts.FormattingEnabled = true;
-            this.dropdownSts.Location = new System.Drawing.Point(209, 207);
-            this.dropdownSts.Name = "dropdownSts";
-            this.dropdownSts.Size = new System.Drawing.Size(185, 21);
-            this.dropdownSts.TabIndex = 19;
-            // 
-            // txt_date
-            // 
-            this.txt_date.Enabled = false;
-            this.txt_date.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_date.Location = new System.Drawing.Point(209, 237);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(164, 21);
-            this.txt_date.TabIndex = 17;
-            // 
-            // txtExtension
-            // 
-            this.txtExtension.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExtension.Location = new System.Drawing.Point(209, 299);
-            this.txtExtension.Name = "txtExtension";
-            this.txtExtension.Size = new System.Drawing.Size(185, 24);
-            this.txtExtension.TabIndex = 15;
-            this.txtExtension.Visible = false;
-            // 
-            // txt_progress
-            // 
-            this.txt_progress.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_progress.Location = new System.Drawing.Point(209, 175);
-            this.txt_progress.Name = "txt_progress";
-            this.txt_progress.Size = new System.Drawing.Size(51, 24);
-            this.txt_progress.TabIndex = 11;
-            // 
-            // txt_tasktitle
-            // 
-            this.txt_tasktitle.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tasktitle.Location = new System.Drawing.Point(210, 62);
-            this.txt_tasktitle.Name = "txt_tasktitle";
-            this.txt_tasktitle.Size = new System.Drawing.Size(185, 24);
-            this.txt_tasktitle.TabIndex = 9;
-            // 
-            // txt_taskid
-            // 
-            this.txt_taskid.Enabled = false;
-            this.txt_taskid.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taskid.Location = new System.Drawing.Point(212, 29);
-            this.txt_taskid.Name = "txt_taskid";
-            this.txt_taskid.Size = new System.Drawing.Size(48, 24);
-            this.txt_taskid.TabIndex = 8;
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(59, 302);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(97, 16);
-            this.bunifuCustomLabel4.TabIndex = 7;
-            this.bunifuCustomLabel4.Text = "Extension Reason";
-            this.bunifuCustomLabel4.Visible = false;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(59, 269);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(67, 16);
-            this.bunifuCustomLabel3.TabIndex = 6;
-            this.bunifuCustomLabel3.Text = "Assigned to";
+            this.txt_Role.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Role.Location = new System.Drawing.Point(211, 161);
+            this.txt_Role.Name = "txt_Role";
+            this.txt_Role.Size = new System.Drawing.Size(185, 24);
+            this.txt_Role.TabIndex = 31;
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 237);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 167);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(58, 16);
-            this.bunifuCustomLabel2.TabIndex = 5;
-            this.bunifuCustomLabel2.Text = "Last Date";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(31, 16);
+            this.bunifuCustomLabel2.TabIndex = 30;
+            this.bunifuCustomLabel2.Text = "Role";
+            // 
+            // btn_update
+            // 
+            this.btn_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Location = new System.Drawing.Point(389, 279);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(77, 23);
+            this.btn_update.TabIndex = 29;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(18, 289);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Reset password";
+            // 
+            // btn_Previllages
+            // 
+            this.btn_Previllages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(222)))));
+            this.btn_Previllages.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_Previllages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Previllages.ForeColor = System.Drawing.Color.White;
+            this.btn_Previllages.Location = new System.Drawing.Point(211, 202);
+            this.btn_Previllages.Name = "btn_Previllages";
+            this.btn_Previllages.Size = new System.Drawing.Size(77, 23);
+            this.btn_Previllages.TabIndex = 27;
+            this.btn_Previllages.Text = "Previllages";
+            this.btn_Previllages.UseVisualStyleBackColor = false;
+            this.btn_Previllages.Click += new System.EventHandler(this.btn_Previllages_Click);
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(59, 208);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(60, 206);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(40, 16);
-            this.bunifuCustomLabel1.TabIndex = 4;
-            this.bunifuCustomLabel1.Text = "Status";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(43, 16);
+            this.bunifuCustomLabel1.TabIndex = 26;
+            this.bunifuCustomLabel1.Text = "Access";
             // 
-            // Progress
+            // txt_Name
             // 
-            this.Progress.AutoSize = true;
-            this.Progress.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress.Location = new System.Drawing.Point(59, 176);
-            this.Progress.Name = "Progress";
-            this.Progress.Size = new System.Drawing.Size(53, 16);
-            this.Progress.TabIndex = 3;
-            this.Progress.Text = "Progress";
+            this.txt_Name.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Name.Location = new System.Drawing.Point(212, 81);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(185, 24);
+            this.txt_Name.TabIndex = 25;
             // 
-            // lbl_pw
+            // bunifuCustomLabel6
             // 
-            this.lbl_pw.AutoSize = true;
-            this.lbl_pw.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pw.Location = new System.Drawing.Point(59, 96);
-            this.lbl_pw.Name = "lbl_pw";
-            this.lbl_pw.Size = new System.Drawing.Size(58, 16);
-            this.lbl_pw.TabIndex = 2;
-            this.lbl_pw.Text = "Password";
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(59, 63);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(60, 16);
-            this.Title.TabIndex = 1;
-            this.Title.Text = "Username";
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(57, 87);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(42, 16);
+            this.bunifuCustomLabel6.TabIndex = 24;
+            this.bunifuCustomLabel6.Text = " Name";
             // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(59, 33);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(61, 47);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(45, 16);
             this.bunifuCustomLabel5.TabIndex = 21;
             this.bunifuCustomLabel5.Text = "User ID";
             // 
-            // bunifuThinButton21
+            // txt_Username
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Update";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Quicksand", 8.25F);
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(194)))), ((int)(((byte)(203)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(202, 340);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(58, 34);
-            this.bunifuThinButton21.TabIndex = 18;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            this.txt_Username.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Username.Location = new System.Drawing.Point(211, 121);
+            this.txt_Username.Name = "txt_Username";
+            this.txt_Username.Size = new System.Drawing.Size(185, 24);
+            this.txt_Username.TabIndex = 9;
             // 
-            // textBox1
+            // txt_taskid
             // 
-            this.textBox1.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(209, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 24);
-            this.textBox1.TabIndex = 22;
+            this.txt_taskid.Enabled = false;
+            this.txt_taskid.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taskid.Location = new System.Drawing.Point(212, 41);
+            this.txt_taskid.Name = "txt_taskid";
+            this.txt_taskid.Size = new System.Drawing.Size(48, 24);
+            this.txt_taskid.TabIndex = 8;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(59, 127);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(60, 16);
+            this.Title.TabIndex = 1;
+            this.Title.Text = "Username";
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(6, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(460, 297);
+            this.panel4.TabIndex = 32;
             // 
             // F_EDIT_ACCOUNT
             // 
@@ -348,9 +280,9 @@ namespace GridViewExample
             this.Load += new System.EventHandler(this.F_EDIT_ACCOUNT_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_EDIT_ACCOUNT_Paint);
             this.panel1.ResumeLayout(false);
-            this.panel_cross.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel_cross.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -365,23 +297,18 @@ namespace GridViewExample
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_taskdtl;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.CheckBox chkbox_extend;
-        private System.Windows.Forms.ComboBox dropDownAssTo;
-        private System.Windows.Forms.ComboBox dropdownSts;
-        private BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.DateTimePicker txt_date;
-        private System.Windows.Forms.TextBox txtExtension;
-        private System.Windows.Forms.TextBox txt_progress;
-        private System.Windows.Forms.TextBox txt_tasktitle;
+        private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.TextBox txt_taskid;
-        private BunifuCustomLabel bunifuCustomLabel4;
-        private BunifuCustomLabel bunifuCustomLabel3;
-        private BunifuCustomLabel bunifuCustomLabel2;
-        private BunifuCustomLabel bunifuCustomLabel1;
-        private BunifuCustomLabel Progress;
-        private BunifuCustomLabel lbl_pw;
         private BunifuCustomLabel Title;
         private BunifuCustomLabel bunifuCustomLabel5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Name;
+        private BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Previllages;
+        private BunifuCustomLabel bunifuCustomLabel1;
+        private System.Windows.Forms.TextBox txt_Role;
+        private BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

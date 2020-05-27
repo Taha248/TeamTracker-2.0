@@ -18,7 +18,7 @@ namespace TeamTracker2._0
 
         private static void initializeUserAccounts()
         {
-            UC_UserAccounts.gridViewHelper = new GridViewHelper("NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user", null);
+            UC_UserAccounts.gridViewHelper = new GridViewHelper("UserID,NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user", null);
 
         }
 
