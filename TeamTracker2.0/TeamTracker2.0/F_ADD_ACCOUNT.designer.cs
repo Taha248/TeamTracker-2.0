@@ -3,7 +3,7 @@ using System;
 
 namespace GridViewExample
 {
-    partial class F_EDIT_ACCOUNT
+    partial class F_ADD_ACCOUNT
     {
         /// <summary>
         /// Required designer variable.
@@ -41,8 +41,6 @@ namespace GridViewExample
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Previllages = new System.Windows.Forms.Button();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -122,8 +120,6 @@ namespace GridViewExample
             this.panel3.Controls.Add(this.bunifuCustomLabel2);
             this.panel3.Controls.Add(this.btn_update);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.btn_Previllages);
-            this.panel3.Controls.Add(this.bunifuCustomLabel1);
             this.panel3.Controls.Add(this.txt_Name);
             this.panel3.Controls.Add(this.bunifuCustomLabel6);
             this.panel3.Controls.Add(this.bunifuCustomLabel5);
@@ -140,7 +136,7 @@ namespace GridViewExample
             // txt_Role
             // 
             this.txt_Role.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Role.Location = new System.Drawing.Point(211, 161);
+            this.txt_Role.Location = new System.Drawing.Point(211, 180);
             this.txt_Role.Name = "txt_Role";
             this.txt_Role.Size = new System.Drawing.Size(185, 24);
             this.txt_Role.TabIndex = 31;
@@ -149,7 +145,7 @@ namespace GridViewExample
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 167);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 186);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(31, 16);
             this.bunifuCustomLabel2.TabIndex = 30;
@@ -165,7 +161,7 @@ namespace GridViewExample
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(77, 23);
             this.btn_update.TabIndex = 29;
-            this.btn_update.Text = "Update";
+            this.btn_update.Text = "Next";
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
@@ -184,34 +180,10 @@ namespace GridViewExample
             this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
-            // btn_Previllages
-            // 
-            this.btn_Previllages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(222)))));
-            this.btn_Previllages.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btn_Previllages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Previllages.ForeColor = System.Drawing.Color.White;
-            this.btn_Previllages.Location = new System.Drawing.Point(211, 202);
-            this.btn_Previllages.Name = "btn_Previllages";
-            this.btn_Previllages.Size = new System.Drawing.Size(77, 23);
-            this.btn_Previllages.TabIndex = 27;
-            this.btn_Previllages.Text = "Previllages";
-            this.btn_Previllages.UseVisualStyleBackColor = false;
-            this.btn_Previllages.Click += new System.EventHandler(this.btn_Previllages_Click);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(60, 206);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(43, 16);
-            this.bunifuCustomLabel1.TabIndex = 26;
-            this.bunifuCustomLabel1.Text = "Access";
-            // 
             // txt_Name
             // 
             this.txt_Name.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Name.Location = new System.Drawing.Point(212, 81);
+            this.txt_Name.Location = new System.Drawing.Point(212, 100);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(185, 24);
             this.txt_Name.TabIndex = 25;
@@ -220,7 +192,7 @@ namespace GridViewExample
             // 
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(57, 87);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(57, 106);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(42, 16);
             this.bunifuCustomLabel6.TabIndex = 24;
@@ -230,7 +202,7 @@ namespace GridViewExample
             // 
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(61, 47);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(61, 66);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(45, 16);
             this.bunifuCustomLabel5.TabIndex = 21;
@@ -239,7 +211,7 @@ namespace GridViewExample
             // txt_Username
             // 
             this.txt_Username.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Username.Location = new System.Drawing.Point(211, 121);
+            this.txt_Username.Location = new System.Drawing.Point(211, 140);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(185, 24);
             this.txt_Username.TabIndex = 9;
@@ -248,7 +220,7 @@ namespace GridViewExample
             // 
             this.txt_taskid.Enabled = false;
             this.txt_taskid.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taskid.Location = new System.Drawing.Point(212, 41);
+            this.txt_taskid.Location = new System.Drawing.Point(212, 60);
             this.txt_taskid.Name = "txt_taskid";
             this.txt_taskid.Size = new System.Drawing.Size(48, 24);
             this.txt_taskid.TabIndex = 8;
@@ -257,7 +229,7 @@ namespace GridViewExample
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(59, 127);
+            this.Title.Location = new System.Drawing.Point(59, 146);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(60, 16);
             this.Title.TabIndex = 1;
@@ -271,7 +243,7 @@ namespace GridViewExample
             this.panel4.Size = new System.Drawing.Size(460, 297);
             this.panel4.TabIndex = 32;
             // 
-            // F_EDIT_ACCOUNT
+            // F_ADD_ACOUNT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -279,11 +251,11 @@ namespace GridViewExample
             this.ClientSize = new System.Drawing.Size(783, 522);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "F_EDIT_ACCOUNT";
+            this.Name = "F_ADD_ACOUNT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F_EDIT_ACCOUNT";
-            this.Load += new System.EventHandler(this.F_EDIT_ACCOUNT_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_EDIT_ACCOUNT_Paint);
+            this.Text = "F_ADD_ACOUNT";
+            this.Load += new System.EventHandler(this.F_ADD_ACOUNT_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_ADD_ACOUNT_Paint);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -310,8 +282,6 @@ namespace GridViewExample
         private BunifuCustomLabel bunifuCustomLabel6;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Previllages;
-        private BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.TextBox txt_Role;
         private BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel4;

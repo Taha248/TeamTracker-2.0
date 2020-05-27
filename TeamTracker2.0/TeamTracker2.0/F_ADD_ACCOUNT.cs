@@ -13,7 +13,7 @@ using TeamTracker2._0;
 
 namespace GridViewExample
 {
-    public partial class F_EDIT_ACCOUNT : EditScreenGeneral
+    public partial class F_ADD_ACCOUNT: EditScreenGeneral
     {
         private TextBox userID = null;
         private TextBox userName = null;
@@ -21,7 +21,6 @@ namespace GridViewExample
         private TextBox role = null;
         private String permission = null;
         private Form prevForm = null;
-
         private GridViewHelper gridView = null;
 
         public TextBox UserID
@@ -91,7 +90,7 @@ namespace GridViewExample
 
 
         // TaskId,TaskTitle,TaskDesc,Progress,TaskStatus,AssignedTo,LastDate,DateOfCreation,LastUpdated,Extension_reason
-        public F_EDIT_ACCOUNT()
+        public F_ADD_ACCOUNT()
         {
             InitializeComponent();
             //txt_date.Format = DateTimePickerFormat.Custom;
@@ -111,7 +110,7 @@ namespace GridViewExample
 
         }
 
-        public F_EDIT_ACCOUNT(Form prevForm , GridViewHelper gridView )
+        public F_ADD_ACCOUNT(Form prevForm , GridViewHelper gridView )
         {
             this.gridView = gridView;
             this.prevForm = prevForm;
@@ -184,13 +183,13 @@ namespace GridViewExample
            
         }
 
-        private void F_EDIT_ACCOUNT_Paint(object sender, PaintEventArgs e)
+        private void F_ADD_ACOUNT_Paint(object sender, PaintEventArgs e)
         {
             var hb = new HatchBrush(HatchStyle.Percent50, this.TransparencyKey);
             e.Graphics.FillRectangle(hb, this.DisplayRectangle);
         }
 
-        private void F_EDIT_ACCOUNT_Load(object sender, EventArgs e)
+        private void F_ADD_ACOUNT_Load(object sender, EventArgs e)
         {
 
             this.Height = prevForm.Height;
@@ -207,22 +206,42 @@ namespace GridViewExample
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> updateList = new Dictionary<string, string>();
+            /*
+             * 
 
+             Dictionary<string, string> updateList = new Dictionary<string, string>();
+            
              updateList.Add("USERNAME", txt_Username.Text);
              updateList.Add("NAME", txt_Name.Text);
              updateList.Add("ROLE", txt_Role.Text);
+            
+             ManData.executeUpdateQuery(updateList, "user", " userID = '" + userID.Text + "'");
+             gridView.reloadGridView();
 
-
-            ManData.executeUpdateQuery(updateList, "user", " userID = '" + userID.Text + "'");
+             this.Close();
+             
+            */
+            Dictionary<string, string> addList = new Dictionary<string, string>();
+            addList.Add("USERNAME", txt_Username.Text);
+            addList.Add("NAME", txt_Name.Text);
+            addList.Add("ROLE", txt_Role.Text);
+            ManData.executeInsertQuery(addList, "user");
             gridView.reloadGridView();
-            this.Close();
+
+
+            UC_Permissions permissions = new UC_Permissions(panel4, permission, userID.Text);
+            permissions.IsNew = true;
+            panel4.Controls.Add(permissions);
+            panel4.BringToFront();
+            panel4.Show();
+
+
+
         }
 
         private void btn_Previllages_Click(object sender, EventArgs e)
         {
             UC_Permissions permissions = new UC_Permissions(panel4, permission, userID.Text);
-            permissions.IsNew = false;
             panel4.Controls.Add(permissions);
             panel4.BringToFront();
             panel4.Show();

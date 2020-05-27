@@ -15,6 +15,7 @@ namespace TeamTracker2._0
     {
         public static GridViewHelper gridViewHelper = null;
         public static F_EDIT_ACCOUNT dm = null;
+        public static F_ADD_ACCOUNT addAcc = null;
         public static Form prevForm = null;
         private string userid = null;
 
@@ -46,8 +47,12 @@ namespace TeamTracker2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
+            addAcc = new F_ADD_ACCOUNT(prevForm, gridViewHelper);
+                String newID = ManData.getNewId("user", "userid");
+            addAcc.UserID.Text = newID;
 
-        }
+            addAcc.ShowDialog();
+            }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -78,7 +83,7 @@ namespace TeamTracker2._0
             {
                 string value =
                 this.bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
-                ManData.executeDeleteQuery("task", "taskID='" + value + "'");
+                ManData.executeDeleteQuery("user", "userID='" + value + "'");
                 gridViewHelper.reloadGridView();
 
             }

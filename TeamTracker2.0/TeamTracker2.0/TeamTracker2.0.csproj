@@ -92,6 +92,12 @@
     <Compile Include="F_ADD_TASK.designer.cs">
       <DependentUpon>F_ADD_TASK.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_ADD_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_ADD_ACCOUNT.designer.cs">
+      <DependentUpon>F_ADD_ACCOUNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_EDIT_ACCOUNT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,7 @@
     <Compile Include="OnlineUsers.Designer.cs">
       <DependentUpon>OnlineUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permissions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Task.cs" />
@@ -212,6 +219,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="F_ADD_TASK.resx">
       <DependentUpon>F_ADD_TASK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_ADD_ACCOUNT.resx">
+      <DependentUpon>F_ADD_ACCOUNT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_EDIT_ACCOUNT.resx">
       <DependentUpon>F_EDIT_ACCOUNT.cs</DependentUpon>

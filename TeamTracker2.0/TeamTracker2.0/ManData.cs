@@ -113,7 +113,7 @@ namespace GridViewExample
                 count++;
             }
 
-            return "UPDATE " + table + " SET " + col + " where " + condition;
+            return "UPDATE " + table + " SET " + col + (condition != null ? " where " + condition : "");
         }
         public static DataSet getDataSet(string col, string table, string condition)
         {
