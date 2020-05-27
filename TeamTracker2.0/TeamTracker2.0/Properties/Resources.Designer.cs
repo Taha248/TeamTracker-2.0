@@ -263,6 +263,16 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_camera_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-camera-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_christmas_star_28 {
             get {
                 object obj = ResourceManager.GetObject("icons8-christmas-star-28", resourceCulture);
