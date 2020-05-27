@@ -116,7 +116,7 @@ namespace GridViewExample
             this.lbl_taskdtl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_taskdtl.Location = new System.Drawing.Point(15, 0);
             this.lbl_taskdtl.Name = "lbl_taskdtl";
-            this.lbl_taskdtl.Size = new System.Drawing.Size(69, 15);
+            this.lbl_taskdtl.Size = new System.Drawing.Size(71, 16);
             this.lbl_taskdtl.TabIndex = 1;
             this.lbl_taskdtl.Text = "Task Entry";
             // 

@@ -18,11 +18,6 @@ namespace TeamTracker2._0
         int totalHeight = 0;
         Form form = null;
 
-        public static List<User> activeUsers = null;
-        public static List<User> totalUsers = null; 
-        public static List<User> incompletedTask = null;
-        public static List<User> completedTask = null;
-        public static Task currentTask = null;
 
         public UC_Dashboard(Form form)
         {
@@ -113,11 +108,11 @@ namespace TeamTracker2._0
         private void initUI()
         {
     
-            label4.Text = activeUsers.Count.ToString();
-            label2.Text = totalUsers.Count.ToString();
-            label3.Text = incompletedTask.Count.ToString();
-            label5.Text = completedTask.Count.ToString();
-            label7.Text = currentTask.TaskName;
+            label4.Text = DB_Initialization.activeUsers.Count.ToString();
+            label2.Text = DB_Initialization.totalUsers.Count.ToString();
+            label3.Text = DB_Initialization.incompletedTask.Count.ToString();
+            label5.Text = DB_Initialization.completedTask.Count.ToString();
+            label7.Text = DB_Initialization.currentTask.TaskName;
         }
 
         private void LoadNotification(List<MessageFormat> Messages)
@@ -403,116 +398,8 @@ namespace TeamTracker2._0
 
         }
 
-        public static List<User> showActiveUsers()
-        {
-            User user = null;
-            List<User> taskList = new List<User>();
-            DataTable readUserTask = GridViewExample.ManData.getDataReader("*", "user", " IS_ACTIVE='1'");
-            foreach (DataRow row in readUserTask.Rows)
-            {
-                user = new User();
-                user.UserID = int.Parse(row["USERID"].ToString());
-                user.Name = row["NAME"].ToString();
-                user.UserName = row["USERNAME"].ToString();
-                user.Reputation = row["REPUTATION"].ToString();
-                user.CompletedTask = row["COMPLETED_TASK"].ToString();
-                user.Role = row["ROLE"].ToString();
-                user.LastLogin = row["LAST_LOGIN"].ToString();
-                user.CretedBy = row["CREATED_BY"].ToString();
-                user.CreatedOn = row["CREATED_ON"].ToString();
-                user.Permissions = row["PERMISSIONS"].ToString();
-                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
-                taskList.Add(user);
-            }
-            return taskList;
-        }
 
-        public static Task getCurrentTask(string userId)
-        {
-            Task taskname = new Task();
-            DataTable readUserTask = ManData.getDataReader("task.TaskTitle,DATEDIFF(NOW(),LastDate) AS deadline ", "task", "  AssignedTo = '" + userId + "' AND (TaskStatus != 'Rejected' AND TaskStatus != 'Approved' ) ORDER BY deadline ASC LIMIT 0,1");
-            foreach (DataRow row in readUserTask.Rows)
-            {
-                taskname.TaskName = row["TaskTitle"].ToString();
-            }
-            return taskname;
-        }
 
-        public static List<User> getTotaluser()
-        {
-            User user = null;
-            List<User> taskList = new List<User>();
-            DataTable readUserTask = ManData.getDataReader("*", "user", null);
-            foreach (DataRow row in readUserTask.Rows)
-            {
-                user = new User();
-
-                user.UserID = int.Parse(row["USERID"].ToString());
-                user.Name = row["NAME"].ToString();
-                user.UserName = row["USERNAME"].ToString();
-                user.Reputation = row["REPUTATION"].ToString();
-                user.CompletedTask = row["COMPLETED_TASK"].ToString();
-                user.Role = row["ROLE"].ToString();
-                user.LastLogin = row["LAST_LOGIN"].ToString();
-                user.CretedBy = row["CREATED_BY"].ToString();
-                user.CreatedOn = row["CREATED_ON"].ToString();
-                user.Permissions = row["PERMISSIONS"].ToString();
-                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
-                taskList.Add(user);
-            }
-            return taskList;
-        }
-
-        public static List<User> getincompleteTasks()
-        {
-            User user = null;
-            List<User> taskList = new List<User>();
-            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress != '100%' AND TaskStatus = 'Unapproved' ");
-            foreach (DataRow row in readUserTask.Rows)
-            {
-                user = new User();
-
-                user.UserID = int.Parse(row["USERID"].ToString());
-                user.Name = row["NAME"].ToString();
-                user.UserName = row["USERNAME"].ToString();
-                user.Reputation = row["REPUTATION"].ToString();
-                user.CompletedTask = row["COMPLETED_TASK"].ToString();
-                user.Role = row["ROLE"].ToString();
-                user.LastLogin = row["LAST_LOGIN"].ToString();
-                user.CretedBy = row["CREATED_BY"].ToString();
-                user.CreatedOn = row["CREATED_ON"].ToString();
-                user.Permissions = row["PERMISSIONS"].ToString();
-                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
-                taskList.Add(user);
-            }
-            return taskList;
-        }
-
-        public static List<User> tasksCompleted()
-        {
-            User user = null;
-            List<User> taskList = new List<User>();
-            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress = '100%' AND TaskStatus = 'Approved' ");
-
-            foreach (DataRow row in readUserTask.Rows)
-            {
-                user = new User();
-
-                user.UserID = int.Parse(row["USERID"].ToString());
-                user.Name = row["NAME"].ToString();
-                user.UserName = row["USERNAME"].ToString();
-                user.Reputation = row["REPUTATION"].ToString();
-                user.CompletedTask = row["COMPLETED_TASK"].ToString();
-                user.Role = row["ROLE"].ToString();
-                user.LastLogin = row["LAST_LOGIN"].ToString();
-                user.CretedBy = row["CREATED_BY"].ToString();
-                user.CreatedOn = row["CREATED_ON"].ToString();
-                user.Permissions = row["PERMISSIONS"].ToString();
-                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
-                taskList.Add(user);
-            }
-            return taskList;
-        }
 
         private void xuiGradientPanel1_MouseHover(object sender, EventArgs e)
         {

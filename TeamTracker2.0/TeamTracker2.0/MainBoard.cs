@@ -182,7 +182,7 @@ namespace TeamTracker2._0
         {
             clearSelection();
             dashboard_panel.Controls.Clear();
-            dashboard_panel.Controls.Add(new UC_UserAccounts());
+            dashboard_panel.Controls.Add(new UC_UserAccounts(this));
             panel_user_account.BackColor = Color.FromArgb(27, 194, 203);
             ChangeProfile();
         }

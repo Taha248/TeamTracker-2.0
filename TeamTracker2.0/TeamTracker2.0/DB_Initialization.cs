@@ -1,5 +1,7 @@
-﻿using System;
+﻿using GridViewExample;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +10,14 @@ namespace TeamTracker2._0
 {
     class DB_Initialization
     {
+        public static List<User> activeUsers = null;
+        public static List<User> totalUsers = null;
+        public static List<User> incompletedTask = null;
+        public static List<User> completedTask = null;
+        public static Task currentTask = null;
+
+        public static DataTable user_permissions = null;
+
         public static void initializeDB() {
             initializeDashBoard();
             initializeManageTask();
@@ -18,8 +28,8 @@ namespace TeamTracker2._0
 
         private static void initializeUserAccounts()
         {
-            UC_UserAccounts.gridViewHelper = new GridViewHelper("NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user", null);
-
+            UC_UserAccounts.gridViewHelper = new GridViewHelper("UserID,NAME as Name,Username as Username,Role AS Type,LAST_LOGIN as 'Last Login'", "user", null);
+            user_permissions = getUserPermissions();
         }
 
         private static void initializeSessionLogs()
@@ -37,11 +47,127 @@ namespace TeamTracker2._0
 
         private static void initializeDashBoard()
         {
-            UC_Dashboard.activeUsers = UC_Dashboard.showActiveUsers();
-            UC_Dashboard.totalUsers = UC_Dashboard.getTotaluser();
-            UC_Dashboard.incompletedTask = UC_Dashboard.getincompleteTasks();
-            UC_Dashboard.completedTask = UC_Dashboard.tasksCompleted();
-            UC_Dashboard.currentTask = UC_Dashboard.getCurrentTask("4");
+            activeUsers = showActiveUsers();
+            totalUsers = getTotaluser();
+            incompletedTask = getincompleteTasks();
+            completedTask = tasksCompleted();
+            currentTask = getCurrentTask("4");
+
+        }
+
+        public static List<User> showActiveUsers()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = GridViewExample.ManData.getDataReader("*", "user", " IS_ACTIVE='1'");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static Task getCurrentTask(string userId)
+        {
+            Task taskname = new Task();
+            DataTable readUserTask = ManData.getDataReader("task.TaskTitle,DATEDIFF(NOW(),LastDate) AS deadline ", "task", "  AssignedTo = '" + userId + "' AND (TaskStatus != 'Rejected' AND TaskStatus != 'Approved' ) ORDER BY deadline ASC LIMIT 0,1");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                taskname.TaskName = row["TaskTitle"].ToString();
+            }
+            return taskname;
+        }
+
+        public static List<User> getTotaluser()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = ManData.getDataReader("*", "user", null);
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static List<User> getincompleteTasks()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress != '100%' AND TaskStatus = 'Unapproved' ");
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static List<User> tasksCompleted()
+        {
+            User user = null;
+            List<User> taskList = new List<User>();
+            DataTable readUserTask = ManData.getDataReader("u.*", "task t , USER u  ", " u.`USERID` = t.`AssignedTo` AND Progress = '100%' AND TaskStatus = 'Approved' ");
+
+            foreach (DataRow row in readUserTask.Rows)
+            {
+                user = new User();
+
+                user.UserID = int.Parse(row["USERID"].ToString());
+                user.Name = row["NAME"].ToString();
+                user.UserName = row["USERNAME"].ToString();
+                user.Reputation = row["REPUTATION"].ToString();
+                user.CompletedTask = row["COMPLETED_TASK"].ToString();
+                user.Role = row["ROLE"].ToString();
+                user.LastLogin = row["LAST_LOGIN"].ToString();
+                user.CretedBy = row["CREATED_BY"].ToString();
+                user.CreatedOn = row["CREATED_ON"].ToString();
+                user.Permissions = row["PERMISSIONS"].ToString();
+                user.Active = int.Parse(row["IS_ACTIVE"].ToString());
+                taskList.Add(user);
+            }
+            return taskList;
+        }
+
+        public static DataTable getUserPermissions() {
+            return ManData.getDataReader("*","user_permissions",null);
 
         }
     }

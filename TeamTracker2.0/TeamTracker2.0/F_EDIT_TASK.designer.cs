@@ -33,32 +33,33 @@ namespace GridViewExample
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_EDIT_TASK));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Detail = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Progress = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txt_taskid = new System.Windows.Forms.TextBox();
-            this.txt_tasktitle = new System.Windows.Forms.TextBox();
-            this.txt_taskDTL = new System.Windows.Forms.RichTextBox();
-            this.txt_progress = new System.Windows.Forms.TextBox();
-            this.txtExtension = new System.Windows.Forms.TextBox();
-            this.txt_date = new System.Windows.Forms.DateTimePicker();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dropdownSts = new System.Windows.Forms.ComboBox();
-            this.dropDownAssTo = new System.Windows.Forms.ComboBox();
-            this.chkbox_extend = new System.Windows.Forms.CheckBox();
-            this.lbl_taskdtl = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_cross = new System.Windows.Forms.Label();
             this.panel_cross = new System.Windows.Forms.Panel();
+            this.lbl_cross = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_taskdtl = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.chkbox_extend = new System.Windows.Forms.CheckBox();
+            this.dropDownAssTo = new System.Windows.Forms.ComboBox();
+            this.dropdownSts = new System.Windows.Forms.ComboBox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txt_date = new System.Windows.Forms.DateTimePicker();
+            this.txtExtension = new System.Windows.Forms.TextBox();
+            this.txt_progress = new System.Windows.Forms.TextBox();
+            this.txt_taskDTL = new System.Windows.Forms.RichTextBox();
+            this.txt_tasktitle = new System.Windows.Forms.TextBox();
+            this.txt_taskid = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Progress = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Detail = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel_cross.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,8 +76,55 @@ namespace GridViewExample
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel_cross
+            // 
+            this.panel_cross.Controls.Add(this.lbl_cross);
+            this.panel_cross.ForeColor = System.Drawing.Color.Transparent;
+            this.panel_cross.Location = new System.Drawing.Point(595, 37);
+            this.panel_cross.Name = "panel_cross";
+            this.panel_cross.Size = new System.Drawing.Size(26, 19);
+            this.panel_cross.TabIndex = 2;
+            this.panel_cross.Click += new System.EventHandler(this.lbl_cross_Click);
+            this.panel_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
+            this.panel_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
+            // 
+            // lbl_cross
+            // 
+            this.lbl_cross.BackColor = System.Drawing.Color.White;
+            this.lbl_cross.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_cross.Location = new System.Drawing.Point(-1, 1);
+            this.lbl_cross.Name = "lbl_cross";
+            this.lbl_cross.Size = new System.Drawing.Size(26, 19);
+            this.lbl_cross.TabIndex = 3;
+            this.lbl_cross.Text = "x";
+            this.lbl_cross.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_cross.Click += new System.EventHandler(this.lbl_cross_Click);
+            this.lbl_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
+            this.lbl_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lbl_taskdtl);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(130, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(491, 403);
+            this.panel2.TabIndex = 3;
+            // 
+            // lbl_taskdtl
+            // 
+            this.lbl_taskdtl.AutoSize = true;
+            this.lbl_taskdtl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_taskdtl.Location = new System.Drawing.Point(15, 0);
+            this.lbl_taskdtl.Name = "lbl_taskdtl";
+            this.lbl_taskdtl.Size = new System.Drawing.Size(79, 16);
+            this.lbl_taskdtl.TabIndex = 1;
+            this.lbl_taskdtl.Text = "Task Details";
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.bunifuCustomLabel5);
             this.panel3.Controls.Add(this.chkbox_extend);
             this.panel3.Controls.Add(this.dropDownAssTo);
             this.panel3.Controls.Add(this.dropdownSts);
@@ -100,129 +148,32 @@ namespace GridViewExample
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
-            // Title
+            // chkbox_extend
             // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(59, 63);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(60, 16);
-            this.Title.TabIndex = 1;
-            this.Title.Text = "Task Title ";
+            this.chkbox_extend.AutoSize = true;
+            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
+            this.chkbox_extend.Name = "chkbox_extend";
+            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
+            this.chkbox_extend.TabIndex = 20;
+            this.chkbox_extend.UseVisualStyleBackColor = true;
+            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
             // 
-            // Detail
+            // dropDownAssTo
             // 
-            this.Detail.AutoSize = true;
-            this.Detail.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Detail.Location = new System.Drawing.Point(59, 93);
-            this.Detail.Name = "Detail";
-            this.Detail.Size = new System.Drawing.Size(65, 16);
-            this.Detail.TabIndex = 2;
-            this.Detail.Text = "Task Detail";
+            this.dropDownAssTo.FormattingEnabled = true;
+            this.dropDownAssTo.Location = new System.Drawing.Point(210, 268);
+            this.dropDownAssTo.Name = "dropDownAssTo";
+            this.dropDownAssTo.Size = new System.Drawing.Size(185, 21);
+            this.dropDownAssTo.TabIndex = 19;
             // 
-            // Progress
+            // dropdownSts
             // 
-            this.Progress.AutoSize = true;
-            this.Progress.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Progress.Location = new System.Drawing.Point(59, 176);
-            this.Progress.Name = "Progress";
-            this.Progress.Size = new System.Drawing.Size(53, 16);
-            this.Progress.TabIndex = 3;
-            this.Progress.Text = "Progress";
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(59, 208);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(40, 16);
-            this.bunifuCustomLabel1.TabIndex = 4;
-            this.bunifuCustomLabel1.Text = "Status";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 237);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(58, 16);
-            this.bunifuCustomLabel2.TabIndex = 5;
-            this.bunifuCustomLabel2.Text = "Last Date";
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(59, 269);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(67, 16);
-            this.bunifuCustomLabel3.TabIndex = 6;
-            this.bunifuCustomLabel3.Text = "Assigned to";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(59, 302);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(97, 16);
-            this.bunifuCustomLabel4.TabIndex = 7;
-            this.bunifuCustomLabel4.Text = "Extension Reason";
-            this.bunifuCustomLabel4.Visible = false;
-            // 
-            // txt_taskid
-            // 
-            this.txt_taskid.Enabled = false;
-            this.txt_taskid.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taskid.Location = new System.Drawing.Point(212, 29);
-            this.txt_taskid.Name = "txt_taskid";
-            this.txt_taskid.Size = new System.Drawing.Size(48, 24);
-            this.txt_taskid.TabIndex = 8;
-            // 
-            // txt_tasktitle
-            // 
-            this.txt_tasktitle.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tasktitle.Location = new System.Drawing.Point(210, 62);
-            this.txt_tasktitle.Name = "txt_tasktitle";
-            this.txt_tasktitle.Size = new System.Drawing.Size(185, 24);
-            this.txt_tasktitle.TabIndex = 9;
-            // 
-            // txt_taskDTL
-            // 
-            this.txt_taskDTL.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taskDTL.Location = new System.Drawing.Point(209, 96);
-            this.txt_taskDTL.Name = "txt_taskDTL";
-            this.txt_taskDTL.Size = new System.Drawing.Size(185, 72);
-            this.txt_taskDTL.TabIndex = 10;
-            this.txt_taskDTL.Text = "";
-            // 
-            // txt_progress
-            // 
-            this.txt_progress.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_progress.Location = new System.Drawing.Point(209, 175);
-            this.txt_progress.Name = "txt_progress";
-            this.txt_progress.Size = new System.Drawing.Size(51, 24);
-            this.txt_progress.TabIndex = 11;
-            // 
-            // txtExtension
-            // 
-            this.txtExtension.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExtension.Location = new System.Drawing.Point(209, 299);
-            this.txtExtension.Name = "txtExtension";
-            this.txtExtension.Size = new System.Drawing.Size(185, 24);
-            this.txtExtension.TabIndex = 15;
-            this.txtExtension.Visible = false;
-            // 
-            // txt_date
-            // 
-            this.txt_date.Enabled = false;
-            this.txt_date.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txt_date.Location = new System.Drawing.Point(209, 237);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(164, 21);
-            this.txt_date.TabIndex = 17;
+            this.dropdownSts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdownSts.FormattingEnabled = true;
+            this.dropdownSts.Location = new System.Drawing.Point(209, 207);
+            this.dropdownSts.Name = "dropdownSts";
+            this.dropdownSts.Size = new System.Drawing.Size(185, 21);
+            this.dropdownSts.TabIndex = 19;
             // 
             // bunifuThinButton21
             // 
@@ -250,78 +201,139 @@ namespace GridViewExample
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // dropdownSts
+            // txt_date
             // 
-            this.dropdownSts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dropdownSts.FormattingEnabled = true;
-            this.dropdownSts.Location = new System.Drawing.Point(209, 207);
-            this.dropdownSts.Name = "dropdownSts";
-            this.dropdownSts.Size = new System.Drawing.Size(185, 21);
-            this.dropdownSts.TabIndex = 19;
+            this.txt_date.Enabled = false;
+            this.txt_date.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_date.Location = new System.Drawing.Point(209, 237);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(164, 21);
+            this.txt_date.TabIndex = 17;
             // 
-            // dropDownAssTo
+            // txtExtension
             // 
-            this.dropDownAssTo.FormattingEnabled = true;
-            this.dropDownAssTo.Location = new System.Drawing.Point(210, 268);
-            this.dropDownAssTo.Name = "dropDownAssTo";
-            this.dropDownAssTo.Size = new System.Drawing.Size(185, 21);
-            this.dropDownAssTo.TabIndex = 19;
+            this.txtExtension.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExtension.Location = new System.Drawing.Point(209, 299);
+            this.txtExtension.Name = "txtExtension";
+            this.txtExtension.Size = new System.Drawing.Size(185, 24);
+            this.txtExtension.TabIndex = 15;
+            this.txtExtension.Visible = false;
             // 
-            // chkbox_extend
+            // txt_progress
             // 
-            this.chkbox_extend.AutoSize = true;
-            this.chkbox_extend.Location = new System.Drawing.Point(379, 241);
-            this.chkbox_extend.Name = "chkbox_extend";
-            this.chkbox_extend.Size = new System.Drawing.Size(15, 14);
-            this.chkbox_extend.TabIndex = 20;
-            this.chkbox_extend.UseVisualStyleBackColor = true;
-            this.chkbox_extend.CheckedChanged += new System.EventHandler(this.chkbox_extend_CheckedChanged);
+            this.txt_progress.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_progress.Location = new System.Drawing.Point(209, 175);
+            this.txt_progress.Name = "txt_progress";
+            this.txt_progress.Size = new System.Drawing.Size(51, 24);
+            this.txt_progress.TabIndex = 11;
             // 
-            // lbl_taskdtl
+            // txt_taskDTL
             // 
-            this.lbl_taskdtl.AutoSize = true;
-            this.lbl_taskdtl.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_taskdtl.Location = new System.Drawing.Point(15, 0);
-            this.lbl_taskdtl.Name = "lbl_taskdtl";
-            this.lbl_taskdtl.Size = new System.Drawing.Size(76, 15);
-            this.lbl_taskdtl.TabIndex = 1;
-            this.lbl_taskdtl.Text = "Task Details";
+            this.txt_taskDTL.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taskDTL.Location = new System.Drawing.Point(209, 96);
+            this.txt_taskDTL.Name = "txt_taskDTL";
+            this.txt_taskDTL.Size = new System.Drawing.Size(185, 72);
+            this.txt_taskDTL.TabIndex = 10;
+            this.txt_taskDTL.Text = "";
             // 
-            // panel2
+            // txt_tasktitle
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lbl_taskdtl);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(130, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 403);
-            this.panel2.TabIndex = 3;
+            this.txt_tasktitle.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tasktitle.Location = new System.Drawing.Point(210, 62);
+            this.txt_tasktitle.Name = "txt_tasktitle";
+            this.txt_tasktitle.Size = new System.Drawing.Size(185, 24);
+            this.txt_tasktitle.TabIndex = 9;
             // 
-            // lbl_cross
+            // txt_taskid
             // 
-            this.lbl_cross.BackColor = System.Drawing.Color.White;
-            this.lbl_cross.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_cross.Location = new System.Drawing.Point(-1, 1);
-            this.lbl_cross.Name = "lbl_cross";
-            this.lbl_cross.Size = new System.Drawing.Size(26, 19);
-            this.lbl_cross.TabIndex = 3;
-            this.lbl_cross.Text = "x";
-            this.lbl_cross.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_cross.Click += new System.EventHandler(this.lbl_cross_Click);
-            this.lbl_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
-            this.lbl_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
+            this.txt_taskid.Enabled = false;
+            this.txt_taskid.Font = new System.Drawing.Font("Quicksand", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taskid.Location = new System.Drawing.Point(212, 29);
+            this.txt_taskid.Name = "txt_taskid";
+            this.txt_taskid.Size = new System.Drawing.Size(48, 24);
+            this.txt_taskid.TabIndex = 8;
             // 
-            // panel_cross
+            // bunifuCustomLabel4
             // 
-            this.panel_cross.Controls.Add(this.lbl_cross);
-            this.panel_cross.ForeColor = System.Drawing.Color.Transparent;
-            this.panel_cross.Location = new System.Drawing.Point(595, 37);
-            this.panel_cross.Name = "panel_cross";
-            this.panel_cross.Size = new System.Drawing.Size(26, 19);
-            this.panel_cross.TabIndex = 2;
-            this.panel_cross.Click += new System.EventHandler(this.lbl_cross_Click);
-            this.panel_cross.MouseLeave += new System.EventHandler(this.lbl_cross_MouseLeave);
-            this.panel_cross.MouseHover += new System.EventHandler(this.lbl_cross_MouseHover);
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(59, 302);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(97, 16);
+            this.bunifuCustomLabel4.TabIndex = 7;
+            this.bunifuCustomLabel4.Text = "Extension Reason";
+            this.bunifuCustomLabel4.Visible = false;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(59, 269);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(67, 16);
+            this.bunifuCustomLabel3.TabIndex = 6;
+            this.bunifuCustomLabel3.Text = "Assigned to";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(59, 237);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(58, 16);
+            this.bunifuCustomLabel2.TabIndex = 5;
+            this.bunifuCustomLabel2.Text = "Last Date";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(59, 208);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(40, 16);
+            this.bunifuCustomLabel1.TabIndex = 4;
+            this.bunifuCustomLabel1.Text = "Status";
+            // 
+            // Progress
+            // 
+            this.Progress.AutoSize = true;
+            this.Progress.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Progress.Location = new System.Drawing.Point(59, 176);
+            this.Progress.Name = "Progress";
+            this.Progress.Size = new System.Drawing.Size(53, 16);
+            this.Progress.TabIndex = 3;
+            this.Progress.Text = "Progress";
+            // 
+            // Detail
+            // 
+            this.Detail.AutoSize = true;
+            this.Detail.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Detail.Location = new System.Drawing.Point(59, 93);
+            this.Detail.Name = "Detail";
+            this.Detail.Size = new System.Drawing.Size(65, 16);
+            this.Detail.TabIndex = 2;
+            this.Detail.Text = "Task Detail";
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(59, 63);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(60, 16);
+            this.Title.TabIndex = 1;
+            this.Title.Text = "Task Title ";
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Quicksand", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(63, 33);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(46, 16);
+            this.bunifuCustomLabel5.TabIndex = 21;
+            this.bunifuCustomLabel5.Text = "Task ID";
             // 
             // F_EDIT_TASK
             // 
@@ -337,11 +349,11 @@ namespace GridViewExample
             this.Load += new System.EventHandler(this.F_EDIT_TASK_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.F_EDIT_TASK_Paint);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_cross.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel_cross.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,5 +383,6 @@ namespace GridViewExample
         private BunifuCustomLabel Progress;
         private BunifuCustomLabel Detail;
         private BunifuCustomLabel Title;
+        private BunifuCustomLabel bunifuCustomLabel5;
     }
 }
