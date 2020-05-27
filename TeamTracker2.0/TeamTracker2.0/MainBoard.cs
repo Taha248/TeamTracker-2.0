@@ -144,6 +144,7 @@ namespace TeamTracker2._0
         {
             pictureBox12.Image = Properties.Resources.editprofie;
             pictureBox12.BringToFront();
+            dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_EditProfile());
             clearSelection();
         }
