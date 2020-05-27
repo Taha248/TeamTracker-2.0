@@ -63,6 +63,16 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _30pro {
+            get {
+                object obj = ResourceManager.GetObject("30pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bbb {
             get {
                 object obj = ResourceManager.GetObject("bbb", resourceCulture);
@@ -166,6 +176,16 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap Dashboard3 {
             get {
                 object obj = ResourceManager.GetObject("Dashboard3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editprofie {
+            get {
+                object obj = ResourceManager.GetObject("editprofie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +473,16 @@ namespace TeamTracker2._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_rounded_square_27__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-rounded-square-27 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_rounded_square_27__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-rounded-square-27 (2)", resourceCulture);
@@ -466,6 +496,26 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap icons8_rounded_square_28__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-rounded-square-28 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_rounded_square_28__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-rounded-square-28 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_rounded_square_28__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-rounded-square-28 (1)2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -746,6 +796,86 @@ namespace TeamTracker2._0.Properties {
         internal static System.Drawing.Bitmap ppp {
             get {
                 object obj = ResourceManager.GetObject("ppp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pro {
+            get {
+                object obj = ResourceManager.GetObject("pro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pro29 {
+            get {
+                object obj = ResourceManager.GetObject("pro29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover {
+            get {
+                object obj = ResourceManager.GetObject("prohover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover__2_ {
+            get {
+                object obj = ResourceManager.GetObject("prohover (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover1 {
+            get {
+                object obj = ResourceManager.GetObject("prohover1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover29 {
+            get {
+                object obj = ResourceManager.GetObject("prohover29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover291 {
+            get {
+                object obj = ResourceManager.GetObject("prohover291", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prohover30 {
+            get {
+                object obj = ResourceManager.GetObject("prohover30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -167,6 +167,12 @@
     <Compile Include="UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_EditProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditProfile.Designer.cs">
+      <DependentUpon>UC_EditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ManageTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditProfile.resx">
+      <DependentUpon>UC_EditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ManageTask.resx">
       <DependentUpon>UC_ManageTask.cs</DependentUpon>
@@ -417,6 +426,21 @@
     <None Include="Resources\icons8-double-tick-22.png" />
     <None Include="Resources\icons8-error-22.png" />
     <None Include="Resources\icons8-error-20.png" />
+    <None Include="Resources\30pro.png" />
+    <None Include="Resources\editprofie.png" />
+    <None Include="Resources\icons8-rounded-square-27 %281%291.png" />
+    <Content Include="Resources\icons8-rounded-square-27 %284%29.png" />
+    <None Include="Resources\icons8-rounded-square-28 %281%291.png" />
+    <None Include="Resources\icons8-rounded-square-28 %281%292.png" />
+    <Content Include="Resources\pro.png" />
+    <None Include="Resources\pro1.png" />
+    <None Include="Resources\pro29.png" />
+    <None Include="Resources\prohover.png" />
+    <None Include="Resources\prohover %282%29.png" />
+    <None Include="Resources\prohover30.png" />
+    <None Include="Resources\prohover29.png" />
+    <None Include="Resources\prohover1.png" />
+    <None Include="Resources\prohover291.png" />
     <Content Include="Resources\success.png" />
     <Content Include="Resources\Dashboard.png" />
     <None Include="Resources\Dashboard1.png" />

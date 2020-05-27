@@ -62,7 +62,6 @@ namespace TeamTracker2._0
 
         private void panel_cross_MouseHover(object sender, EventArgs e)
         {
-
             System.Drawing.Color col = System.Drawing.ColorTranslator.FromHtml("#DD3F34");
             panel_cross.BackColor = col;
         }
@@ -137,10 +136,17 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_ManageTask(this));
             panel_managetask.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
 
         }
 
-
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            pictureBox12.Image = Properties.Resources.editprofie;
+            pictureBox12.BringToFront();
+            dashboard_panel.Controls.Add(new UC_EditProfile());
+            clearSelection();
+        }
 
         private void panel_session_log_Click(object sender, EventArgs e)
         {
@@ -149,6 +155,7 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_SessionLogs(this));
             panel_session_log.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
         }
 
         private void panel_user_statistics_Click(object sender, EventArgs e)
@@ -158,6 +165,7 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_UserStatistics());
             panel_user_statistics.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
         }
 
         private void panel_user_monitoring_Click(object sender, EventArgs e)
@@ -166,16 +174,17 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_UserMonitoring());
             panel_user_monitoring.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
 
         }
 
         private void panel_user_account_Click(object sender, EventArgs e)
         {
-
             clearSelection();
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_UserAccounts());
             panel_user_account.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
         }
 
         private void panel_configuration_Click(object sender, EventArgs e)
@@ -185,15 +194,16 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_Configuration());
             panel_configuration.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
         }
 
         private void panel_settings_Click(object sender, EventArgs e)
         {
-
             clearSelection();
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(new UC_Settings());
             panel_settings.BackColor = Color.FromArgb(27, 194, 203);
+            ChangeProfile();
         }
 
         private void panel_dashboard_Click(object sender, EventArgs e)
@@ -205,6 +215,7 @@ namespace TeamTracker2._0
             dashboard_panel.Controls.Add(new UC_Dashboard(this));
             panel_dashboard.BackColor = Color.FromArgb(27, 194, 203);
             GenerateNotification("Saved", messageType.Success);
+            ChangeProfile();
 
         }
 
@@ -356,6 +367,20 @@ namespace TeamTracker2._0
         {
 
         }
+
+      
+
+        private void pictureBox12_MouseHover(object sender, EventArgs e)
+        {
+            //pictureBox12.Image = Properties.Resources.prohover29;
+        }
+
+        private void ChangeProfile()
+        {
+            pictureBox12.Image = Properties.Resources.icons8_rounded_square_27__1_;
+            pictureBox9.BringToFront();
+        }
+
     }
 }
 

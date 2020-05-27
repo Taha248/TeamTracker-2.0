@@ -132,7 +132,7 @@
             this.dashboard_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.dashboard_panel.Location = new System.Drawing.Point(191, 66);
             this.dashboard_panel.Name = "dashboard_panel";
-            this.dashboard_panel.Size = new System.Drawing.Size(591, 455);
+            this.dashboard_panel.Size = new System.Drawing.Size(591, 432);
             this.dashboard_panel.TabIndex = 7;
             this.dashboard_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboard_panel_Paint);
             // 
@@ -156,13 +156,15 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::TeamTracker2._0.Properties.Resources.icons8_person_22;
-            this.pictureBox9.Location = new System.Drawing.Point(522, 33);
+            this.pictureBox9.Location = new System.Drawing.Point(522, 34);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox9.Size = new System.Drawing.Size(19, 19);
             this.pictureBox9.TabIndex = 23;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.pictureBox9.MouseHover += new System.EventHandler(this.pictureBox12_MouseHover);
             // 
             // pictureBox11
             // 
@@ -176,13 +178,15 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::TeamTracker2._0.Properties.Resources.icons8_rounded_square_27__1_;
+            this.pictureBox12.Image = global::TeamTracker2._0.Properties.Resources.icons8_rounded_square_27__1_1;
             this.pictureBox12.Location = new System.Drawing.Point(518, 29);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(30, 30);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox12.TabIndex = 22;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.pictureBox12.MouseHover += new System.EventHandler(this.pictureBox12_MouseHover);
             // 
             // label14
             // 
