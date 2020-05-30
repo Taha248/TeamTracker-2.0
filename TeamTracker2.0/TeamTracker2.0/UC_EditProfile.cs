@@ -12,6 +12,7 @@ namespace TeamTracker2._0
 {
     public partial class UC_EditProfile : UserControl
     {
+        MainBoard mainBoard = new MainBoard();
         public UC_EditProfile()
         {
             InitializeComponent();
@@ -86,6 +87,10 @@ namespace TeamTracker2._0
         private void linkLabel1_MouseLeave(object sender, EventArgs e)
         {
             linkLabel1.ForeColor = Color.DodgerBlue;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

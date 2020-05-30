@@ -318,41 +318,30 @@ namespace TeamTracker2._0
             messageType result;
             if (Enum.TryParse(msgType.ToString(),out result))
             {
+                messageBox.BringToFront();
                 switch (result)
                 {
                     case messageType.Success:
-                        messageBox.BringToFront();
                         panel1.BackColor = Color.FromArgb(0,200,81); 
                         label10.Text = message + " Successfully!";
                         success.BringToFront();
                         error.Hide();
                         //custom.Hide();
-                        timer1.Interval = 3000; // here time in milliseconds
-                        timer1.Tick += timer1_Tick;
-                        timer1.Start();
                         break;
 
                     case messageType.Error:
-                        messageBox.BringToFront();
                         panel1.BackColor = Color.FromArgb(255, 136, 0);
                         label10.Text = message + " Successfully!";
                         error.BringToFront();
                         success.Hide();
                         //custom.Hide();
-                        timer1.Interval = 3000; // here time in milliseconds
-                        timer1.Tick += timer1_Tick;
-                        timer1.Start();
                         break;
 
                     case messageType.Custom:
                         panel1.BackColor = Color.FromArgb(255, 136, 0);
-                        messageBox.BringToFront();
                         error.BringToFront();
                         success.Hide();
                         //custom.Hide();
-                        timer1.Interval = 3000; // here time in milliseconds
-                        timer1.Tick += timer1_Tick;
-                        timer1.Start();
                         label10.Text = "Please Enter Email In Right Format";
                         if(label10.Text.Length>20)
                             label10.Font = new Font("Montserrat", 7, FontStyle.Regular);
@@ -362,6 +351,10 @@ namespace TeamTracker2._0
                         break;
                 }
             }
+
+            timer1.Interval = 3000; // here time in milliseconds
+            timer1.Tick += timer1_Tick;
+            timer1.Start();
         }
 
         private void messageBox_Paint(object sender, PaintEventArgs e)

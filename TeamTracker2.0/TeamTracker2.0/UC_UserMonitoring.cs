@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TeamTracker2._0
 {
     public partial class UC_UserMonitoring : UserControl
     {
+        //public static ScreenShot
         public UC_UserMonitoring()
         {
             InitializeComponent();
@@ -134,6 +136,37 @@ namespace TeamTracker2._0
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            //ImageToBase64(pictureBox1.ImageLocation);
+
+            ScreenShotView ssv = new ScreenShotView();
+            ssv.ShowDialog();
+        }
+        
+
+        public static string ssv_Base64String = null;
+        public void ImageToBase64(string picLoc)
+        {
+            using (System.Drawing.Image image = System.Drawing.Image.FromFile(picLoc))
+            {
+                using (MemoryStream m = new MemoryStream())
+                {
+                    image.Save(m, image.RawFormat);
+                    byte[] imageBytes = m.ToArray();
+                    ssv_Base64String = Convert.ToBase64String(imageBytes);
+                }
+            }
+        }
+        public System.Drawing.Image Base64ToImage()
+        {
+            byte[] imageBytes = Convert.FromBase64String(ssv_Base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+            return image;
         }
     }
 
