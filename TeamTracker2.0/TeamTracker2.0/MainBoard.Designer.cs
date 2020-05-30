@@ -132,7 +132,7 @@
             this.dashboard_panel.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.dashboard_panel.Location = new System.Drawing.Point(191, 66);
             this.dashboard_panel.Name = "dashboard_panel";
-            this.dashboard_panel.Size = new System.Drawing.Size(591, 432);
+            this.dashboard_panel.Size = new System.Drawing.Size(591, 455);
             this.dashboard_panel.TabIndex = 7;
             this.dashboard_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.dashboard_panel_Paint);
             // 
@@ -313,7 +313,7 @@
             this.label17.Size = new System.Drawing.Size(192, 20);
             this.label17.TabIndex = 27;
             this.label17.Text = "01:22:33";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 

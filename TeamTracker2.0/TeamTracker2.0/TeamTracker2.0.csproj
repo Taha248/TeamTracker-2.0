@@ -85,6 +85,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB_Initialization.cs" />
     <Compile Include="F_ADD_TASK.cs">
       <SubType>Form</SubType>
@@ -223,6 +229,9 @@
       <DependentUpon>UC_UserStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_ADD_TASK.resx">
       <DependentUpon>F_ADD_TASK.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,9 +458,12 @@
     <None Include="Resources\editprofie.png" />
     <None Include="Resources\icons8-rounded-square-27 %281%291.png" />
     <None Include="Resources\icons8-camera-50.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\download.jpg" />
     <Content Include="Resources\icons8-rounded-square-27 %284%29.png" />
     <None Include="Resources\icons8-rounded-square-28 %281%291.png" />
     <None Include="Resources\icons8-rounded-square-28 %281%292.png" />
+    <None Include="Resources\photo-camera.png" />
     <Content Include="Resources\pro.png" />
     <None Include="Resources\pro1.png" />
     <None Include="Resources\pro29.png" />

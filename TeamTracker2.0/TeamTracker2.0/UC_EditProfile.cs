@@ -39,6 +39,21 @@ namespace TeamTracker2._0
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+          //  pictureBox2.BringToFront();
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+           // pictureBox2.SendToBack();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
@@ -47,14 +62,30 @@ namespace TeamTracker2._0
             }
         }
 
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            pictureBox2.BringToFront();
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.ShowDialog();
         }
 
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        private void label17_MouseHover(object sender, EventArgs e)
         {
-            pictureBox2.SendToBack();
+            label17.BackColor = Color.RoyalBlue;
+        }
+
+        private void label17_MouseLeave(object sender, EventArgs e)
+        {
+            label17.BackColor = Color.DodgerBlue;
+        }
+
+        private void linkLabel1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel1.ForeColor = Color.Red;
+        }
+
+        private void linkLabel1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel1.ForeColor = Color.DodgerBlue;
         }
     }
 }
