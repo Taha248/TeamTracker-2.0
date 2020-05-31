@@ -39,21 +39,22 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.picbox_ScreenShot);
             this.panel1.Controls.Add(this.panel_cross);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(759, 498);
+            this.panel1.Size = new System.Drawing.Size(763, 501);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // picbox_ScreenShot
             // 
             this.picbox_ScreenShot.BackColor = System.Drawing.Color.White;
-            this.picbox_ScreenShot.Location = new System.Drawing.Point(0, 18);
+            this.picbox_ScreenShot.Location = new System.Drawing.Point(19, 23);
             this.picbox_ScreenShot.Name = "picbox_ScreenShot";
-            this.picbox_ScreenShot.Size = new System.Drawing.Size(758, 480);
+            this.picbox_ScreenShot.Size = new System.Drawing.Size(723, 459);
+            this.picbox_ScreenShot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbox_ScreenShot.TabIndex = 9;
             this.picbox_ScreenShot.TabStop = false;
             this.picbox_ScreenShot.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -77,7 +78,7 @@
             // panel_cross
             // 
             this.panel_cross.Controls.Add(this.screenShotCross);
-            this.panel_cross.Location = new System.Drawing.Point(738, 1);
+            this.panel_cross.Location = new System.Drawing.Point(742, 1);
             this.panel_cross.Name = "panel_cross";
             this.panel_cross.Size = new System.Drawing.Size(20, 20);
             this.panel_cross.TabIndex = 8;
@@ -103,8 +104,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label screenShotCross;
         private System.Windows.Forms.PictureBox picbox_ScreenShot;
         private System.Windows.Forms.Panel panel_cross;
+        private System.Windows.Forms.Label screenShotCross;
     }
 }

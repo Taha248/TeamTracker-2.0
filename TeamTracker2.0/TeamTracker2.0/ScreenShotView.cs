@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +17,19 @@ namespace TeamTracker2._0
         {
             InitializeComponent();
         }
-
+        
         private void ScreenShotView_Load(object sender, EventArgs e)
         {
+            picbox_ScreenShot.Image = Base64ToImage();
+        }
 
+        public System.Drawing.Image Base64ToImage()
+        {
+            byte[] imageBytes = Convert.FromBase64String(UC_UserMonitoring.ssv_Base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+            return image;
         }
         protected override void OnPaintBackground(PaintEventArgs e)
         {

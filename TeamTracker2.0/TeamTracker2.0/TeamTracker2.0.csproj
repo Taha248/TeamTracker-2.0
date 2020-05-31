@@ -140,6 +140,7 @@
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="ManData.cs" />
+    <Compile Include="MessageHelper.cs" />
     <Compile Include="NotificationViewer.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -140,8 +140,8 @@ namespace TeamTracker2._0
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            //ImageToBase64(pictureBox1.ImageLocation);
-
+            string loc = @"C:\Users\Hamza Saleem\Desktop\Hamza\New folder\old\LAstest\TeamTracker-\TeamTracker2.0\TeamTracker2.0\Resources\Dashboard.png";
+            ImageToBase64(loc);
             ScreenShotView ssv = new ScreenShotView();
             ssv.ShowDialog();
         }
@@ -159,14 +159,6 @@ namespace TeamTracker2._0
                     ssv_Base64String = Convert.ToBase64String(imageBytes);
                 }
             }
-        }
-        public System.Drawing.Image Base64ToImage()
-        {
-            byte[] imageBytes = Convert.FromBase64String(ssv_Base64String);
-            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
-            return image;
         }
     }
 
