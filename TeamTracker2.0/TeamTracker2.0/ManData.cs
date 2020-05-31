@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GridViewExample
 {
@@ -64,13 +65,23 @@ namespace GridViewExample
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 using (conn)
                 {
-                    conn.Open();
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception conEx)
+                    {
+                        MessageBox.Show("Could not connect database..", "Database Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.Environment.Exit(1);
+                    }
                     cmd.ExecuteNonQuery();
                     LogWriter.LogWrite(query);
                 }
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
                 LogWriter.LogWrite(ex.StackTrace);
                 return false;
             }
@@ -128,7 +139,15 @@ namespace GridViewExample
                 MySqlDataAdapter adpt = new MySqlDataAdapter(query, conn);
                 using (conn)
                 {
-                    conn.Open();
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception conEx)
+                    {
+                        MessageBox.Show("Could not connect database..", "Database Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.Environment.Exit(1);
+                    }
                     adpt.Fill(dataSet);
                     LogWriter.LogWrite(query);
 
@@ -136,6 +155,8 @@ namespace GridViewExample
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
                 LogWriter.LogWrite(ex.StackTrace);
             }
 
@@ -157,7 +178,15 @@ namespace GridViewExample
             {
                 using (conn)
                 {
-                    conn.Open();
+                    try
+                    {
+                            conn.Open();
+                    }
+                    catch(Exception conEx)
+                    {
+                        MessageBox.Show("Could not connect database..","Database Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.Environment.Exit(1);
+                    }
                     reader = cmd.ExecuteReader();
                     dataTable.Load(reader);
                 }
@@ -165,6 +194,8 @@ namespace GridViewExample
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
                 LogWriter.LogWrite(ex.StackTrace);
             }
 
@@ -182,7 +213,21 @@ namespace GridViewExample
             MySqlCommand cmd = new MySqlCommand(query,conn);
             try
             {
-                conn.Open();
+                try
+                {            try { 
+                    conn.Open();
+                    }
+                    catch(Exception conEx)
+                    {
+                        MessageBox.Show("Could not connect database..","Database Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        System.Environment.Exit(1);
+                    }
+                }
+                catch (Exception conEx)
+                {
+                    MessageBox.Show("Could not connect database..", "Database Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Environment.Exit(1);
+                }
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -193,6 +238,8 @@ namespace GridViewExample
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
                 LogWriter.LogWrite(ex.StackTrace);
             }
 
